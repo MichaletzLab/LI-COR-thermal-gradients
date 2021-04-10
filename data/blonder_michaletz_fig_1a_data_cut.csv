@@ -1,0 +1,547 @@
+index,Site,Date,Taxon,TimeStart,Filename,sample,Notes,Tair_C,Tleaf_C,curveID
+1,Almont,6/17/2015,Artemisia tridentata,10:30,stm-as1_.xls,as1,,14.74998837,19.50174166,1
+2,Almont,6/17/2015,Artemisia tridentata,10:30,stm-as1_.xls,as1,,18.74735781,21.18357824,1
+3,Almont,6/17/2015,Artemisia tridentata,10:30,stm-as1_.xls,as1,,23.36297709,24.04818471,1
+4,Almont,6/17/2015,Artemisia tridentata,10:30,stm-as1_.xls,as1,,27.6254823,26.51633937,1
+5,Almont,6/17/2015,Artemisia tridentata,10:30,stm-as1_.xls,as1,,32.35796534,30.17018356,1
+6,Almont,6/17/2015,Artemisia tridentata,10:30,stm-as1_.xls,as1,,36.69976985,32.83172251,1
+7,Almont,6/17/2015,Artemisia tridentata,10:30,stm-as1_.xls,as1,,41.12447128,35.51321335,1
+8,Almont,6/17/2015,Artemisia tridentata,10:30,stm-as1_.xls,as1,,45.50936025,38.28797557,1
+9,Almont,17-Jun-15,Artemisia tridentata,12:45,stm-as2_.xls,as2,,23.55728683,27.47882805,2
+10,Almont,17-Jun-15,Artemisia tridentata,12:45,stm-as2_.xls,as2,,27.85254784,29.39237289,2
+11,Almont,17-Jun-15,Artemisia tridentata,12:45,stm-as2_.xls,as2,,32.15990397,31.88278898,2
+12,Almont,17-Jun-15,Artemisia tridentata,12:45,stm-as2_.xls,as2,,36.47885234,34.58053436,2
+13,Almont,17-Jun-15,Artemisia tridentata,12:45,stm-as2_.xls,as2,,40.85432765,37.32206116,2
+14,Almont,17-Jun-15,Artemisia tridentata,12:45,stm-as2_.xls,as2,,45.23525263,38.82274755,2
+15,Almont,18-Jun-15,Artemisia tridentata,9:45,stm-as3_.xls,as3,Photosynthesis oscillation a lot,,,3
+16,Almont,18-Jun-15,Artemisia tridentata,9:45,stm-as3_.xls,as3,Photosynthesis oscillation a lot,,,3
+17,Almont,18-Jun-15,Artemisia tridentata,9:45,stm-as3_.xls,as3,Photosynthesis oscillation a lot,24.67898814,25.87410863,3
+18,Almont,18-Jun-15,Artemisia tridentata,9:45,stm-as3_.xls,as3,Photosynthesis oscillation a lot,29.09881007,28.95600942,3
+19,Almont,18-Jun-15,Artemisia tridentata,9:45,stm-as3_.xls,as3,Photosynthesis oscillation a lot,33.47875621,31.77093188,3
+20,Almont,18-Jun-15,Artemisia tridentata,9:45,stm-as3_.xls,as3,Photosynthesis oscillation a lot,37.69621684,33.93447825,3
+21,Almont,18-Jun-15,Artemisia tridentata,9:45,stm-as3_.xls,as3,Photosynthesis oscillation a lot,41.53863678,36.61906865,3
+22,Almont,18-Jun-15,Artemisia tridentata,11:24,stm-as4_.xls,as4,,23.38294868,25.95657921,4
+23,Almont,18-Jun-15,Artemisia tridentata,11:24,stm-as4_.xls,as4,,27.54715385,28.02847786,4
+24,Almont,18-Jun-15,Artemisia tridentata,11:24,stm-as4_.xls,as4,,31.90428327,30.89550819,4
+25,Almont,18-Jun-15,Artemisia tridentata,11:24,stm-as4_.xls,as4,,36.14750671,33.31564051,4
+26,Almont,18-Jun-15,Artemisia tridentata,11:24,stm-as4_.xls,as4,,40.7159078,36.51039785,4
+27,Almont,18-Jun-15,Artemisia tridentata,11:24,stm-as4_.xls,as4,,45.10487442,39.35582072,4
+28,Almont,18-Jun-15,Artemisia tridentata,12:45,stm-as5_.xls,as5,,24.90533485,27.49520925,5
+29,Almont,18-Jun-15,Artemisia tridentata,12:45,stm-as5_.xls,as5,,28.942829,29.2485218,5
+30,Almont,18-Jun-15,Artemisia tridentata,12:45,stm-as5_.xls,as5,,33.16269201,31.0480039,5
+31,Almont,18-Jun-15,Artemisia tridentata,12:45,stm-as5_.xls,as5,,37.60693207,33.41451925,5
+32,Almont,18-Jun-15,Artemisia tridentata,12:45,stm-as5_.xls,as5,,42.09724096,35.79153671,5
+33,Almont,18-Jun-15,Artemisia tridentata,12:45,stm-as5_.xls,as5,,45.07278035,37.56180344,5
+34,Almont,22-Jun-15,Artemisia tridentata,12:45,stm-as6_.xls,as6,,24.62004573,28.26126811,6
+35,Almont,22-Jun-15,Artemisia tridentata,12:45,stm-as6_.xls,as6,,28.69760997,30.22826131,6
+36,Almont,22-Jun-15,Artemisia tridentata,12:45,stm-as6_.xls,as6,,32.56014684,31.96979179,6
+37,Almont,22-Jun-15,Artemisia tridentata,12:45,stm-as6_.xls,as6,,36.92785873,34.6846789,6
+38,Almont,22-Jun-15,Artemisia tridentata,12:45,stm-as6_.xls,as6,,41.64891739,38.72966843,6
+39,Almont,22-Jun-15,Artemisia tridentata,1:30,stm-as7_.xls,as7,,28.64290148,26.86326599,7
+40,Almont,22-Jun-15,Artemisia tridentata,1:30,stm-as7_.xls,as7,,32.62565028,32.25785192,7
+41,Almont,22-Jun-15,Artemisia tridentata,1:30,stm-as7_.xls,as7,,36.63008753,37.13590647,7
+42,Almont,22-Jun-15,Artemisia tridentata,1:30,stm-as7_.xls,as7,,41.13698273,42.18615163,7
+43,Almont,22-Jun-15,Artemisia tridentata,1:30,stm-as7_.xls,as7,,45.43086344,41.31457392,7
+44,Almont,22-Jun-15,Artemisia tridentata,1:30,stm-as7_.xls,as7,,48.15835444,42.94652964,7
+45,Almont,22-Jun-15,Balsamorhiza sagittata,9:35,stm-abasa1_.xls,abasa1,,15.38953145,18.56421013,8
+46,Almont,22-Jun-15,Balsamorhiza sagittata,9:35,stm-abasa1_.xls,abasa1,,19.22180608,20.63071353,8
+47,Almont,22-Jun-15,Balsamorhiza sagittata,9:35,stm-abasa1_.xls,abasa1,,23.53919589,23.403442,8
+48,Almont,22-Jun-15,Balsamorhiza sagittata,9:35,stm-abasa1_.xls,abasa1,,27.53479029,25.6784167,8
+49,Almont,22-Jun-15,Balsamorhiza sagittata,9:35,stm-abasa1_.xls,abasa1,,32.03917592,28.71097857,8
+50,Almont,22-Jun-15,Balsamorhiza sagittata,9:35,stm-abasa1_.xls,abasa1,,36.46459681,31.64204127,8
+51,Almont,22-Jun-15,Balsamorhiza sagittata,9:35,stm-abasa1_.xls,abasa1,,40.96559626,34.79705582,8
+52,Almont,22-Jun-15,Balsamorhiza sagittata,9:35,stm-abasa1_.xls,abasa1,,44.06592178,36.34753647,8
+53,Almont,22-Jun-15,Balsamorhiza sagittata,9:35,stm-abasa1_.xls,abasa1,,44.80578461,36.72864736,8
+54,Almont,22-Jun-15,Balsamorhiza sagittata,10:55,stm-abasa2_.xls,abasa2,,20.17317607,23.09263293,9
+55,Almont,22-Jun-15,Balsamorhiza sagittata,10:55,stm-abasa2_.xls,abasa2,,23.98020007,24.94077454,9
+56,Almont,22-Jun-15,Balsamorhiza sagittata,10:55,stm-abasa2_.xls,abasa2,,28.14333407,27.73203138,9
+57,Almont,22-Jun-15,Balsamorhiza sagittata,10:55,stm-abasa2_.xls,abasa2,,32.58369115,31.04163513,9
+58,Almont,22-Jun-15,Balsamorhiza sagittata,10:55,stm-abasa2_.xls,abasa2,,36.86023788,33.69566472,9
+59,Almont,22-Jun-15,Balsamorhiza sagittata,10:55,stm-abasa2_.xls,abasa2,,41.03973694,36.07176285,9
+60,Almont,22-Jun-15,Balsamorhiza sagittata,10:55,stm-abasa2_.xls,abasa2,,45.23399277,38.55953013,9
+61,Almont,22-Jun-15,Balsamorhiza sagittata,11:53,stm-abasa3_.xls,abasa3,,23.26766281,25.66745644,10
+62,Almont,22-Jun-15,Balsamorhiza sagittata,11:53,stm-abasa3_.xls,abasa3,,26.89240392,27.21953011,10
+63,Almont,22-Jun-15,Balsamorhiza sagittata,11:53,stm-abasa3_.xls,abasa3,,31.09145139,29.8180116,10
+64,Almont,22-Jun-15,Balsamorhiza sagittata,11:53,stm-abasa3_.xls,abasa3,,35.51578191,33.06922073,10
+65,Almont,22-Jun-15,Balsamorhiza sagittata,11:53,stm-abasa3_.xls,abasa3,,39.60335363,35.13219554,10
+66,Almont,22-Jun-15,Balsamorhiza sagittata,11:53,stm-abasa3_.xls,abasa3,,44.17612228,38.01373647,10
+67,Almont,23-Jun-15,Balsamorhiza sagittata,7:00,stm-abasa4_.xls,abasa4,,4.497817675,8.016926098,11
+68,Almont,23-Jun-15,Balsamorhiza sagittata,7:00,stm-abasa4_.xls,abasa4,,7.882169437,9.584485753,11
+69,Almont,23-Jun-15,Balsamorhiza sagittata,7:00,stm-abasa4_.xls,abasa4,,12.13098958,12.63246682,11
+70,Almont,23-Jun-15,Balsamorhiza sagittata,7:00,stm-abasa4_.xls,abasa4,,16.51929983,15.79123325,11
+71,Almont,23-Jun-15,Balsamorhiza sagittata,7:00,stm-abasa4_.xls,abasa4,,20.95386378,18.80363439,11
+72,Almont,23-Jun-15,Balsamorhiza sagittata,7:00,stm-abasa4_.xls,abasa4,,25.20726916,21.74206963,11
+73,Almont,23-Jun-15,Balsamorhiza sagittata,7:00,stm-abasa4_.xls,abasa4,,29.7400622,24.72662239,11
+74,Almont,23-Jun-15,Balsamorhiza sagittata,7:00,stm-abasa4_.xls,abasa4,,31.24215864,25.48667132,11
+75,Almont,23-Jun-15,Balsamorhiza sagittata,7:00,stm-abasa4_.xls,abasa4,,35.70612717,29.03029582,11
+76,Almont,23-Jun-15,Balsamorhiza sagittata,7:00,stm-abasa4_.xls,abasa4,,40.60624797,32.46744003,11
+77,Almont,23-Jun-15,Balsamorhiza sagittata,10:09,stm-abasa5_.xls,abasa5,,16.90320867,19.61646347,12
+78,Almont,23-Jun-15,Balsamorhiza sagittata,10:09,stm-abasa5_.xls,abasa5,,20.438119,22.01183815,12
+79,Almont,23-Jun-15,Balsamorhiza sagittata,10:09,stm-abasa5_.xls,abasa5,,24.78833593,25.14046249,12
+80,Almont,23-Jun-15,Balsamorhiza sagittata,10:09,stm-abasa5_.xls,abasa5,,28.71015066,27.3379851,12
+81,Almont,23-Jun-15,Balsamorhiza sagittata,10:09,stm-abasa5_.xls,abasa5,,33.10093943,30.28131879,12
+82,Almont,23-Jun-15,Balsamorhiza sagittata,10:09,stm-abasa5_.xls,abasa5,,37.51992696,33.19407196,12
+83,Almont,23-Jun-15,Balsamorhiza sagittata,10:09,stm-abasa5_.xls,abasa5,,41.93158976,36.2566035,12
+84,Road,24-Jun-15,Artemisia tridentata,8:27,stm-rartr1_.xls,rartr1,,7.863583946,11.35239868,13
+85,Road,24-Jun-15,Artemisia tridentata,8:27,stm-rartr1_.xls,rartr1,,11.53391552,13.88956229,13
+86,Road,24-Jun-15,Artemisia tridentata,8:27,stm-rartr1_.xls,rartr1,,15.87494208,17.05168355,13
+87,Road,24-Jun-15,Artemisia tridentata,8:27,stm-rartr1_.xls,rartr1,,20.05873807,20.01892395,13
+88,Road,24-Jun-15,Artemisia tridentata,8:27,stm-rartr1_.xls,rartr1,,24.52317746,23.43905894,13
+89,Road,24-Jun-15,Artemisia tridentata,8:27,stm-rartr1_.xls,rartr1,,29.14379171,27.14398677,13
+90,Road,24-Jun-15,Artemisia tridentata,8:27,stm-rartr1_.xls,rartr1,,33.62647298,30.82447383,13
+91,Road,24-Jun-15,Artemisia tridentata,8:27,stm-rartr1_.xls,rartr1,,37.91559677,33.4846461,13
+92,Road,24-Jun-15,Artemisia tridentata,9:36,stm-rartr2_.xls,rartr2,,15.11769479,17.90588074,14
+93,Road,24-Jun-15,Artemisia tridentata,9:36,stm-rartr2_.xls,rartr2,,19.04768143,20.52604472,14
+94,Road,24-Jun-15,Artemisia tridentata,9:36,stm-rartr2_.xls,rartr2,,23.46140111,23.9193545,14
+95,Road,24-Jun-15,Artemisia tridentata,9:36,stm-rartr2_.xls,rartr2,,27.59741224,26.75880877,14
+96,Road,24-Jun-15,Artemisia tridentata,9:36,stm-rartr2_.xls,rartr2,,31.84508311,29.53008347,14
+97,Road,24-Jun-15,Artemisia tridentata,9:36,stm-rartr2_.xls,rartr2,,36.49794947,33.29429042,14
+98,Road,24-Jun-15,Artemisia tridentata,9:36,stm-rartr2_.xls,rartr2,,40.87743861,36.49246038,14
+99,Road,24-Jun-15,Artemisia tridentata,10:47,stm-rartr3_.xls,rartr3,,18.75570297,22.46609624,15
+100,Road,24-Jun-15,Artemisia tridentata,10:47,stm-rartr3_.xls,rartr3,,22.39864655,24.78300883,15
+101,Road,24-Jun-15,Artemisia tridentata,10:47,stm-rartr3_.xls,rartr3,,26.55880102,27.44123624,15
+102,Road,24-Jun-15,Artemisia tridentata,10:47,stm-rartr3_.xls,rartr3,,30.96880684,30.36555074,15
+103,Road,24-Jun-15,Artemisia tridentata,10:47,stm-rartr3_.xls,rartr3,,34.8785436,32.23228022,15
+104,Road,24-Jun-15,Artemisia tridentata,10:47,stm-rartr3_.xls,rartr3,,39.37011185,35.26457443,15
+105,Road,24-Jun-15,Artemisia tridentata,10:47,stm-rartr3_.xls,rartr3,,43.82813924,37.9062706,15
+113,Road,25-Jun-15,Veratrum californicum,8:35,stm-rcup1_.xls,rcup1,not yet flowering. Entire chamber area filled. *Leaf not homeothermic*,6.728048197,11.23198223,17
+114,Road,25-Jun-15,Veratrum californicum,8:35,stm-rcup1_.xls,rcup1,not yet flowering. Entire chamber area filled. *Leaf not homeothermic*,10.26019179,13.12784271,17
+115,Road,25-Jun-15,Veratrum californicum,8:35,stm-rcup1_.xls,rcup1,not yet flowering. Entire chamber area filled. *Leaf not homeothermic*,14.6239289,16.17189827,17
+116,Road,25-Jun-15,Veratrum californicum,8:35,stm-rcup1_.xls,rcup1,not yet flowering. Entire chamber area filled. *Leaf not homeothermic*,18.93465716,19.02305946,17
+117,Road,25-Jun-15,Veratrum californicum,8:35,stm-rcup1_.xls,rcup1,not yet flowering. Entire chamber area filled. *Leaf not homeothermic*,23.2467261,21.59509621,17
+118,Road,25-Jun-15,Veratrum californicum,8:35,stm-rcup1_.xls,rcup1,not yet flowering. Entire chamber area filled. *Leaf not homeothermic*,27.43432528,24.18334223,17
+119,Road,25-Jun-15,Veratrum californicum,8:35,stm-rcup1_.xls,rcup1,not yet flowering. Entire chamber area filled. *Leaf not homeothermic*,32.10601934,27.6862751,17
+120,Road,25-Jun-15,Veratrum californicum,8:35,stm-rcup1_.xls,rcup1,not yet flowering. Entire chamber area filled. *Leaf not homeothermic*,35.02655411,29.58614566,17
+121,Road,26-Jun-15,Veratrum californicum,10:10,stm-rcup2_.xls,rcup2,,14.88274587,18.47468834,18
+122,Road,26-Jun-15,Veratrum californicum,10:10,stm-rcup2_.xls,rcup2,,19.03350347,20.94297905,18
+123,Road,26-Jun-15,Veratrum californicum,10:10,stm-rcup2_.xls,rcup2,,23.42399241,23.88677165,18
+124,Road,26-Jun-15,Veratrum californicum,10:10,stm-rcup2_.xls,rcup2,,27.46305745,26.22248662,18
+125,Road,26-Jun-15,Veratrum californicum,10:10,stm-rcup2_.xls,rcup2,,31.8936058,29.16418508,18
+126,Road,26-Jun-15,Veratrum californicum,10:10,stm-rcup2_.xls,rcup2,,36.27032598,31.95930456,18
+127,Road,26-Jun-15,Veratrum californicum,10:10,stm-rcup2_.xls,rcup2,,40.80521851,35.46560084,18
+128,Road,26-Jun-15,Veratrum californicum,1:22,stm-rcup3_.xls,rcup3,,12.58193817,16.90041224,19
+129,Road,26-Jun-15,Veratrum californicum,1:22,stm-rcup3_.xls,rcup3,,16.71112124,19.60984739,19
+130,Road,26-Jun-15,Veratrum californicum,1:22,stm-rcup3_.xls,rcup3,,20.67098007,22.1181455,19
+131,Road,26-Jun-15,Veratrum californicum,1:22,stm-rcup3_.xls,rcup3,,25.14082756,25.66162809,19
+132,Road,26-Jun-15,Veratrum californicum,1:22,stm-rcup3_.xls,rcup3,,29.40635427,28.51854528,19
+133,Road,26-Jun-15,Veratrum californicum,1:22,stm-rcup3_.xls,rcup3,,33.41807098,30.8777818,19
+134,Road,27-Jun-15,Veratrum californicum,8:43,stm-rcup4_.xls,rcup4,,7.781877104,11.01485462,20
+135,Road,27-Jun-15,Veratrum californicum,8:43,stm-rcup4_.xls,rcup4,,11.37701206,13.17916177,20
+136,Road,27-Jun-15,Veratrum californicum,8:43,stm-rcup4_.xls,rcup4,,15.60917072,16.22221095,20
+137,Road,27-Jun-15,Veratrum californicum,8:43,stm-rcup4_.xls,rcup4,,19.6966198,19.19392776,20
+138,Road,27-Jun-15,Veratrum californicum,8:43,stm-rcup4_.xls,rcup4,,24.21592776,22.75329145,20
+139,Road,27-Jun-15,Veratrum californicum,8:43,stm-rcup4_.xls,rcup4,,28.6091685,25.95990601,20
+140,Road,27-Jun-15,Veratrum californicum,8:43,stm-rcup4_.xls,rcup4,,33.09800415,29.70680733,20
+141,Road,27-Jun-15,Veratrum californicum,8:43,stm-rcup4_.xls,rcup4,,33.16587397,29.88047142,20
+142,Road,27-Jun-15,Veratrum californicum,8:43,stm-rcup4_.xls,rcup4,,35.42167333,31.46224467,20
+143,Road,25-Jun-15,Valeriana occidentalis,10:06,stm-rvaoc1_.xls,rvaoc1,"not yet bolted/flowering. This is the ""ground"" leaf morphology before bolting with flower appearance. Entire chamber area filled.  *Measured right before LICOR went bad*",14.11510035,17.2833257,21
+144,Road,25-Jun-15,Valeriana occidentalis,10:06,stm-rvaoc1_.xls,rvaoc1,"not yet bolted/flowering. This is the ""ground"" leaf morphology before bolting with flower appearance. Entire chamber area filled.  *Measured right before LICOR went bad*",18.23850759,20.23207347,21
+145,Road,25-Jun-15,Valeriana occidentalis,10:06,stm-rvaoc1_.xls,rvaoc1,"not yet bolted/flowering. This is the ""ground"" leaf morphology before bolting with flower appearance. Entire chamber area filled.  *Measured right before LICOR went bad*",22.58106435,23.36935832,21
+146,Road,25-Jun-15,Valeriana occidentalis,10:06,stm-rvaoc1_.xls,rvaoc1,"not yet bolted/flowering. This is the ""ground"" leaf morphology before bolting with flower appearance. Entire chamber area filled.  *Measured right before LICOR went bad*",26.88691292,26.60601705,21
+147,Road,25-Jun-15,Valeriana occidentalis,10:06,stm-rvaoc1_.xls,rvaoc1,"not yet bolted/flowering. This is the ""ground"" leaf morphology before bolting with flower appearance. Entire chamber area filled.  *Measured right before LICOR went bad*",31.43663979,32.2471962,21
+148,Road,25-Jun-15,Valeriana occidentalis,10:06,stm-rvaoc1_.xls,rvaoc1,"not yet bolted/flowering. This is the ""ground"" leaf morphology before bolting with flower appearance. Entire chamber area filled.  *Measured right before LICOR went bad*",35.7790919,37.10652974,21
+149,Road,25-Jun-15,Valeriana occidentalis,10:06,stm-rvaoc1_.xls,rvaoc1,"not yet bolted/flowering. This is the ""ground"" leaf morphology before bolting with flower appearance. Entire chamber area filled.  *Measured right before LICOR went bad*",40.44604772,36.48820928,21
+150,Road,25-Jun-15,Valeriana occidentalis,3:40,stm-rvaoc2_.xls,rvaoc2,,9.446789614,13.62445348,22
+151,Road,25-Jun-15,Valeriana occidentalis,3:40,stm-rvaoc2_.xls,rvaoc2,,13.91306527,17.27002665,22
+152,Road,25-Jun-15,Valeriana occidentalis,3:40,stm-rvaoc2_.xls,rvaoc2,,18.25807546,20.60140279,22
+153,Road,25-Jun-15,Valeriana occidentalis,3:40,stm-rvaoc2_.xls,rvaoc2,,22.43810565,23.28176587,22
+154,Road,25-Jun-15,Valeriana occidentalis,3:40,stm-rvaoc2_.xls,rvaoc2,,26.44522158,25.76131172,22
+155,Road,25-Jun-15,Valeriana occidentalis,3:40,stm-rvaoc2_.xls,rvaoc2,,30.5150898,27.90648066,22
+156,Road,26-Jun-15,Valeriana occidentalis,8:10,stm-rvaoc3_.xls,rvaoc3,May be just bolting,6.762965965,11.42984447,23
+157,Road,26-Jun-15,Valeriana occidentalis,8:10,stm-rvaoc3_.xls,rvaoc3,May be just bolting,10.80014159,13.43378576,23
+158,Road,26-Jun-15,Valeriana occidentalis,8:10,stm-rvaoc3_.xls,rvaoc3,May be just bolting,15.3139389,16.76230469,23
+159,Road,26-Jun-15,Valeriana occidentalis,8:10,stm-rvaoc3_.xls,rvaoc3,May be just bolting,19.55943362,19.64097137,23
+160,Road,26-Jun-15,Valeriana occidentalis,8:10,stm-rvaoc3_.xls,rvaoc3,May be just bolting,24.0443428,22.80390663,23
+161,Road,26-Jun-15,Valeriana occidentalis,8:10,stm-rvaoc3_.xls,rvaoc3,May be just bolting,28.43599981,25.56060791,23
+162,Road,26-Jun-15,Valeriana occidentalis,8:10,stm-rvaoc3_.xls,rvaoc3,May be just bolting,32.21139577,28.02302971,23
+163,Road,26-Jun-15,Valeriana occidentalis,11:06,stm-rvaoc4_.xls,rvaoc4,,18.88263283,23.29305445,24
+164,Road,26-Jun-15,Valeriana occidentalis,11:06,stm-rvaoc4_.xls,rvaoc4,,23.11536407,25.47206904,24
+165,Road,26-Jun-15,Valeriana occidentalis,11:06,stm-rvaoc4_.xls,rvaoc4,,27.44996847,28.74123446,24
+166,Road,26-Jun-15,Valeriana occidentalis,11:06,stm-rvaoc4_.xls,rvaoc4,,31.55197105,30.87781105,24
+167,Road,26-Jun-15,Valeriana occidentalis,11:06,stm-rvaoc4_.xls,rvaoc4,,35.85495275,33.79106725,24
+168,Road,26-Jun-15,Valeriana occidentalis,11:06,stm-rvaoc4_.xls,rvaoc4,,40.38357697,36.8897138,24
+169,Road,27-Jun-15,Valeriana occidentalis,9:50,stm-rvaoc5_.xls,rvaoc5,,11.33336353,17.04616636,25
+170,Road,27-Jun-15,Valeriana occidentalis,9:50,stm-rvaoc5_.xls,rvaoc5,,15.30529327,18.6510746,25
+171,Road,27-Jun-15,Valeriana occidentalis,9:50,stm-rvaoc5_.xls,rvaoc5,,19.50965017,21.28510768,25
+172,Road,27-Jun-15,Valeriana occidentalis,9:50,stm-rvaoc5_.xls,rvaoc5,,23.96439285,24.07448692,25
+173,Road,27-Jun-15,Valeriana occidentalis,9:50,stm-rvaoc5_.xls,rvaoc5,,28.0807237,26.43140043,25
+174,Road,27-Jun-15,Valeriana occidentalis,9:50,stm-rvaoc5_.xls,rvaoc5,,32.55262858,29.66728948,25
+175,Road,27-Jun-15,Valeriana occidentalis,9:50,stm-rvaoc5_.xls,rvaoc5,,37.22068609,32.37171504,25
+176,Road,26-Jun-15,Potentilla gracilis,9:10,stm-rpoga1_.xls,rpoga1,,11.26320184,13.59395002,26
+177,Road,26-Jun-15,Potentilla gracilis,9:10,stm-rpoga1_.xls,rpoga1,,15.18817825,16.1991216,26
+178,Road,26-Jun-15,Potentilla gracilis,9:10,stm-rpoga1_.xls,rpoga1,,19.3655351,19.37379977,26
+179,Road,26-Jun-15,Potentilla gracilis,9:10,stm-rpoga1_.xls,rpoga1,,23.94553808,23.32228915,26
+180,Road,26-Jun-15,Potentilla gracilis,9:10,stm-rpoga1_.xls,rpoga1,,28.05205828,26.3096358,26
+181,Road,26-Jun-15,Potentilla gracilis,9:10,stm-rpoga1_.xls,rpoga1,,32.49095815,29.81904068,26
+182,Road,26-Jun-15,Potentilla gracilis,9:10,stm-rpoga1_.xls,rpoga1,,36.89926885,33.06342112,26
+183,Road,26-Jun-15,Potentilla gracilis,12:34,stm-rpoga2_.xls,rpoga2,Restarted with cold H2O.  Machine accidentally shut down and restarted between 20 and 25 °C measurements.,12.51206423,16.47611211,27
+184,Road,26-Jun-15,Potentilla gracilis,12:34,stm-rpoga2_.xls,rpoga2,Restarted with cold H2O.  Machine accidentally shut down and restarted between 20 and 25 °C measurements.,16.62006048,18.89564044,27
+185,Road,26-Jun-15,Potentilla gracilis,12:34,stm-rpoga2_.xls,rpoga2,Restarted with cold H2O.  Machine accidentally shut down and restarted between 20 and 25 °C measurements.,20.77060877,22.02077306,27
+186,Road,26-Jun-15,Potentilla gracilis,12:34,stm-rpoga2_.xls,rpoga2,Restarted with cold H2O.  Machine accidentally shut down and restarted between 20 and 25 °C measurements.,25.32854335,25.9349074,27
+187,Road,26-Jun-15,Potentilla gracilis,12:34,stm-rpoga2_.xls,rpoga2,Restarted with cold H2O.  Machine accidentally shut down and restarted between 20 and 25 °C measurements.,29.49837697,28.59147402,27
+188,Road,26-Jun-15,Potentilla gracilis,12:34,stm-rpoga2_.xls,rpoga2,Restarted with cold H2O.  Machine accidentally shut down and restarted between 20 and 25 °C measurements.,33.70604477,31.73561147,27
+189,Road,26-Jun-15,Potentilla gracilis,12:34,stm-rpoga2_.xls,rpoga2,Restarted with cold H2O.  Machine accidentally shut down and restarted between 20 and 25 °C measurements.,38.10775375,34.50693817,27
+190,Road,26-Jun-15,Potentilla gracilis,2:33,stm-rpoga3_.xls,rpoga3,,14.00655473,18.0916406,28
+191,Road,26-Jun-15,Potentilla gracilis,2:33,stm-rpoga3_.xls,rpoga3,,17.66153781,20.2069177,28
+192,Road,26-Jun-15,Potentilla gracilis,2:33,stm-rpoga3_.xls,rpoga3,,21.91943092,23.20401675,28
+193,Road,26-Jun-15,Potentilla gracilis,2:33,stm-rpoga3_.xls,rpoga3,,26.10496076,26.21502406,28
+194,Road,26-Jun-15,Potentilla gracilis,2:33,stm-rpoga3_.xls,rpoga3,,30.40401904,29.20101598,28
+195,Road,26-Jun-15,Potentilla gracilis,2:33,stm-rpoga3_.xls,rpoga3,,34.52444865,31.95382551,28
+196,Road,26-Jun-15,Potentilla gracilis,3:16,stm-rpoga4_.xls,rpoga4,,16.20133146,20.04272753,29
+197,Road,26-Jun-15,Potentilla gracilis,3:16,stm-rpoga4_.xls,rpoga4,,20.13994026,21.84405708,29
+198,Road,26-Jun-15,Potentilla gracilis,3:16,stm-rpoga4_.xls,rpoga4,,24.38416748,24.61657041,29
+199,Road,26-Jun-15,Potentilla gracilis,3:16,stm-rpoga4_.xls,rpoga4,,28.74243126,27.88434881,29
+200,Road,26-Jun-15,Potentilla gracilis,3:16,stm-rpoga4_.xls,rpoga4,,33.11978327,30.85455335,29
+201,Road,26-Jun-15,Potentilla gracilis,3:16,stm-rpoga4_.xls,rpoga4,,37.63151143,34.27998021,29
+202,Road,26-Jun-15,Potentilla gracilis,3:16,stm-rpoga4_.xls,rpoga4,,42.03004506,37.78396428,29
+203,Pfeiler,27-Jun-15,Delphinium barbeyi,1:10,stm-pdeba1_.xls,pdeba1,,10.48081506,14.67091249,30
+204,Pfeiler,27-Jun-15,Delphinium barbeyi,1:10,stm-pdeba1_.xls,pdeba1,,14.55982895,17.56608327,30
+205,Pfeiler,27-Jun-15,Delphinium barbeyi,1:10,stm-pdeba1_.xls,pdeba1,,18.60036074,20.00463333,30
+206,Pfeiler,27-Jun-15,Delphinium barbeyi,1:10,stm-pdeba1_.xls,pdeba1,,22.87709363,22.71480331,30
+207,Pfeiler,27-Jun-15,Delphinium barbeyi,1:10,stm-pdeba1_.xls,pdeba1,,27.33748601,26.27887828,30
+208,Pfeiler,27-Jun-15,Delphinium barbeyi,1:10,stm-pdeba1_.xls,pdeba1,,31.73365224,29.5041804,30
+209,Pfeiler,27-Jun-15,Delphinium barbeyi,1:10,stm-pdeba1_.xls,pdeba1,,36.17657598,32.74855855,30
+210,Pfeiler,27-Jun-15,Delphinium barbeyi,1:10,stm-pdeba1_.xls,pdeba1,,38.21859894,33.77542623,30
+211,Pfeiler,27-Jun-15,Delphinium barbeyi,3:15,stm-pdeba2_.xls,pdeba2,,10.0803065,15.99361426,31
+212,Pfeiler,27-Jun-15,Delphinium barbeyi,3:15,stm-pdeba2_.xls,pdeba2,,13.76191235,17.42857997,31
+213,Pfeiler,27-Jun-15,Delphinium barbeyi,3:15,stm-pdeba2_.xls,pdeba2,,18.1741951,20.56316783,31
+214,Pfeiler,27-Jun-15,Delphinium barbeyi,3:15,stm-pdeba2_.xls,pdeba2,,22.27404429,22.8696668,31
+215,Pfeiler,27-Jun-15,Delphinium barbeyi,3:15,stm-pdeba2_.xls,pdeba2,,26.13097763,24.7663765,31
+216,Pfeiler,27-Jun-15,Delphinium barbeyi,3:15,stm-pdeba2_.xls,pdeba2,,30.60260022,27.98904037,31
+217,Pfeiler,27-Jun-15,Delphinium barbeyi,3:15,stm-pdeba2_.xls,pdeba2,,35.06376139,31.52686399,31
+218,Pfeiler,28-Jun-15,Delphinium barbeyi,9:36,stm-pdeba3_.xls,pdeba3,,10.14779091,13.85351607,32
+219,Pfeiler,28-Jun-15,Delphinium barbeyi,9:36,stm-pdeba3_.xls,pdeba3,,14.25876637,15.62535706,32
+220,Pfeiler,28-Jun-15,Delphinium barbeyi,9:36,stm-pdeba3_.xls,pdeba3,,18.55945841,19.04875819,32
+221,Pfeiler,28-Jun-15,Delphinium barbeyi,9:36,stm-pdeba3_.xls,pdeba3,,22.81336619,21.9324969,32
+222,Pfeiler,28-Jun-15,Delphinium barbeyi,9:36,stm-pdeba3_.xls,pdeba3,,27.03043569,25.29403725,32
+223,Pfeiler,28-Jun-15,Delphinium barbeyi,9:36,stm-pdeba3_.xls,pdeba3,,31.38039754,28.54410451,32
+224,Pfeiler,28-Jun-15,Delphinium barbeyi,9:36,stm-pdeba3_.xls,pdeba3,,36.10727717,32.76301702,32
+225,Pfeiler,28-Jun-15,Delphinium barbeyi,1:00,stm-pdeba4_.xls,pdeba4,Lots of psyn oscillation,10.35571912,15.85134792,33
+226,Pfeiler,28-Jun-15,Delphinium barbeyi,1:00,stm-pdeba4_.xls,pdeba4,Lots of psyn oscillation,13.74041843,17.44648209,33
+227,Pfeiler,28-Jun-15,Delphinium barbeyi,1:00,stm-pdeba4_.xls,pdeba4,Lots of psyn oscillation,18.28113378,20.38409818,33
+228,Pfeiler,28-Jun-15,Delphinium barbeyi,1:00,stm-pdeba4_.xls,pdeba4,Lots of psyn oscillation,22.60451635,23.23459956,33
+229,Pfeiler,28-Jun-15,Delphinium barbeyi,1:00,stm-pdeba4_.xls,pdeba4,Lots of psyn oscillation,22.57680181,23.18356806,33
+230,Pfeiler,28-Jun-15,Delphinium barbeyi,1:00,stm-pdeba4_.xls,pdeba4,Lots of psyn oscillation,26.50870234,25.34980787,33
+231,Pfeiler,28-Jun-15,Delphinium barbeyi,1:00,stm-pdeba4_.xls,pdeba4,Lots of psyn oscillation,31.11046651,28.89960213,33
+232,Pfeiler,28-Jun-15,Delphinium barbeyi,1:00,stm-pdeba4_.xls,pdeba4,Lots of psyn oscillation,35.14567947,31.19395116,33
+233,Pfeiler,28-Jun-15,Delphinium barbeyi,1:00,stm-pdeba4_.xls,pdeba4,Lots of psyn oscillation,37.38370336,32.17417272,33
+234,Pfeiler,27-Jun-15,Ligusticum porteri,11:53,stm-plipo1_.xls,plipo1,,11.0897377,15.13020134,34
+235,Pfeiler,27-Jun-15,Ligusticum porteri,11:53,stm-plipo1_.xls,plipo1,,15.44962851,17.64876404,34
+236,Pfeiler,27-Jun-15,Ligusticum porteri,11:53,stm-plipo1_.xls,plipo1,,19.52748896,20.25072873,34
+237,Pfeiler,27-Jun-15,Ligusticum porteri,11:53,stm-plipo1_.xls,plipo1,,23.60861994,22.4989596,34
+238,Pfeiler,27-Jun-15,Ligusticum porteri,11:53,stm-plipo1_.xls,plipo1,,27.85604401,25.57854246,34
+239,Pfeiler,27-Jun-15,Ligusticum porteri,11:53,stm-plipo1_.xls,plipo1,,32.37626139,29.03072879,34
+240,Pfeiler,27-Jun-15,Ligusticum porteri,11:53,stm-plipo1_.xls,plipo1,,36.92025909,32.31081645,34
+241,Pfeiler,27-Jun-15,Ligusticum porteri,2:12,stm-plipo2_.xls,plipo2,,10.70310154,15.9723753,35
+242,Pfeiler,27-Jun-15,Ligusticum porteri,2:12,stm-plipo2_.xls,plipo2,,14.84513969,18.40071894,35
+243,Pfeiler,27-Jun-15,Ligusticum porteri,2:12,stm-plipo2_.xls,plipo2,,18.99520378,21.11791407,35
+244,Pfeiler,27-Jun-15,Ligusticum porteri,2:12,stm-plipo2_.xls,plipo2,,23.28329989,23.78333549,35
+245,Pfeiler,27-Jun-15,Ligusticum porteri,2:12,stm-plipo2_.xls,plipo2,,27.2123188,25.86532033,35
+246,Pfeiler,27-Jun-15,Ligusticum porteri,2:12,stm-plipo2_.xls,plipo2,,31.73123245,29.1838857,35
+247,Pfeiler,27-Jun-15,Ligusticum porteri,2:12,stm-plipo2_.xls,plipo2,,36.39242045,32.82670644,35
+248,Pfeiler,28-Jun-15,Ligusticum porteri,10:35,stm-plipo3_.xls,plipo3,,9.178029696,14.45707207,36
+249,Pfeiler,28-Jun-15,Ligusticum porteri,10:35,stm-plipo3_.xls,plipo3,,12.82878017,16.51105423,36
+250,Pfeiler,28-Jun-15,Ligusticum porteri,10:35,stm-plipo3_.xls,plipo3,,16.95842463,18.84575132,36
+251,Pfeiler,28-Jun-15,Ligusticum porteri,10:35,stm-plipo3_.xls,plipo3,,20.8683094,20.49583384,36
+252,Pfeiler,28-Jun-15,Ligusticum porteri,10:35,stm-plipo3_.xls,plipo3,,25.01067848,23.20712751,36
+253,Pfeiler,28-Jun-15,Ligusticum porteri,10:35,stm-plipo3_.xls,plipo3,,29.28999774,25.90175514,36
+254,Pfeiler,28-Jun-15,Ligusticum porteri,10:35,stm-plipo3_.xls,plipo3,,32.9969485,28.68983625,36
+255,Pfeiler,28-Jun-15,Ligusticum porteri,2:10,stm-plipo4_.xls,plipo4,Lots of psyn oscillation.  So cleaned gaskets and restarted.,10.21601289,14.39582329,37
+256,Pfeiler,28-Jun-15,Ligusticum porteri,2:10,stm-plipo4_.xls,plipo4,Lots of psyn oscillation.  So cleaned gaskets and restarted.,13.33909225,15.96275349,37
+257,Pfeiler,28-Jun-15,Ligusticum porteri,2:10,stm-plipo4_.xls,plipo4,Lots of psyn oscillation.  So cleaned gaskets and restarted.,17.3049413,18.28346151,37
+258,Pfeiler,28-Jun-15,Ligusticum porteri,2:10,stm-plipo4_.xls,plipo4,Lots of psyn oscillation.  So cleaned gaskets and restarted.,21.58622437,21.00795453,37
+259,Pfeiler,28-Jun-15,Ligusticum porteri,2:10,stm-plipo4_.xls,plipo4,Lots of psyn oscillation.  So cleaned gaskets and restarted.,26.02807109,24.46688042,37
+260,Pfeiler,29-Jun-15,Ligusticum porteri,9:04,stm-plipo5_.xls,plipo5,,6.168276946,11.12942969,38
+261,Pfeiler,29-Jun-15,Ligusticum porteri,9:04,stm-plipo5_.xls,plipo5,,10.16624571,13.00644035,38
+262,Pfeiler,29-Jun-15,Ligusticum porteri,9:04,stm-plipo5_.xls,plipo5,,14.25584507,15.03295256,38
+263,Pfeiler,29-Jun-15,Ligusticum porteri,9:04,stm-plipo5_.xls,plipo5,,18.48142522,17.43636309,38
+264,Pfeiler,29-Jun-15,Ligusticum porteri,9:04,stm-plipo5_.xls,plipo5,,22.63740247,19.53584658,38
+265,Pfeiler,29-Jun-15,Ligusticum porteri,9:04,stm-plipo5_.xls,plipo5,,27.40163142,23.73783124,38
+266,Pfeiler,29-Jun-15,Ligusticum porteri,9:04,stm-plipo5_.xls,plipo5,,31.89609617,26.424764,38
+267,Pfeiler,29-Jun-15,Ligusticum porteri,9:59,stm-plipo6_.xls,plipo6,,4.978653208,10.98673026,39
+268,Pfeiler,29-Jun-15,Ligusticum porteri,9:59,stm-plipo6_.xls,plipo6,,8.556928317,11.87030958,39
+269,Pfeiler,29-Jun-15,Ligusticum porteri,9:59,stm-plipo6_.xls,plipo6,,12.58086027,14.40218709,39
+270,Pfeiler,29-Jun-15,Ligusticum porteri,9:59,stm-plipo6_.xls,plipo6,,16.71179632,16.50689824,39
+271,Pfeiler,29-Jun-15,Ligusticum porteri,9:59,stm-plipo6_.xls,plipo6,,21.01664098,18.89803352,39
+272,Pfeiler,29-Jun-15,Ligusticum porteri,9:59,stm-plipo6_.xls,plipo6,,25.2855381,21.33233172,39
+273,Pfeiler,29-Jun-15,Ligusticum porteri,9:59,stm-plipo6_.xls,plipo6,,30.09818802,25.14217911,39
+274,Pfeiler,29-Jun-15,Ligusticum porteri,9:59,stm-plipo6_.xls,plipo6,,32.24805222,27.17677778,39
+275,Pfeiler,29-Jun-15,Ligusticum porteri,12:15,stm-plipo7_.xls,plipo7,,7.271260611,11.87614848,40
+276,Pfeiler,29-Jun-15,Ligusticum porteri,12:15,stm-plipo7_.xls,plipo7,,10.4593949,13.29467513,40
+277,Pfeiler,29-Jun-15,Ligusticum porteri,12:15,stm-plipo7_.xls,plipo7,,14.93577894,16.60529925,40
+278,Pfeiler,29-Jun-15,Ligusticum porteri,12:15,stm-plipo7_.xls,plipo7,,18.70328585,18.19619967,40
+279,Pfeiler,29-Jun-15,Ligusticum porteri,12:15,stm-plipo7_.xls,plipo7,,23.05605202,21.00296199,40
+280,Pfeiler,29-Jun-15,Ligusticum porteri,12:15,stm-plipo7_.xls,plipo7,,27.87597135,25.58865178,40
+281,Pfeiler,29-Jun-15,Ligusticum porteri,12:15,stm-plipo7_.xls,plipo7,,32.27099635,28.28875122,40
+282,Pfeiler,29-Jun-15,Ligusticum porteri,12:15,stm-plipo7_.xls,plipo7,,34.85181402,29.46734225,40
+283,Pfeiler,28-Jun-15,Veratrum californicum,8:45,stm-pcup1_.xls,pcup1,Not yet flowering.  ,7.512911479,12.70352688,41
+284,Pfeiler,28-Jun-15,Veratrum californicum,8:45,stm-pcup1_.xls,pcup1,Not yet flowering.  ,11.31197828,14.71702601,41
+285,Pfeiler,28-Jun-15,Veratrum californicum,8:45,stm-pcup1_.xls,pcup1,Not yet flowering.  ,15.5214962,17.26071574,41
+286,Pfeiler,28-Jun-15,Veratrum californicum,8:45,stm-pcup1_.xls,pcup1,Not yet flowering.  ,19.87404404,20.21229858,41
+287,Pfeiler,28-Jun-15,Veratrum californicum,8:45,stm-pcup1_.xls,pcup1,Not yet flowering.  ,24.36604551,23.31912015,41
+288,Pfeiler,28-Jun-15,Veratrum californicum,8:45,stm-pcup1_.xls,pcup1,Not yet flowering.  ,28.93289948,26.49936028,41
+289,Pfeiler,28-Jun-15,Veratrum californicum,8:45,stm-pcup1_.xls,pcup1,Not yet flowering.  ,33.11992009,28.9184742,41
+290,Pfeiler,28-Jun-15,Veratrum californicum,11:50,stm-pcup2_.xls,pcup2,Not yet flowering.  ,9.686122449,15.69121914,42
+291,Pfeiler,28-Jun-15,Veratrum californicum,11:50,stm-pcup2_.xls,pcup2,Not yet flowering.  ,13.73260028,18.51278509,42
+292,Pfeiler,28-Jun-15,Veratrum californicum,11:50,stm-pcup2_.xls,pcup2,Not yet flowering.  ,17.75349973,20.00906576,42
+293,Pfeiler,28-Jun-15,Veratrum californicum,11:50,stm-pcup2_.xls,pcup2,Not yet flowering.  ,22.4557752,23.79086622,42
+294,Pfeiler,28-Jun-15,Veratrum californicum,11:50,stm-pcup2_.xls,pcup2,Not yet flowering.  ,26.42089424,25.78565712,42
+295,Pfeiler,28-Jun-15,Veratrum californicum,11:50,stm-pcup2_.xls,pcup2,Not yet flowering.  ,30.81959407,28.3104833,42
+296,Pfeiler,28-Jun-15,Veratrum californicum,11:50,stm-pcup2_.xls,pcup2,Not yet flowering.  ,35.2831721,31.3917305,42
+297,Pfeiler,29-Jun-15,Veratrum californicum,11:04,stm-pcup3_.xls,pcup3,Not yet flowering.  ,7.988101546,14.70197633,43
+298,Pfeiler,29-Jun-15,Veratrum californicum,11:04,stm-pcup3_.xls,pcup3,Not yet flowering.  ,11.77955354,16.52685636,43
+299,Pfeiler,29-Jun-15,Veratrum californicum,11:04,stm-pcup3_.xls,pcup3,Not yet flowering.  ,15.68855235,18.04195913,43
+300,Pfeiler,29-Jun-15,Veratrum californicum,11:04,stm-pcup3_.xls,pcup3,Not yet flowering.  ,19.49770304,19.46178131,43
+301,Pfeiler,29-Jun-15,Veratrum californicum,11:04,stm-pcup3_.xls,pcup3,Not yet flowering.  ,23.68255526,21.35973587,43
+302,Pfeiler,29-Jun-15,Veratrum californicum,11:04,stm-pcup3_.xls,pcup3,Not yet flowering.  ,28.64447899,25.55960579,43
+303,Pfeiler,29-Jun-15,Veratrum californicum,11:04,stm-pcup3_.xls,pcup3,Not yet flowering.  ,32.92792943,28.16868146,43
+304,Painter Boy,02-Jul-15,Chamerion angustifolium,8:30,stm-pbchan1_.xls,pbchan1,"Not yet flowering. Leaf filled basically the entire chamber, even though I cut into pieces (didn't entirely fill but difference likely negligable).",5.687921206,10.34513804,44
+305,Painter Boy,02-Jul-15,Chamerion angustifolium,8:30,stm-pbchan1_.xls,pbchan1,"Not yet flowering. Leaf filled basically the entire chamber, even though I cut into pieces (didn't entirely fill but difference likely negligable).",9.272693443,12.22729543,44
+306,Painter Boy,02-Jul-15,Chamerion angustifolium,8:30,stm-pbchan1_.xls,pbchan1,"Not yet flowering. Leaf filled basically the entire chamber, even though I cut into pieces (didn't entirely fill but difference likely negligable).",13.31818822,14.53323949,44
+307,Painter Boy,02-Jul-15,Chamerion angustifolium,8:30,stm-pbchan1_.xls,pbchan1,"Not yet flowering. Leaf filled basically the entire chamber, even though I cut into pieces (didn't entirely fill but difference likely negligable).",17.17647667,16.51767604,44
+308,Painter Boy,02-Jul-15,Chamerion angustifolium,8:30,stm-pbchan1_.xls,pbchan1,"Not yet flowering. Leaf filled basically the entire chamber, even though I cut into pieces (didn't entirely fill but difference likely negligable).",21.27926343,18.65966619,44
+309,Painter Boy,02-Jul-15,Chamerion angustifolium,8:30,stm-pbchan1_.xls,pbchan1,"Not yet flowering. Leaf filled basically the entire chamber, even though I cut into pieces (didn't entirely fill but difference likely negligable).",26.00258369,22.19809113,44
+310,Painter Boy,02-Jul-15,Chamerion angustifolium,8:30,stm-pbchan1_.xls,pbchan1,"Not yet flowering. Leaf filled basically the entire chamber, even though I cut into pieces (didn't entirely fill but difference likely negligable).",30.72997093,25.47975578,44
+311,Painter Boy,02-Jul-15,Chamerion angustifolium,8:30,stm-pbchan1_.xls,pbchan1,"Not yet flowering. Leaf filled basically the entire chamber, even though I cut into pieces (didn't entirely fill but difference likely negligable).",32.86333923,27.90261917,44
+312,Painter Boy,02-Jul-15,Chamerion angustifolium,8:30,stm-pbchan1_.xls,pbchan1,"Not yet flowering. Leaf filled basically the entire chamber, even though I cut into pieces (didn't entirely fill but difference likely negligable).",34.7931193,29.8875459,44
+313,Painter Boy,02-Jul-15,Chamerion angustifolium,10:50,stm-pbchan2_.xls,pbchan2,Note RH of first measurement.,5.836493929,9.886653741,45
+314,Painter Boy,02-Jul-15,Chamerion angustifolium,10:50,stm-pbchan2_.xls,pbchan2,Note RH of first measurement.,9.075873057,11.19054216,45
+315,Painter Boy,02-Jul-15,Chamerion angustifolium,10:50,stm-pbchan2_.xls,pbchan2,Note RH of first measurement.,13.23793716,13.50091972,45
+316,Painter Boy,02-Jul-15,Chamerion angustifolium,10:50,stm-pbchan2_.xls,pbchan2,Note RH of first measurement.,17.94160372,17.47299779,45
+317,Painter Boy,02-Jul-15,Chamerion angustifolium,10:50,stm-pbchan2_.xls,pbchan2,Note RH of first measurement.,22.34904264,20.55399412,45
+318,Painter Boy,02-Jul-15,Chamerion angustifolium,10:50,stm-pbchan2_.xls,pbchan2,Note RH of first measurement.,26.47579473,23.61887614,45
+319,Painter Boy,02-Jul-15,Chamerion angustifolium,10:50,stm-pbchan2_.xls,pbchan2,Note RH of first measurement.,30.79141439,26.77938309,45
+320,Painter Boy,02-Jul-15,Chamerion angustifolium,12:00,stm-pbchan3_.xls,pbchan3,,7.599770737,13.26484954,46
+321,Painter Boy,02-Jul-15,Chamerion angustifolium,12:00,stm-pbchan3_.xls,pbchan3,,11.24118722,14.71655057,46
+322,Painter Boy,02-Jul-15,Chamerion angustifolium,12:00,stm-pbchan3_.xls,pbchan3,,15.39915352,17.17827123,46
+323,Painter Boy,02-Jul-15,Chamerion angustifolium,12:00,stm-pbchan3_.xls,pbchan3,,19.37309812,19.36225306,46
+324,Painter Boy,02-Jul-15,Chamerion angustifolium,12:00,stm-pbchan3_.xls,pbchan3,,23.46374766,21.30176722,46
+325,Painter Boy,02-Jul-15,Chamerion angustifolium,12:00,stm-pbchan3_.xls,pbchan3,,6.628061104,12.90092869,46
+326,Painter Boy,02-Jul-15,Chamerion angustifolium,12:00,stm-pbchan3_.xls,pbchan3,,4.531042353,11.55904776,46
+327,Painter Boy,01-Jul-15,Veratrum californicum,9:25,stm-pbcup1_.xls,pbcup1,,6.890148608,13.26327559,47
+328,Painter Boy,01-Jul-15,Veratrum californicum,9:25,stm-pbcup1_.xls,pbcup1,,10.52380486,14.87222939,47
+329,Painter Boy,01-Jul-15,Veratrum californicum,9:25,stm-pbcup1_.xls,pbcup1,,14.78871333,17.30275752,47
+330,Painter Boy,01-Jul-15,Veratrum californicum,9:25,stm-pbcup1_.xls,pbcup1,,18.87637761,19.55135167,47
+331,Painter Boy,01-Jul-15,Veratrum californicum,9:25,stm-pbcup1_.xls,pbcup1,,23.0577877,21.73047981,47
+332,Painter Boy,01-Jul-15,Veratrum californicum,9:25,stm-pbcup1_.xls,pbcup1,,27.40008049,24.66480764,47
+333,Painter Boy,01-Jul-15,Veratrum californicum,9:25,stm-pbcup1_.xls,pbcup1,,32.00419134,28.01109746,47
+334,Painter Boy,01-Jul-15,Veratrum californicum,10:05,stm-pbcup2_.xls,pbcup2,,6.748171552,12.83543199,48
+335,Painter Boy,01-Jul-15,Veratrum californicum,10:05,stm-pbcup2_.xls,pbcup2,,10.63822168,14.89551385,48
+336,Painter Boy,01-Jul-15,Veratrum californicum,10:05,stm-pbcup2_.xls,pbcup2,,14.85821126,17.46691526,48
+337,Painter Boy,01-Jul-15,Veratrum californicum,10:05,stm-pbcup2_.xls,pbcup2,,19.2400809,20.26490428,48
+338,Painter Boy,01-Jul-15,Veratrum californicum,10:05,stm-pbcup2_.xls,pbcup2,,23.2647672,22.15962105,48
+339,Painter Boy,01-Jul-15,Veratrum californicum,10:05,stm-pbcup2_.xls,pbcup2,,27.39834722,24.38903707,48
+340,Painter Boy,01-Jul-15,Veratrum californicum,10:05,stm-pbcup2_.xls,pbcup2,,32.19936574,27.9469532,48
+341,Painter Boy,01-Jul-15,Veratrum californicum,10:45,stm-pbcup3_.xls,pbcup3,,7.679033248,13.73717569,49
+342,Painter Boy,01-Jul-15,Veratrum californicum,10:45,stm-pbcup3_.xls,pbcup3,,11.43487771,15.55589237,49
+343,Painter Boy,01-Jul-15,Veratrum californicum,10:45,stm-pbcup3_.xls,pbcup3,,15.67594401,18.49505895,49
+344,Painter Boy,01-Jul-15,Veratrum californicum,10:45,stm-pbcup3_.xls,pbcup3,,19.61058846,20.67319705,49
+345,Painter Boy,01-Jul-15,Veratrum californicum,10:45,stm-pbcup3_.xls,pbcup3,,24.15769717,23.84594243,49
+346,Painter Boy,01-Jul-15,Veratrum californicum,10:45,stm-pbcup3_.xls,pbcup3,,29.10275218,28.25888405,49
+347,Painter Boy,01-Jul-15,Veratrum californicum,10:45,stm-pbcup3_.xls,pbcup3,,33.44797363,30.96437327,49
+355,Painter Boy,01-Jul-15,Valeriana occidentalis,12:15,stm-pbvaoc2_.xls,pbvaoc2,Not yet flowering.  ,9.337559128,12.93115985,51
+356,Painter Boy,01-Jul-15,Valeriana occidentalis,12:15,stm-pbvaoc2_.xls,pbvaoc2,Not yet flowering.  ,13.25316722,15.11883049,51
+357,Painter Boy,01-Jul-15,Valeriana occidentalis,12:15,stm-pbvaoc2_.xls,pbvaoc2,Not yet flowering.  ,17.59477514,18.46889636,51
+358,Painter Boy,01-Jul-15,Valeriana occidentalis,12:15,stm-pbvaoc2_.xls,pbvaoc2,Not yet flowering.  ,21.5374499,20.51394641,51
+359,Painter Boy,01-Jul-15,Valeriana occidentalis,12:15,stm-pbvaoc2_.xls,pbvaoc2,Not yet flowering.  ,25.56309153,23.05117633,51
+360,Painter Boy,01-Jul-15,Valeriana occidentalis,12:15,stm-pbvaoc2_.xls,pbvaoc2,Not yet flowering.  ,30.22326266,27.18224894,51
+927,CBT,,Valeriana occidentalis,,062016-stm-vaoc1,vaoc1,,2.520378637,8.399407323,111
+928,CBT,,Valeriana occidentalis,,062016-stm-vaoc1,vaoc1,,6.851621246,11.35917772,111
+929,CBT,,Valeriana occidentalis,,062016-stm-vaoc1,vaoc1,,11.08341821,14.34101219,111
+930,CBT,,Valeriana occidentalis,,062016-stm-vaoc1,vaoc1,,15.73710575,17.90824763,111
+931,CBT,,Valeriana occidentalis,,062016-stm-vaoc1,vaoc1,,20.19191068,21.04402784,111
+932,CBT,,Valeriana occidentalis,,062016-stm-vaoc1,vaoc1,,24.58563919,24.23014386,111
+933,CBT,,Valeriana occidentalis,,062016-stm-vaoc1,vaoc1,,29.15012538,27.55572611,111
+934,CBT,,Valeriana occidentalis,,062016-stm-vaoc1,vaoc1,,33.78636042,31.31230024,111
+935,CBT,,Valeriana occidentalis,,062016-stm-vaoc1,vaoc1,,38.27080231,34.13885498,111
+936,CBT,,Valeriana occidentalis,,062016-stm-vaoc1,vaoc1,,38.30444616,34.21525955,111
+937,CBT,,Valeriana occidentalis,,062016-stm-vaoc1,vaoc1,,42.9619077,37.10285034,111
+938,CBT,,Valeriana occidentalis,,062016-stm-vaoc1,vaoc1,,47.31881231,39.41974538,111
+939,CBT,,Taraxacum,,062016-stm-taof1,taof1,,5.354822063,12.16343873,112
+940,CBT,,Taraxacum,,062016-stm-taof1,taof1,,7.314371204,13.42035878,112
+941,CBT,,Taraxacum,,062016-stm-taof1,taof1,,11.58015149,16.48818588,112
+942,CBT,,Taraxacum,,062016-stm-taof1,taof1,,16.23412921,19.66657333,112
+943,CBT,,Taraxacum,,062016-stm-taof1,taof1,,20.75292104,22.72655296,112
+944,CBT,,Taraxacum,,062016-stm-taof1,taof1,,24.99556808,25.51531499,112
+945,CBT,,Taraxacum,,062016-stm-taof1,taof1,,29.71383667,29.20232366,112
+946,CBT,,Taraxacum,,062016-stm-taof1,taof1,,34.17488632,31.92839559,112
+947,CBT,,Taraxacum,,062016-stm-taof1,taof1,,39.04651922,35.80577596,112
+948,CBT,,Taraxacum,,062016-stm-taof1,taof1,,43.30949097,37.58836085,112
+949,CBT,,Taraxacum,,062016-stm-taof1,taof1,,47.40520732,39.20537923,112
+950,CBT,,Valeriana occidentalis,,062016-stm-vaoc2,vaoc2,,10.93550148,17.85064494,113
+951,CBT,,Valeriana occidentalis,,062016-stm-vaoc2,vaoc2,,15.15300865,20.67138545,113
+952,CBT,,Valeriana occidentalis,,062016-stm-vaoc2,vaoc2,,19.92394892,25.50427373,113
+953,CBT,,Valeriana occidentalis,,062016-stm-vaoc2,vaoc2,,24.34571762,28.24749654,113
+954,CBT,,Valeriana occidentalis,,062016-stm-vaoc2,vaoc2,,28.84591522,31.29454219,113
+955,CBT,,Valeriana occidentalis,,062016-stm-vaoc2,vaoc2,,33.25473913,34.24009959,113
+956,CBT,,Valeriana occidentalis,,062016-stm-vaoc2,vaoc2,,37.66674067,36.92050908,113
+957,CBT,,Valeriana occidentalis,,062016-stm-vaoc2,vaoc2,,42.13931173,39.11546707,113
+958,CBT,,Valeriana occidentalis,,062016-stm-vaoc2,vaoc2,,48.11341654,41.79544525,113
+959,CBT,,Taraxacum,,062216-stm-taof2,taof2,,2.189472691,6.69335467,114
+960,CBT,,Taraxacum,,062216-stm-taof2,taof2,,6.498032411,9.591802788,114
+961,CBT,,Taraxacum,,062216-stm-taof2,taof2,,10.74729239,12.79367981,114
+962,CBT,,Taraxacum,,062216-stm-taof2,taof2,,15.22838033,16.25313047,114
+963,CBT,,Taraxacum,,062216-stm-taof2,taof2,,20.04503721,20.40844892,114
+964,CBT,,Taraxacum,,062216-stm-taof2,taof2,,23.95310542,22.58213412,114
+965,CBT,,Taraxacum,,062216-stm-taof3,taof3,,4.040574964,9.435203107,115
+966,CBT,,Taraxacum,,062216-stm-taof3,taof3,,8.415889676,12.25835196,115
+967,CBT,,Taraxacum,,062216-stm-taof3,taof3,,12.6541996,14.87501195,115
+968,CBT,,Taraxacum,,062216-stm-taof3,taof3,,16.93673617,17.8820507,115
+969,CBT,,Taraxacum,,062216-stm-taof3,taof3,,21.75390511,21.88403002,115
+970,CBT,,Taraxacum,,062216-stm-taof3,taof3,,26.17739143,24.84982796,115
+971,CBT,,Taraxacum,,062216-stm-taof3,taof3,,30.75397377,28.66722438,115
+972,CBT,,Taraxacum,,062216-stm-taof3,taof3,,35.29522095,31.59595528,115
+973,CBT,,Taraxacum,,062216-stm-taof3,taof3,,39.6893219,34.47729314,115
+974,CBT,,Valeriana occidentalis,,062216-stm-vaoc3,vaoc3,,4.38101174,9.689146169,116
+975,CBT,,Valeriana occidentalis,,062216-stm-vaoc3,vaoc3,,8.703235435,12.5837745,116
+976,CBT,,Valeriana occidentalis,,062216-stm-vaoc3,vaoc3,,13.38646933,15.64476846,116
+977,CBT,,Valeriana occidentalis,,062216-stm-vaoc3,vaoc3,,18.80879873,20.08077596,116
+978,CBT,,Bromus,,062216-stm-bro1,bro1,,2.708684063,8.825623894,117
+979,CBT,,Bromus,,062216-stm-bro1,bro1,,6.853193696,11.25545082,117
+980,CBT,,Bromus,,062216-stm-bro1,bro1,,10.95543658,13.78799324,117
+981,CBT,,Bromus,,062216-stm-bro1,bro1,,15.4340325,16.74064852,117
+982,CBT,,Bromus,,062216-stm-bro1,bro1,,19.69705722,19.46004206,117
+983,CBT,,Bromus,,062216-stm-bro1,bro1,,24.37420705,22.84783567,117
+984,CBT,,Bromus,,062216-stm-bro1,bro1,,28.69887822,25.26908747,117
+985,CBT,,Bromus,,062216-stm-bro1,bro1,,33.30078532,28.68677673,117
+986,CBT,,Bromus,,062216-stm-bro1,bro1,,37.77346141,31.35891304,117
+987,CBT,,Bromus,,062216-stm-bro1,bro1,,42.06114477,33.6771843,117
+988,CBT,,Bromus,,062216-stm-bro1,bro1,,46.47042618,35.81487554,117
+989,CBT,,Valeriana occidentalis,,062316-stm-vaoc4,vaoc4,,2.296557109,8.089530881,118
+990,CBT,,Valeriana occidentalis,,062316-stm-vaoc4,vaoc4,,6.480894852,10.68814564,118
+991,CBT,,Valeriana occidentalis,,062316-stm-vaoc4,vaoc4,,10.57174034,13.2650582,118
+992,CBT,,Valeriana occidentalis,,062316-stm-vaoc4,vaoc4,,14.82092896,15.75279299,118
+993,CBT,,Valeriana occidentalis,,062316-stm-vaoc4,vaoc4,,19.13000603,18.66891848,118
+994,CBT,,Valeriana occidentalis,,062316-stm-vaoc4,vaoc4,,23.75529836,21.88016574,118
+995,CBT,,Valeriana occidentalis,,062316-stm-vaoc4,vaoc4,,28.65490583,25.65104319,118
+996,CBT,,Valeriana occidentalis,,062316-stm-vaoc4,vaoc4,,32.89624914,28.05607033,118
+997,CBT,,Valeriana occidentalis,,062316-stm-vaoc4,vaoc4,,37.43929265,30.60365372,118
+998,CBT,,Valeriana occidentalis,,062316-stm-vaoc4,vaoc4,,41.94909668,34.00571849,118
+999,CBT,,Valeriana occidentalis,,062316-stm-vaoc4,vaoc4,,46.44386597,36.21961212,118
+1000,CBT,,Valeriana occidentalis,,062316-stm-vaoc5,vaoc5,,2.558456643,8.586385473,119
+1001,CBT,,Valeriana occidentalis,,062316-stm-vaoc5,vaoc5,,6.798940595,11.37304681,119
+1002,CBT,,Valeriana occidentalis,,062316-stm-vaoc5,vaoc5,,10.72956231,13.45996723,119
+1003,CBT,,Valeriana occidentalis,,062316-stm-vaoc5,vaoc5,,15.18000266,16.5617569,119
+1004,CBT,,Valeriana occidentalis,,062316-stm-vaoc5,vaoc5,,19.54025523,19.73065656,119
+1005,CBT,,Valeriana occidentalis,,062316-stm-vaoc5,vaoc5,,24.09532649,23.13464012,119
+1006,CBT,,Valeriana occidentalis,,062316-stm-vaoc5,vaoc5,,28.41854261,25.8550471,119
+1007,CBT,,Valeriana occidentalis,,062316-stm-vaoc5,vaoc5,,33.46575114,29.79001579,119
+1008,CBT,,Valeriana occidentalis,,062316-stm-vaoc5,vaoc5,,37.80687383,31.86047414,119
+1009,CBT,,Valeriana occidentalis,,062316-stm-vaoc5,vaoc5,,42.2787885,35.42635752,119
+1010,CBT,,Valeriana occidentalis,,062316-stm-vaoc5,vaoc5,,46.1391672,36.10348305,119
+1011,CBT,,Valeriana occidentalis,,062316-stm-vaoc5,vaoc5,,46.57534027,36.03773041,119
+1012,CBT,,Valeriana occidentalis,,062316-stm-vaoc6,vaoc6,,2.8398434,9.67214419,120
+1013,CBT,,Valeriana occidentalis,,062316-stm-vaoc6,vaoc6,,7.049004141,12.4310208,120
+1014,CBT,,Valeriana occidentalis,,062316-stm-vaoc6,vaoc6,,11.29593042,15.30635955,120
+1015,CBT,,Valeriana occidentalis,,062316-stm-vaoc6,vaoc6,,15.81057892,18.27998899,120
+1016,CBT,,Valeriana occidentalis,,062316-stm-vaoc6,vaoc6,,20.26359113,21.65452881,120
+1017,CBT,,Valeriana occidentalis,,062316-stm-vaoc6,vaoc6,,24.65574112,24.47759603,120
+1018,CBT,,Valeriana occidentalis,,062316-stm-vaoc6,vaoc6,,29.31860606,27.61922493,120
+1019,CBT,,Valeriana occidentalis,,062316-stm-vaoc6,vaoc6,,33.4849528,29.86532694,120
+1020,CBT,,Valeriana occidentalis,,062316-stm-vaoc6,vaoc6,,38.45245845,34.02249222,120
+1021,CBT,,Valeriana occidentalis,,062316-stm-vaoc6,vaoc6,,42.65493876,37.23393199,120
+1022,CBT,,Valeriana occidentalis,,062316-stm-vaoc6,vaoc6,,46.86350835,39.06419423,120
+1023,CBT,,Bromus,,062316-stm-bro2,bro2,,3.028145281,10.21049894,121
+1024,CBT,,Bromus,,062316-stm-bro2,bro2,,7.318549697,13.03643932,121
+1025,CBT,,Bromus,,062316-stm-bro2,bro2,,11.51310577,15.81909498,121
+1026,CBT,,Bromus,,062316-stm-bro2,bro2,,15.84099388,18.38181839,121
+1027,CBT,,Bromus,,062316-stm-bro2,bro2,,20.00623055,20.82997004,121
+1028,CBT,,Bromus,,062316-stm-bro2,bro2,,24.40942243,23.5489329,121
+1029,CBT,,Bromus,,062316-stm-bro2,bro2,,28.86833382,26.24051921,121
+1030,CBT,,Bromus,,062316-stm-bro2,bro2,,28.90153109,26.3646492,121
+1031,CBT,,Bromus,,062316-stm-bro2,bro2,,33.31766307,29.39204369,121
+1032,CBT,,Bromus,,062316-stm-bro2,bro2,,37.78216807,32.26415583,121
+1033,CBT,,Bromus,,062316-stm-bro2,bro2,,42.25576808,34.50633214,121
+1034,CBT,,Bromus,,062316-stm-bro2,bro2,,46.77908885,37.20313161,121
+1035,CBT,,CBT shrub,,062416-stm-shrub1,shrub1,,3.089656369,8.637879244,122
+1036,CBT,,CBT shrub,,062416-stm-shrub1,shrub1,,7.420097796,12.05335782,122
+1037,CBT,,CBT shrub,,062416-stm-shrub1,shrub1,,11.68217335,15.03445225,122
+1038,CBT,,CBT shrub,,062416-stm-shrub1,shrub1,,16.19135106,18.34628716,122
+1039,CBT,,CBT shrub,,062416-stm-shrub1,shrub1,,20.42211838,21.26020457,122
+1040,CBT,,CBT shrub,,062416-stm-shrub1,shrub1,,24.82131437,24.30832443,122
+1041,CBT,,CBT shrub,,062416-stm-shrub1,shrub1,,29.33192329,27.5499293,122
+1042,CBT,,CBT shrub,,062416-stm-shrub1,shrub1,,33.60211029,30.39719111,122
+1043,CBT,,CBT shrub,,062416-stm-shrub1,shrub1,,38.34616852,33.93694026,122
+1044,CBT,,CBT shrub,,062416-stm-shrub1,shrub1,,42.62008565,36.65014699,122
+1045,CBT,,CBT shrub,,062416-stm-shrub1,shrub1,,46.98347499,39.48960164,122
+1046,CBT,,CBT shrub,,062416-stm-shrub2,shrub2,,3.144264174,9.430079206,123
+1047,CBT,,CBT shrub,,062416-stm-shrub2,shrub2,,7.275717926,12.25049381,123
+1048,CBT,,CBT shrub,,062416-stm-shrub2,shrub2,,11.50990829,15.20179831,123
+1049,CBT,,CBT shrub,,062416-stm-shrub2,shrub2,,16.06172333,18.43212179,123
+1050,CBT,,CBT shrub,,062416-stm-shrub2,shrub2,,24.7201416,24.05676956,123
+1051,CBT,,CBT shrub,,062416-stm-shrub2,shrub2,,29.24186554,27.14731051,123
+1052,CBT,,CBT shrub,,062416-stm-shrub2,shrub2,,33.20944163,29.08094762,123
+1053,CBT,,CBT shrub,,062416-stm-shrub2,shrub2,,37.78828074,32.1707929,123
+1054,CBT,,CBT shrub,,062416-stm-shrub2,shrub2,,41.58045858,34.75093384,123
+1055,CBT,,CBT shrub,,062416-stm-shrub2,shrub2,,46.62439143,37.94450836,123
+1056,CBT,,Valeriana occidentalis,,062716-stm-vaoc7,vaoc7,,3.175685104,11.45541433,124
+1057,CBT,,Valeriana occidentalis,,062716-stm-vaoc7,vaoc7,,7.413768228,14.10644786,124
+1058,CBT,,Valeriana occidentalis,,062716-stm-vaoc7,vaoc7,,11.61582947,16.86849467,124
+1059,CBT,,CBT shrub,,062716-stm-shrub3,shrub3,,4.313564173,11.75242246,125
+1060,CBT,,CBT shrub,,062716-stm-shrub3,shrub3,,7.787404696,14.16426951,125
+1061,CBT,,CBT shrub,,062716-stm-shrub3,shrub3,,12.23611279,17.63239683,125
+1062,CBT,,CBT shrub,,062716-stm-shrub3,shrub3,,16.49323133,20.15288467,125
+1063,CBT,,CBT shrub,,062816-stm-shrub4,shrub4,,3.802074528,10.29210796,126
+1064,CBT,,CBT shrub,,062816-stm-shrub4,shrub4,,7.491776403,12.73409189,126
+1065,CBT,,CBT shrub,,062816-stm-shrub4,shrub4,,11.63607985,15.61739629,126
+1066,CBT,,CBT shrub,,062816-stm-shrub4,shrub4,,16.28131269,19.30815277,126
+1067,CBT,,CBT shrub,,062816-stm-shrub4,shrub4,,20.52748121,22.11192322,126
+1068,CBT,,CBT shrub,,062816-stm-shrub4,shrub4,,24.90725441,25.04630114,126
+1069,CBT,,CBT shrub,,062816-stm-shrub4,shrub4,,29.33178202,28.19484266,126
+1070,CBT,,CBT shrub,,062816-stm-shrub4,shrub4,,33.686321,31.42794329,126
+1071,CBT,,CBT shrub,,062816-stm-shrub4,shrub4,,38.44508464,35.31203384,126
+1072,CBT,,CBT shrub,,062816-stm-shrub4,shrub4,,42.79844386,38.44512151,126
+1073,CBT,,CBT shrub,,062816-stm-shrub4,shrub4,,47.21517258,41.54564616,126
+1074,CBT,,Valeriana occidentalis,,062816-stm-vaoc8,vaoc8,,3.176610311,12.98486258,127
+1075,CBT,,Valeriana occidentalis,,062816-stm-vaoc8,vaoc8,,7.470178159,15.52265625,127
+1076,CBT,,Valeriana occidentalis,,062816-stm-vaoc8,vaoc8,,11.58435555,17.70717049,127
+1077,CBT,,Valeriana occidentalis,,062816-stm-vaoc8,vaoc8,,15.87175687,19.77154973,127
+1078,CBT,,Valeriana occidentalis,,062816-stm-vaoc8,vaoc8,,20.37322693,22.42079061,127
+1079,CBT,,Valeriana occidentalis,,062816-stm-vaoc8,vaoc8,,24.69587453,25.35644658,127
+1080,CBT,,Valeriana occidentalis,,062816-stm-vaoc8,vaoc8,,29.20507189,28.09215012,127
+1081,CBT,,Valeriana occidentalis,,062816-stm-vaoc8,vaoc8,,33.69246368,31.47077967,127
+1082,CBT,,Valeriana occidentalis,,062816-stm-vaoc8,vaoc8,,38.3599261,34.48200938,127
+1083,CBT,,Valeriana occidentalis,,062816-stm-vaoc8,vaoc8,,42.58065796,36.41215235,127
+1084,CBT,,Valeriana occidentalis,,062816-stm-vaoc8,vaoc8,,47.05813166,38.30147578,127
+1085,CBT,,Bromus,,062916-stm-bro3,bro3,,2.826591094,10.40742995,128
+1086,CBT,,Bromus,,062916-stm-bro3,bro3,,7.102672005,12.78585714,128
+1087,CBT,,Bromus,,062916-stm-bro3,bro3,,11.34163335,14.84828841,128
+1088,CBT,,Bromus,,062916-stm-bro3,bro3,,16.07713432,18.83100815,128
+1089,CBT,,Bromus,,062916-stm-bro3,bro3,,20.52773743,21.89975891,128
+1090,CBT,,Bromus,,062916-stm-bro3,bro3,,25.07843971,25.0836291,128
+1091,CBT,,Bromus,,062916-stm-bro3,bro3,,29.53149376,27.96969376,128
+1092,CBT,,Bromus,,062916-stm-bro3,bro3,,33.57675044,29.65437228,128
+1093,CBT,,Bromus,,062916-stm-bro3,bro3,,38.16202774,33.15161489,128
+1094,Road,,Lupinus,,063016-stm-lup1,lup1,,2.58425196,8.818357849,129
+1095,Road,,Lupinus,,063016-stm-lup1,lup1,,6.566931057,11.00878518,129
+1096,Road,,Lupinus,,063016-stm-lup1,lup1,,10.61927745,13.40171687,129
+1097,Road,,Lupinus,,063016-stm-lup1,lup1,,14.86507963,15.79266599,129
+1098,Road,,Lupinus,,063016-stm-lup1,lup1,,15.12157218,16.49313545,129
+1099,Road,,Lupinus,,063016-stm-lup1,lup1,,19.39186579,19.11304652,129
+1100,Road,,Lupinus,,063016-stm-lup1,lup1,,24.01401761,22.2501325,129
+1101,Road,,Lupinus,,063016-stm-lup1,lup1,,28.51461906,25.67864609,129
+1102,Road,,Lupinus,,063016-stm-lup1,lup1,,33.29393565,30.08953705,129
+1103,Road,,Lupinus,,063016-stm-lup1,lup1,,37.58569463,32.14037043,129
+1104,Road,,Lupinus,,063016-stm-lup1,lup1,,41.87406998,34.64560089,129
+1105,Road,,Lupinus,,063016-stm-lup1,lup1,,46.40238876,36.90927633,129
+1106,Road,,Geranium,,063016-stm-ger1,ger1,,2.858307362,10.92217484,130
+1107,Road,,Geranium,,063016-stm-ger1,ger1,,6.824789588,12.96086597,130
+1108,Road,,Geranium,,063016-stm-ger1,ger1,,10.96445675,15.36741193,130
+1109,Road,,Geranium,,063016-stm-ger1,ger1,,15.53056742,18.42428627,130
+1110,Road,,Geranium,,063016-stm-ger1,ger1,,19.72659747,20.69114939,130
+1111,Road,,Geranium,,063016-stm-ger1,ger1,,24.02699331,22.88056424,130
+1112,Road,,Geranium,,063016-stm-ger1,ger1,,28.9445446,26.760355,130
+1113,Road,,Geranium,,063016-stm-ger1,ger1,,33.37400589,29.58385976,130
+1114,Road,,Geranium,,063016-stm-ger1,ger1,,37.81394933,32.5574852,130
+1115,Road,,Geranium,,063016-stm-ger1,ger1,,42.095858,34.74387614,130
+1116,Road,,Geranium,,063016-stm-ger1,ger1,,46.57428055,35.82144241,130
+1117,Road,,Artemisia tridentata,,063016-stm-sage1,sage1,,3.004970996,9.900590769,131
+1118,Road,,Artemisia tridentata,,063016-stm-sage1,sage1,,7.162260342,12.50787023,131
+1119,Road,,Artemisia tridentata,,063016-stm-sage1,sage1,,11.20915038,15.90421944,131
+1120,Road,,Artemisia tridentata,,063016-stm-sage1,sage1,,15.55966587,17.88531736,131
+1121,Road,,Artemisia tridentata,,063016-stm-sage1,sage1,,19.72523193,20.31957843,131
+1122,Road,,Artemisia tridentata,,063016-stm-sage1,sage1,,24.2107048,22.83316409,131
+1123,Road,,Artemisia tridentata,,063016-stm-sage1,sage1,,28.91351611,26.33338356,131
+1124,Road,,Artemisia tridentata,,063016-stm-sage1,sage1,,33.40579631,30.30869128,131
+1125,Road,,Artemisia tridentata,,063016-stm-sage1,sage1,,37.64261907,32.48142039,131
+1126,Road,,Artemisia tridentata,,063016-stm-sage1,sage1,,41.8780777,34.79241409,131

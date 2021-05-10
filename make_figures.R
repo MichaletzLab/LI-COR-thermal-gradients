@@ -12,6 +12,8 @@ library(nls.multstart)
 library(broom)
 library(tidyverse)
 
+library(plantecophys)
+
 source("curve_fitting.R")
 source("error_prop_6400.R")
 source("error_prop_6800.R")
@@ -627,23 +629,8 @@ corr_df = data.frame(
   Tleaf = AT_uncorrected$Tleaf_corr,
   Photo = AT_uncorrected$Photo)
 
-models_to_fit = c("johnsonlewin_1946", "briere2_1999", "gaussian_1987")
+models_to_fit = c("pawar_2018", "briere2_1999", "gaussian_1987")
 mod = models_to_fit[1]
-
-
-mod = "johnsonlewin_1946"
-start_vals = get_start_vals(uncorr_df$Tleaf, uncorr_df$Photo, model_name = mod)
-low_lims = get_lower_lims(uncorr_df$Tleaf, uncorr_df$Photo, model_name = mod)
-upper_lims = get_upper_lims(uncorr_df$Tleaf, uncorr_df$Photo, model_name = mod)
-
-fit = nls_multstart(Photo~johnsonlewin_1946(temp = Tleaf, r0,e,eh,topt),
-                     data = uncorr_df,
-                     iter = 500,
-                     start_lower = start_vals - 10,
-                     start_upper = start_vals + 10,
-                     lower = low_lims,
-                     upper = upper_lims,
-                     supp_errors = 'Y')
 
 
 mod = "pawar_2018"
@@ -651,7 +638,7 @@ start_vals = get_start_vals(uncorr_df$Tleaf, uncorr_df$Photo, model_name = mod)
 low_lims = get_lower_lims(uncorr_df$Tleaf, uncorr_df$Photo, model_name = mod)
 upper_lims = get_upper_lims(uncorr_df$Tleaf, uncorr_df$Photo, model_name = mod)
 
-fit = nls_multstart(Photo~pawar_2018(temp = Tleaf, r_tref,e,eh,topt, tref=25),
+fit_pawar_uncorr = nls_multstart(Photo~pawar_2018(temp = Tleaf, r_tref,e,eh,topt, tref=25),
                     data = uncorr_df,
                     iter = 500,
                     start_lower = start_vals - 10,
@@ -659,50 +646,52 @@ fit = nls_multstart(Photo~pawar_2018(temp = Tleaf, r_tref,e,eh,topt, tref=25),
                     lower = low_lims,
                     upper = upper_lims,
                     supp_errors = 'Y')
+summary(fit_pawar_uncorr)
+confint2(fit_pawar_uncorr)
 
 
-mod = "sharpeschoolhigh_1981"
+fit_pawar_corr = nls_multstart(Photo~pawar_2018(temp = Tleaf, r_tref,e,eh,topt, tref=25),
+                    data = corr_df,
+                    iter = 500,
+                    start_lower = start_vals - 10,
+                    start_upper = start_vals + 10,
+                    lower = low_lims,
+                    upper = upper_lims,
+                    supp_errors = 'Y')
+summary(fit_pawar_corr)
+confint2(fit_pawar_corr)
+
+
+
+mod = "modifiedgaussian_2006"
 start_vals = get_start_vals(uncorr_df$Tleaf, uncorr_df$Photo, model_name = mod)
 low_lims = get_lower_lims(uncorr_df$Tleaf, uncorr_df$Photo, model_name = mod)
 upper_lims = get_upper_lims(uncorr_df$Tleaf, uncorr_df$Photo, model_name = mod)
 
-fit = nls_multstart(Photo~sharpeschoolhigh_1981(temp = Tleaf, r_tref,e,eh,th,tref=25),
-                    data = uncorr_df,
-                    iter = 500,
-                    start_lower = start_vals - 10,
-                    start_upper = start_vals + 10,
-                    lower = low_lims,
-                    upper = upper_lims,
-                    supp_errors = 'Y')
+#low_lims[1] = -30
 
-fit <- nls_multstart(Photo ~ (Schoolfield(lnB0, E, E_D, T_h, temp = Tleaf)),
-                     data = uncorr_df,
-                     iter = 1000,
-                     start_lower = c(lnB0 = 0, E = 0, E_D = 0.2, T_h = 285),
-                     start_upper = c(lnB0 = 100, E = 4, E_D = 8, T_h = 330),
-                     supp_errors = 'Y',
-                     na.action = na.omit,
-                     lower = c(lnB0 = -10, E = 0, E_D = 0, T_h = 0))
+fit_gaussian_uncorr = nls_multstart(Photo~modifiedgaussian_2006(temp = Tleaf, rmax, topt, a,b),
+                                  data = uncorr_df,
+                                  iter = 500,
+                                  start_lower = start_vals - 10,
+                                  start_upper = start_vals + 10,
+                                  lower = low_lims,
+                                  upper = upper_lims,
+                                  supp_errors = 'Y')
 
+summary(fit_gaussian_uncorr)
+confint2(fit_gaussian_uncorr)
 
-
-
-
-Schoolfield <- function(lnB0, E, E_D, T_h, temp, SchoolTpk=TRUE) { 
-  # temp   : Temperature values to evaluate at (C)
-  # lnB0   : Normalisation constant (units depend on rate; log transformed)
-  # E      : Activation energy (eV; E > 0)
-  # E_D    : High temperature de-activation energy (eV, E_D > 0) 
-  # T_h    : Temperature at which trait reaches peak value (K, Tpk)   
-  
-  k <- 8.62e-5        # Boltzmann's constant (eV K-1)
-  temp = temp+273.15  # Convert T to Kelvin
-  
-  return(lnB0*exp((-E/k) * ((1/temp)))/(1 + (E/(E_D - E)) * exp(E_D/k * (1/T_h - 1/temp)))))
-}
-
-
-
+fit_gaussian_corr = nls_multstart(Photo~modifiedgaussian_2006(temp = Tleaf, rmax, topt, a,b),
+                                    data = corr_df,
+                                    iter = 500,
+                                    start_lower = start_vals - 10,
+                                    start_upper = start_vals + 10,
+                                    lower = low_lims,
+                                    upper = upper_lims,
+                                    supp_errors = 'Y')
+summary(fit_gaussian_corr)
+confint2(fit_gaussian_corr)
 
 #all_data = rbind(uncorr_df, corr_df)
 
@@ -784,11 +773,13 @@ plot_model_14 = c()
 
 a = subset(aci_all, T_setpoint == 14)
 b = fitaci(a, Tcorrect = F)
+confint(b$nlsfit)
 c = b$Photosyn(Ca = 1*(60:2500))
 c$Type = "Uncorrected"
 plot_model_14 = c
 
 b = fitaci(a, varnames = list(ALEAF = "Photo", Tleaf = "Tleaf", Ci = "Ci_corr", PPFD = "PARi", Rd = "Rd"), Tcorrect = F)
+confint(b$nlsfit)
 c = b$Photosyn(Ca = 1*(60:2500))
 c$Type = "Corrected"
 plot_model_14 = rbind(plot_model_14,c)
@@ -797,11 +788,13 @@ plot_model_38 = c()
 
 a = subset(aci_all, T_setpoint == 38)
 b = fitaci(a, Tcorrect = F)
+confint(b$nlsfit)
 c = b$Photosyn(Ca = 1*(52:1921))
 c$Type = "Uncorrected"
 plot_model_38 = c
 
 b = fitaci(a, varnames = list(ALEAF = "Photo", Tleaf = "Tleaf", Ci = "Ci_corr",PPFD = "PARi", Rd = "Rd"), Tcorrect = F)
+confint(b$nlsfit)
 c = b$Photosyn(Ca = 1*(52:2022))
 c$Type = "Corrected"
 plot_model_38 = rbind(plot_model_38,c)

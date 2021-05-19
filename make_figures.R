@@ -629,30 +629,28 @@ corr_df = data.frame(
   Tleaf = AT_uncorrected$Tleaf_corr,
   Photo = AT_uncorrected$Photo)
 
-models_to_fit = c("pawar_2018", "briere2_1999", "gaussian_1987")
-mod = models_to_fit[1]
-
 
 mod = "pawar_2018"
 start_vals = get_start_vals(uncorr_df$Tleaf, uncorr_df$Photo, model_name = mod)
 low_lims = get_lower_lims(uncorr_df$Tleaf, uncorr_df$Photo, model_name = mod)
 upper_lims = get_upper_lims(uncorr_df$Tleaf, uncorr_df$Photo, model_name = mod)
 
-fit_pawar_uncorr = nls_multstart(Photo~pawar_2018(temp = Tleaf, r_tref,e,eh,topt, tref=25),
+fit_pawar_uncorr = nls_multstart(Photo~pawar_2018(temp = Tleaf, r_tref,e,eh,topt, tref=5),
                     data = uncorr_df,
-                    iter = 500,
+                    iter = 1000,
                     start_lower = start_vals - 10,
                     start_upper = start_vals + 10,
                     lower = low_lims,
                     upper = upper_lims,
                     supp_errors = 'Y')
+
 summary(fit_pawar_uncorr)
 confint2(fit_pawar_uncorr)
 
 
-fit_pawar_corr = nls_multstart(Photo~pawar_2018(temp = Tleaf, r_tref,e,eh,topt, tref=25),
+fit_pawar_corr = nls_multstart(Photo~pawar_2018(temp = Tleaf, r_tref,e,eh,topt, tref=5),
                     data = corr_df,
-                    iter = 500,
+                    iter = 1000,
                     start_lower = start_vals - 10,
                     start_upper = start_vals + 10,
                     lower = low_lims,
@@ -693,25 +691,49 @@ fit_gaussian_corr = nls_multstart(Photo~modifiedgaussian_2006(temp = Tleaf, rmax
 summary(fit_gaussian_corr)
 confint2(fit_gaussian_corr)
 
-#all_data = rbind(uncorr_df, corr_df)
+all_data = rbind(uncorr_df, corr_df)
 
 #fits = fit_curves(all_data)
 
-ModelToPlotS = c()
+tref = 25
+tmp_temps <- seq(min(floor(uncorr_df$Tleaf)), ceiling(max(uncorr_df$Tleaf)), length = 200)
 
-for (i in 1:2) {
-  d_1 = subset(all_data, curveID == i)
-  # Make predicted model lines
-  # Pick a set of temperature values to compute model over
-  tmp_temps <- seq(min(floor(d_1$Tleaf)), ceiling(max(d_1$Tleaf)), length = 200)
+r_tref <- coef(fit_pawar_uncorr)["r_tref"]
+e <- coef(fit_pawar_uncorr)["e"]
+eh <- coef(fit_pawar_uncorr)["eh"]
+topt <- coef(fit_pawar_uncorr)["topt"]
+
+pred_uncorr = data.frame(Temperature = tmp_temps,
+                         TraitValue = pawar_2018(tmp_temps,r_tref,e,eh,topt,tref=5),
+                         Condition = "Uncorrected")
+
+tmp_temps <- seq(min(floor(corr_df$Tleaf)), ceiling(max(corr_df$Tleaf)), length = 200)
   
-  # Compute model predictions depending on model type and select curve color
-  tmp_model <- exp(Schoolfield(fits$lnB0[i], fits$E[i], fits$E_D[i], fits$T_h[i], tmp_temps))
-  color_model = "red"
-  
-  # Assemble model predicitons and raw data to plot
-  ModelToPlotS <- rbind(ModelToPlotS,data.frame(Temperature = tmp_temps, TraitValue = tmp_model, curveID = i, Condition = fits$Condition[i]))
-}
+r_tref <- coef(fit_pawar_corr)["r_tref"]
+e <- coef(fit_pawar_corr)["e"]
+eh <- coef(fit_pawar_corr)["eh"]
+topt <- coef(fit_pawar_corr)["topt"]
+
+pred_corr = data.frame(Temperature = tmp_temps,
+                         TraitValue = pawar_2018(tmp_temps,r_tref,e,eh,topt,tref=5),
+                         Condition = "Corrected")
+
+
+ModelToPlotS = rbind(pred_uncorr, pred_corr)
+
+# for (i in 1:2) {
+#  d_1 = subset(all_data, curveID == i)
+#  # Make predicted model lines
+#  # Pick a set of temperature values to compute model over
+#  tmp_temps <- seq(min(floor(d_1$Tleaf)), ceiling(max(d_1$Tleaf)), length = 200)
+# 
+#  # Compute model predictions depending on model type and select curve color
+# #  tmp_model <- pawar_2018(tmp_tempsfits$lnB0[i], fits$E[i], fits$E_D[i], fits$T_h[i]))
+#  color_model = "red"
+# 
+#  # Assemble model predicitons and raw data to plot
+#  ModelToPlotS <- rbind(ModelToPlotS,data.frame(Temperature = tmp_temps, TraitValue = tmp_model, curveID = i, Condition = fits$Condition[i]))
+# }
 
 pdf("figures/fig7.pdf", width = 4, height = 3.5)
 
@@ -812,8 +834,8 @@ pdf("figures/fig8.pdf", width = 7.5, height = 3.5)
 aci_cut = subset(aci_plot, T_setpoint == 14)
 
 p1 = ggplot(data = aci_cut, aes(x = Ci, y = Photo, fill = Type, color = Type)) +
-  scale_fill_manual(values = palette_c) +
-  scale_colour_manual(values = palette_c) +  
+  scale_fill_manual(values = rev(palette_c)) +
+  scale_colour_manual(values = rev(palette_c)) +  
   geom_line(data = plot_model_14, aes(x=Ci, y=ALEAF,color=Type),lwd=0.4) +
   geom_point(aes(fill = Type), size=2.4, color = "black", shape = 21) +
   my_theme +
@@ -828,8 +850,8 @@ aci_cut = subset(aci_plot, T_setpoint == 38)
 #                                       PPFD = "PARi", Rd = "Rd"))
 
 p2 = ggplot(data = aci_cut, aes(x = Ci, y = Photo, fill = Type, color = Type)) +
-  scale_fill_manual(values = palette_c) +
-  scale_colour_manual(values = palette_c) +
+  scale_fill_manual(values = rev(palette_c)) +
+  scale_colour_manual(values = rev(palette_c)) +
   geom_line(data = plot_model_38, aes(x=Ci, y=ALEAF), lwd=0.4) +
   geom_point(aes(fill = Type), size=2.4, color = "black", shape = 21) +
   my_theme +

@@ -91,7 +91,7 @@ summary(z7)
 summary(test_7$diff)
 summary(test_7$T_leaf_error)
 
-#
+# Error in Tleaf as a function of Tair-Tleaf in the LI-6800
 test_8 = subset(Tleaf_error_trials_all, Licor_Type == "6800")
 test_8 = subset(test_8, !is.na(T_air_below))
 test_8$T_leaf_error = (test_8$T_leaf-test_8$T_below)
@@ -161,7 +161,15 @@ z14 = lm(Tleaf_err ~ T_diff, data = test_14)
 confint(z14)
 summary(z14)
 
-
+# Error in Tair as a function of (Txcg-Tair) in the LI-6400XT (new regression)
+test_15 = subset(Tleaf_error_trials_all, Licor_Type == "6400")
+test_15 = subset(test_15, !is.na(T_air_below))
+test_15$T_air_true = (test_15$T_air_below + test_15$T_air_above)/2
+test_15$T_air_error = test_15$T_air - test_15$T_air_true
+test_15$diff = test_15$T_block - test_15$T_air
+z15 = lm(T_air_error ~ diff, data = test_15)
+confint(z15)
+summary(z15)
 
 # Two-sample Anderson-Darling test to see if truncating data changes distribution of slopes
 {

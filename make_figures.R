@@ -343,8 +343,10 @@ error_all = subset(error_all, error < 1)
 
 pdf("figures/fig5.pdf", width = 7, height = 3.5)
 
+#belabels = c(expression(italic("g"[sw])), expression(italic("g"[tw])), expression(italic("g"[tc])), expression(italic("C"[i])))
+
 dat_text <- data.frame(
-  labels = c("(b)", "(c)", "(d)", "(e)"),
+  labels = c("(a) ~~ italic(g[sw])", "(b) ~~ italic(g[tw])", "(c) ~~ italic(g[tc])", "(d) ~~ italic(C[i])"),
   variable = c("g_sw","g_tw","g_tc","C_i"),
   Tair = 0,
   Tleaf = 0,
@@ -382,7 +384,7 @@ p2 = ggplot(data = error_all, aes(x = Tair-Tleaf, y=100*error, color=Licor_Type)
   guides(colour = "none") +
   ylim(c(-0.55*100, 0.75*100)) +
   geom_abline(slope = 0, lty = 2) +
-  geom_text(data = dat_text, aes(x = -Inf, y = Inf, label = labels), color = "black", hjust = -0.1, vjust = 1.3)
+  geom_text(data = dat_text, aes(x = -Inf, y = Inf, label = labels), color = "black", hjust = -0.1, vjust = 1.3, parse=T)
 #  annotate("text", x = -6, y = 0.75*100, label = "(b)") #+
 #  annotate("text", x = 10, 0.75*100, label = "italic(C[i])", parse=T)
 
@@ -693,6 +695,57 @@ confint2(fit_gaussian_corr)
 
 all_data = rbind(uncorr_df, corr_df)
 
+# New significance test
+g1 = nls(Photo ~ modifiedgaussian_2006(temp = Tleaf, rmax[Condition], topt[Condition], a[Condition], b[Condition]),
+                                  data = all_data,
+                                  start = list(rmax = c(11,11),
+                                               topt = c(26,26),
+                                               a = c(14,14),
+                                               b = c(2,2)))
+
+g2 = nls(Photo ~ modifiedgaussian_2006(temp = Tleaf, rmax, topt[Condition], a[Condition], b[Condition]),
+         data = all_data,
+         start = list(rmax = 11,
+                      topt = c(26,26),
+                      a = c(14,14),
+                      b = c(2,2)))
+
+g3 = nls(Photo ~ modifiedgaussian_2006(temp = Tleaf, rmax[Condition], topt[Condition], a, b[Condition]),
+         data = all_data,
+         start = list(rmax = c(11,11),
+                      topt = c(26,26),
+                      a = 14,
+                      b = c(2,2)))
+
+anova(g1,g2)
+anova(g1,g3)
+
+p1 = nls(Photo ~ pawar_2018(temp = Tleaf, r_tref[Condition], e[Condition], eh[Condition], topt[Condition], tref=5),
+                   data = all_data,
+                   start = list(r_tref = c(6,6),
+                                e = c(0.5,0.5),
+                                eh = c(1,1),
+                                topt = c(23,23)))
+
+p2 = nls(Photo ~ pawar_2018(temp = Tleaf, r_tref[Condition], e, eh[Condition], topt[Condition], tref=5),
+         data = all_data,
+         start = list(r_tref = c(6,6),
+                      e = 0.5,
+                      eh = c(1,1),
+                      topt = c(23,23)))
+
+p3 = nls(Photo ~ pawar_2018(temp = Tleaf, r_tref[Condition], e[Condition], eh[Condition], topt, tref=5),
+         data = all_data,
+         start = list(r_tref = c(6,6),
+                      e = c(0.5,0.5),
+                      eh = c(1,1),
+                      topt = 23))
+
+anova(p1,p2)
+anova(p1,p3)
+
+
+
 #fits = fit_curves(all_data)
 
 tref = 25
@@ -790,6 +843,11 @@ aci_all = read.csv("data/aci_by_temp_all.csv")
 Ci_corr = recalc_Ci(aci_all, m = 0.7838, b = 0.8092)
 aci_all$Ci_corr = Ci_corr
 
+m = 0.7838
+b = 0.8092
+T_error = m*(aci_all$Tair-aci_all$Tleaf)+b
+aci_all$Tleaf_corr = aci_all$Tleaf-T_error
+
 # Vcmax and Jmax values
 plot_model_14 = c()
 
@@ -865,6 +923,135 @@ p2 = ggplot(data = aci_cut, aes(x = Ci, y = Photo, fill = Type, color = Type)) +
 grid.arrange(p1, p2, ncol = 2)
 dev.off()
 }
+
+
+# Let's look at Vcmax and Jmax temperature response
+aci_fits_corr = fitacis(data = aci_all, group = "curveID", fitmethod = "default", varnames = list(ALEAF = "Photo", Tleaf = "Tleaf_corr", Ci = "Ci_corr", PPFD = "PARi", Rd = "Rd"), Tcorrect = F)
+kinetics_extracted_corr = coef(aci_fits_corr)
+Tleaf_means_corr = aci_all %>% group_by(curveID) %>% summarize(Tleaf = mean(Tleaf_corr))
+kinetics_extracted_corr = merge(kinetics_extracted_corr, Tleaf_means_corr, by = "curveID")
+kinetics_extracted_corr$type = "Corrected"
+
+aci_fits_uncorr = fitacis(data = aci_all, group = "curveID", fitmethod = "default", varnames = list(ALEAF = "Photo", Tleaf = "Tleaf", Ci = "Ci", PPFD = "PARi", Rd = "Rd"), Tcorrect = F)
+kinetics_extracted_uncorr = coef(aci_fits_uncorr)
+Tleaf_means_uncorr = aci_all %>% group_by(curveID) %>% summarize(Tleaf = mean(Tleaf))
+kinetics_extracted_uncorr = merge(kinetics_extracted_uncorr, Tleaf_means_uncorr, by = "curveID")
+kinetics_extracted_uncorr$type = "Uncorrected"
+
+kinetics_all = rbind(kinetics_extracted_corr, kinetics_extracted_uncorr)
+
+# Now we need to fit an arrhenius model
+arrhenius = function(k25, Ea, TC, R = 8.31446) {return(k25*exp( (Ea*(TC+273.15) - Ea*298.15) / (298.15*R*(TC+273.15)) ))}
+
+vcmax_corr = nls(Vcmax ~ arrhenius(k25, Ea, Tleaf), 
+                 data = kinetics_extracted_corr,
+                 start = list(k25 = 66, Ea = 50000))
+
+jmax_corr = nls(Jmax ~ arrhenius(k25, Ea, Tleaf), 
+                 data = kinetics_extracted_corr,
+                 start = list(k25 = 66, Ea = 50000))
+
+vcmax_uncorr = nls(Vcmax ~ arrhenius(k25, Ea, Tleaf), 
+                 data = kinetics_extracted_uncorr,
+                 start = list(k25 = 66, Ea = 50000))
+
+jmax_uncorr = nls(Jmax ~ arrhenius(k25, Ea, Tleaf), 
+                 data = kinetics_extracted_uncorr,
+                 start = list(k25 = 66, Ea = 50000))
+
+# Estimate Q10
+kc = kinetics_extracted_corr
+ku = kinetics_extracted_uncorr
+q10 = function(r1, r2, t1, t2) {
+  return( (r2/r1)^(10/(t2-t1)) )
+}
+jmax_q10_corr = q10(kc$Jmax[1], kc$Jmax[5], kc$Tleaf[1], kc$Tleaf[5])
+jmax_q10_uncorr = q10(ku$Jmax[1], ku$Jmax[5], ku$Tleaf[1], ku$Tleaf[5])
+vcmax_q10_corr = q10(kc$Vcmax[1], kc$Vcmax[5], kc$Tleaf[1], kc$Tleaf[5])
+vcmax_q10_uncorr = q10(ku$Vcmax[1], ku$Vcmax[5], ku$Tleaf[1], ku$Tleaf[5])
+
+
+
+
+# Test of a new significance thingie
+kinetics_all$type = as.factor(kinetics_all$type)
+
+a1 = nls(Vcmax ~ arrhenius(k25[type], Ea[type], Tleaf),
+         data = kinetics_all,
+         start = list(k25 = c(66,66), Ea = c(50000,50000)))
+
+a2 = nls(Vcmax ~ arrhenius(k25, Ea[type], Tleaf),
+         data = kinetics_all,
+         start = list(k25 = 66, Ea = c(50000,50000)))
+
+a3 = nls(Vcmax ~ arrhenius(k25[type], Ea, Tleaf),
+         data = kinetics_all,
+         start = list(k25 = c(66,66), Ea = 50000))
+
+anova(a1,a2)
+anova(a1,a3)
+
+b1 = nls(Jmax ~ arrhenius(k25[type], Ea[type], Tleaf),
+         data = kinetics_all,
+         start = list(k25 = c(66,66), Ea = c(50000,50000)))
+
+b2 = nls(Jmax ~ arrhenius(k25, Ea[type], Tleaf),
+         data = kinetics_all,
+         start = list(k25 = 66, Ea = c(50000,50000)))
+
+b3 = nls(Jmax ~ arrhenius(k25[type], Ea, Tleaf),
+         data = kinetics_all,
+         start = list(k25 = c(66,66), Ea = 50000))
+
+anova(b1,b2)
+anova(b1,b3)
+
+
+
+
+temps_uncorr = seq(17.8, 32.4, 0.2)
+temps_corr = seq(18.6,29, 0.2)
+v_corr_model = data.frame(Vcmax = predict(vcmax_corr, newdata = list(Tleaf = temps_corr)), Tleaf = temps_corr, type = "Corrected")
+v_uncorr_model = data.frame(Vcmax = predict(vcmax_uncorr, newdata = list(Tleaf = temps_uncorr)), Tleaf = temps_uncorr, type = "Uncorrected")
+vcmax_model = rbind(v_corr_model, v_uncorr_model)
+
+j_corr_model = data.frame(Jmax = predict(jmax_corr, newdata = list(Tleaf = temps_corr)), Tleaf = temps_corr, type = "Corrected")
+j_uncorr_model = data.frame(Jmax = predict(jmax_uncorr, newdata = list(Tleaf = temps_uncorr)), Tleaf = temps_uncorr, type = "Uncorrected")
+jmax_model = rbind(j_corr_model, j_uncorr_model)
+
+
+pdf("figures/fig8a.pdf", width = 7.5, height = 3.5)
+
+# Plot 1 vcmax
+p1 = ggplot(data = kinetics_all, aes(x = Tleaf, y = Vcmax, fill = type, color = type)) +
+  scale_fill_manual(values = rev(palette_c)) +
+  scale_colour_manual(values = rev(palette_c)) +  
+  geom_line(data = vcmax_model, aes(color=type)) +
+  geom_point(aes(fill = type), size=2.4, color = "black", shape = 21) +
+  my_theme +
+  theme(legend.position = c(0.2,0.8)) +
+  theme(legend.title = element_blank()) +
+  xlab("Leaf temperature (ºC)") +
+  ylab(expression(V[cmax]~~(µmol/m^2~s ))) +
+  annotate("text", x = 17.5, y = 150, label = "(a)")
+
+
+# Plot 2 Jmax
+p2 = ggplot(data = kinetics_all, aes(x = Tleaf, y = Jmax, fill = type, color = type)) +
+    scale_fill_manual(values = rev(palette_c)) +
+    scale_colour_manual(values = rev(palette_c)) +  
+  geom_line(data = jmax_model, aes(color=type)) +
+    geom_point(aes(fill = type), size=2.4, color = "black", shape = 21) +
+    my_theme +
+    xlab("Leaf temperature (ºC)") +
+    ylab(expression(J[max]~~(µmol/m^2~s))) +
+  annotate("text", x = 17.5, y = 160, label = "(b)")
+
+grid.arrange(p1, p2, ncol = 2)
+dev.off()
+
+
+
 
 
 

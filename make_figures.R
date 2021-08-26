@@ -346,7 +346,7 @@ pdf("figures/fig5.pdf", width = 7, height = 3.5)
 #belabels = c(expression(italic("g"[sw])), expression(italic("g"[tw])), expression(italic("g"[tc])), expression(italic("C"[i])))
 
 dat_text <- data.frame(
-  labels = c("(a) ~~ italic(g[sw])", "(b) ~~ italic(g[tw])", "(c) ~~ italic(g[tc])", "(d) ~~ italic(C[i])"),
+  labels = c("(b) ~~ italic(g[sw])", "(c) ~~ italic(g[tw])", "(d) ~~ italic(g[tc])", "(e) ~~ italic(C[i])"),
   variable = c("g_sw","g_tw","g_tc","C_i"),
   Tair = 0,
   Tleaf = 0,
@@ -802,7 +802,8 @@ ggplot(all_data, aes(x = Tleaf, y = Photo, color = Condition)) +
   theme(legend.title = element_blank()) +
   theme(legend.background = element_rect(fill="transparent")) +
   xlab("Leaf temperature (ºC)") +
-  ylab("Assimilation rate (µmol/m²s)") #+
+#  ylab("Assimilation rate (µmol/m²s)") #+
+  ylab(expression(paste("Assimilation rate (µmol ", m^-2, s^-1, ")")))
 #geom_segment(aes(x = 35, y = 9, xend = 28, yend = 9), color = "black",
 #             arrow = arrow(length = unit(0.5, "cm")))
 
@@ -1032,20 +1033,21 @@ p1 = ggplot(data = kinetics_all, aes(x = Tleaf, y = Vcmax, fill = type, color = 
   theme(legend.position = c(0.2,0.8)) +
   theme(legend.title = element_blank()) +
   xlab("Leaf temperature (ºC)") +
-  ylab(expression(V[cmax]~~(µmol/m^2~s ))) +
+  ylab(expression(paste(V[cmax]~~(µmol~m^-2~s^-1 )))) +
   annotate("text", x = 17.5, y = 150, label = "(a)")
 
+#ylab(expression(paste("Assimilation rate (µmol ", m^-2, s^-1, ")")))
 
 # Plot 2 Jmax
 p2 = ggplot(data = kinetics_all, aes(x = Tleaf, y = Jmax, fill = type, color = type)) +
     scale_fill_manual(values = rev(palette_c)) +
     scale_colour_manual(values = rev(palette_c)) +  
-  geom_line(data = jmax_model, aes(color=type)) +
+    geom_line(data = jmax_model, aes(color=type)) +
     geom_point(aes(fill = type), size=2.4, color = "black", shape = 21) +
     my_theme +
     xlab("Leaf temperature (ºC)") +
-    ylab(expression(J[max]~~(µmol/m^2~s))) +
-  annotate("text", x = 17.5, y = 160, label = "(b)")
+    ylab(expression(paste(J[max]~~(µmol~m^-2~s^-1 )))) +
+    annotate("text", x = 17.5, y = 160, label = "(b)")
 
 grid.arrange(p1, p2, ncol = 2)
 dev.off()

@@ -1,1 +1,0 @@
-# LI-COR-thermal-gradients

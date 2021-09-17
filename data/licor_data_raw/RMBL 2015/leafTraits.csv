@@ -1,0 +1,53 @@
+Index,Site,Date,Taxon,TimeStart,filename,Sample,Mfresh_g,Mdry_g,A_cm2,Absorptance,Notes
+1,Almont,06/17/15,Artemisia tridentata,10:30,stm-as1_.xls,as1,0.02092,0.00862,0.656378517,0.35,added H2O at 42.7 °C
+2,Almont,06/17/15,Artemisia tridentata,12:45,stm-as2_.xls,as2,0.0134,0.00517,0.434013404,0.35,
+3,Almont,06/18/15,Artemisia tridentata,9:45,stm-as3_.xls,as3,0.01706,0.00705,0.512722912,0.35,"Psyn oscillating lots. Extra leaves were in gasket, possibly contributing to leak?"
+4,Almont,06/18/15,Artemisia tridentata,11:24,stm-as4_.xls,as4,0.02436,0.00915,0.946449578,0.35,
+5,Almont,06/18/15,Artemisia tridentata,12:45,stm-as5_.xls,as5,0.02397,0.00808,0.851754441,0.35,This leaf behaved well
+6,Almont,06/22/15,Balsamorhiza sagittata,9:35,stm-abasa1_.xls,abasa1,5.56724,1.5744,157.3954411,0.38,This leaf took whole chamber area. Started using Jennie's machine on this day (installed temperature conrtol kit previous Friday)
+7,Almont,06/22/15,Balsamorhiza sagittata,10:55,stm-abasa2_.xls,abasa2,4.66954,1.31303,140.440137,0.38,
+8,Almont,06/22/15,Balsamorhiza sagittata,11:53,stm-abasa3_.xls,abasa3,5.69415,1.78322,158.6623201,0.38,Didn't get T_opt!
+9,Almont,06/22/15,Artemisia tridentata,12:45,stm-as6_.xls,as6,0.02051,0.0082,0.536074116,0.35,Leaf may not be touching thermocouple.
+10,Almont,06/22/15,Artemisia tridentata,1:30,stm-as7_.xls,as7,0.02359,0.00898,0.86952322,0.35,"Something funky happened with 5th temperature.  T_leaf = T_air until fifth temp, when T_leaf dropped dramatically."
+11,Almont,06/23/15,Balsamorhiza sagittata,7:00,stm-abasa4_.xls,abasa4,3.55055,0.9698,104.0503049,0.38,Sensor head tipped near T_opt
+12,Almont,06/23/15,Balsamorhiza sagittata,10:09,stm-abasa5_.xls,abasa5,6.71308,1.80515,165.109636,0.38,
+13,Road,06/24/15,Artemisia tridentata,8:27,stm-rartr1_.xls,rartr1,0.03525,0.0097,1.435910891,0.35,
+14,Road,06/24/15,Artemisia tridentata,9:36,stm-rartr2_.xls,rartr2,0.04126,0.01123,1.555211709,0.35,
+15,Road,06/24/15,Artemisia tridentata,10:47,stm-rartr3_.xls,rartr3,0.033,0.00889,1.247551081,0.35,
+16,Road,06/24/15,Artemisia tridentata,12:00,stm-rartr4_.xls,rartr4,0.0349,0.01072,1.488482462,0.35,not doing homeothermy - water limited?
+17,Road,06/25/15,Veratrum californicum,8:35,stm-rcup1_.xls,rcup1,5.51545,1.24308,178.2417762,0.41,not yet flowering. Entire chamber area filled. *Leaf not homeothermic*
+18,Road,06/25/15,Valeriana occidentalis,10:06,stm-rvaoc1_.xls,rvaoc1,0.38429,0.08571,18.70662644,0.46,"not yet bolted/flowering. This is the ""ground"" leaf morphology before bolting with flower appearance. Entire chamber area filled.  *Measured right before LICOR went bad*"
+19,Road,06/25/15,Valeriana occidentalis,3:40,stm-rvaoc2_.xls,rvaoc2,0.70575,0.16826,31.51430499,0.46,
+20,Road,06/26/15,Valeriana occidentalis,8:10,stm-rvaoc3_.xls,rvaoc3,0.38729,0.07733,19.10444816,0.46,May be just bolting
+21,Road,06/26/15,Potentilla gracilis,9:10,stm-rpoga1_.xls,rpoga1,1.0377,0.33686,52.80245813,0.49,
+22,Road,06/26/15,Veratrum californicum,10:10,stm-rcup2_.xls,rcup2,3.47853,0.80149,120.9582255,0.41,
+23,Road,06/26/15,Valeriana occidentalis,11:06,stm-rvaoc4_.xls,rvaoc4,0.48,0.11509,19.3954332,0.46,
+24,Road,06/26/15,Potentilla gracilis,12:34,stm-rpoga2_.xls,rpoga2,1.254,0.41281,66.85207845,0.49,Restarted with cold H2O.  Machine accidentally shut down and restarted between 20 and 25 °C measurements.
+25,Road,06/26/15,Veratrum californicum,1:22,stm-rcup3_.xls,rcup3,3.8481,0.94734,135.7825843,0.41,
+26,Road,06/26/15,Potentilla gracilis,2:33,stm-rpoga3_.xls,rpoga3,0.56823,0.15176,32.37115798,0.49,
+27,Road,06/26/15,Potentilla gracilis,3:16,stm-rpoga4_.xls,rpoga4,0.46794,0.12557,24.2545715,0.49,
+28,Road,06/27/15,Veratrum californicum,8:43,stm-rcup4_.xls,rcup4,4.72403,1.08564,160.3670566,0.41,
+29,Road,06/27/15,Valeriana occidentalis,9:50,stm-rvaoc5_.xls,rvaoc5,0.4972,0.1012,25.08238334,0.46,
+30,Pfeiler,06/27/15,Ligusticum porteri,11:53,stm-plipo1_.xls,plipo1,0.09644,0.02876,4.044355102,0.52,
+31,Pfeiler,06/27/15,Delphinium barbeyi,1:10,stm-pdeba1_.xls,pdeba1,1.25082,0.29154,52.83205484,0.49,
+32,Pfeiler,06/27/15,Ligusticum porteri,2:12,stm-plipo2_.xls,plipo2,0.04889,0.01383,2.439484001,0.52,
+33,Pfeiler,06/27/15,Delphinium barbeyi,3:15,stm-pdeba2_.xls,pdeba2,0.99655,0.21909,43.46761261,0.49,
+34,Pfeiler,06/28/15,Veratrum californicum,8:45,stm-pcup1_.xls,pcup1,3.2109,0.64597,138.0539235,0.41,
+35,Pfeiler,06/28/15,Delphinium barbeyi,9:36,stm-pdeba3_.xls,pdeba3,1.44374,0.33766,51.25326791,0.49,
+36,Pfeiler,06/28/15,Ligusticum porteri,10:35,stm-plipo3_.xls,plipo3,0.04985,0.01481,2.093821662,0.52,
+37,Pfeiler,06/28/15,Veratrum californicum,11:50,stm-pcup2_.xls,pcup2,4.84665,0.92218,159.8963497,0.41,
+38,Pfeiler,06/28/15,Delphinium barbeyi,1:00,stm-pdeba4_.xls,pdeba4,1.87551,0.36167,64.56553319,0.49,Lots of psyn oscillation
+39,Pfeiler,06/28/15,Ligusticum porteri,2:10,stm-plipo4_.xls,plipo4,0.02723,0.00758,1.171950885,0.52,Lots of psyn oscillation.  So cleaned gaskets and restarted.
+40,Pfeiler,06/29/15,Ligusticum porteri,9:04,stm-plipo5_.xls,plipo5,0.06641,0.01777,3.506318624,0.52,
+41,Pfeiler,06/29/15,Ligusticum porteri,9:59,stm-plipo6_.xls,plipo6,0.057,0.0144,2.851391717,0.52,
+42,Pfeiler,06/29/15,Veratrum californicum,11:04,stm-pcup3_.xls,pcup3,2.4928,0.5014,95.45845063,0.41,
+43,Pfeiler,06/29/15,Ligusticum porteri,12:15,stm-plipo7_.xls,plipo7,0.05238,0.01408,2.967412973,0.52,
+44,Painter Boy,07/01/15,Veratrum californicum,9:25,stm-pbcup1_.xls,pbcup1,3.975,0.76632,142.2295418,0.41,Not yet flowering.  
+45,Painter Boy,07/01/15,Veratrum californicum,10:05,stm-pbcup2_.xls,pbcup2,4.23435,0.8358,146.777489,0.41,Not yet flowering.  
+46,Painter Boy,07/01/15,Veratrum californicum,10:45,stm-pbcup3_.xls,pbcup3,3.83361,0.70738,133.4804746,0.41,Not yet flowering.  
+47,Painter Boy,07/01/15,Valeriana occidentalis,11:33,stm-pbvaoc1_.xls,pbvaoc1,0.82024,0.13053,32.64558392,0.46,Not yet flowering.  
+48,Painter Boy,07/01/15,Valeriana occidentalis,12:15,stm-pbvaoc2_.xls,pbvaoc2,0.39609,0.05601,19.33433118,0.46,Not yet flowering.  
+49,Painter Boy,07/02/15,Chamerion angustifolium,8:30,stm-pbchan1_.xls,pbchan1,0.31142,0.0666,15.02653579,0.46,"Not yet flowering. Leaf filled basically the entire chamber, even though I cut into pieces (didn't entirely fill but difference likely negligable)."
+50,Painter Boy,07/02/15,Valeriana occidentalis,9:40,stm-pbvaoc3_.xls,pbvaoc3,0.65388,0.10181,32.77178436,0.46,"at 30 °C, T_leaf = T_air (not transpiring)"
+51,Painter Boy,07/02/15,Chamerion angustifolium,10:50,stm-pbchan2_.xls,pbchan2,0.41408,0.09352,18.0291727,0.46,Note RH of first measurement.
+52,Painter Boy,07/02/15,Chamerion angustifolium,12:00,stm-pbchan3_.xls,pbchan3,0.35952,0.07983,17.19152217,0.46,

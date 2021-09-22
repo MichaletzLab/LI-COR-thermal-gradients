@@ -10,7 +10,6 @@ library(readxl)
 library(rTPC)
 library(nls.multstart)
 library(nlstools)
-#library(broom)
 library(plantecophys)
 library(kSamples)
 
@@ -18,14 +17,11 @@ library(kSamples)
 library(LICOR6400)
 
 source("R/correct_licor_function.R")
-
-#source("R/curve_fitting.R")
 #source("R/error_prop_6400.R")
 #source("R/error_prop_6800.R")
 
 source("R/make_figS1.R")
 source("R/make_figS2.R")
-
 source("R/make_fig2.R")
 source("R/make_fig3.R")
 source("R/make_fig4.R")
@@ -52,25 +48,23 @@ my_theme = theme_bw() + theme(legend.position = "none") +
 # Create directory for figures if none exists
 if(!dir.exists("figures")) { dir.create("figures") }
 
-# Generate figures. Code for generating figures includes all analysis.
-# Stats associated with each figure are also printed from each function.
+file.remove("stats.txt")
+file.remove("stats_supplement.txt")
 
-# Generate supplemental figures 1 and 2 (Fig. S3 below)
-make_figS1() # fig runs clean
-make_figS2() # fig runs clean
+# Generate supplemental figures 1 and 2 and stats(Fig. S3 below)
+make_figS1() # OK
+make_figS2() # fig runs clean; no stats to speak of?
 
-# Generate main text figures. Fig. 1 not included.
-make_fig2() # fig runs clean
-make_fig3() # fig runs clean
-make_fig4() # fig runs clean
-make_fig5() # fig runs clean
+# Generate main text figures and stats. Fig. 1 not included.
+make_fig2() # OK
+make_fig3() # OK
+make_fig4() # OK
+make_fig5() # OK
 make_fig6() # runs, but very clunky. ERRORS NEED TO BE CORRECTED HERE.
-make_fig7() # fig runs clean ------ uses new correction fn; includes figS3 and stats (some NAs)
-make_fig8() # fig runs clean ------ uses new correction fn; still has extra stats at end
-make_fig9() # runs? but needs functions from 6400 error prop. use new correction fn? clunko
+make_fig7() # OK; Also generates Fig. S3
+make_fig8() # OK
+make_fig9() # OK
 
 ########
 # Done #
 ########
-
-  

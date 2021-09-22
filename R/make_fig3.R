@@ -90,4 +90,49 @@ make_fig3 = function() {
   
   # Close file
   dev.off()
+  
+  
+  
+  
+  # Output associated statistics
+  
+  # Open file
+  sink("stats.txt", append = T)
+  cat("===================================\n")
+  cat("Statistics associated with Fig. 3:\n")
+  cat("===================================\n\n")
+
+  z = lm(T_above ~ T_air, data = subset(licor_trials_all, Licor_Type == "LI-6400XT"))
+  cat("Linear model summary (LI-6400XT, T_air_upper):")
+  print(summary(z))
+  cat("\n95% confidence intervals (LI-6400XT, T_air_upper):\n")
+  print(confint(z))
+  
+  cat("\n\n")
+  
+  z = lm(T_below ~ T_air, data = subset(licor_trials_all, Licor_Type == "LI-6400XT"))
+  cat("Linear model summary (LI-6400XT, T_air_lower):")
+  print(summary(z))
+  cat("\n95% confidence intervals (LI-6400XT, T_air_lower):\n")
+  print(confint(z))
+  
+  cat("\n\n")
+  
+  z = lm(T_above ~ T_air, data = subset(licor_trials_all, Licor_Type == "LI-6800"))
+  cat("Linear model summary (LI-6800, T_air_upper):")
+  print(summary(z))
+  cat("\n95% confidence intervals (LI-6800, T_air_upper):\n")
+  print(confint(z))
+  
+  cat("\n\n")
+  
+  z = lm(T_below ~ T_air, data = subset(licor_trials_all, Licor_Type == "LI-6800"))
+  cat("Linear model summary (LI-6800, T_air_lower):")
+  print(summary(z))
+  cat("\n95% confidence intervals (LI-6800, T_air_lower):\n")
+  print(confint(z))
+  
+  # Close file
+  cat("\n\n\n")
+  sink()
 }

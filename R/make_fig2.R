@@ -26,7 +26,7 @@ make_fig2 = function() {
     my_theme +
     ylab(expression(atop(paste("Difference between measured"), paste("and reported air temperatures (", degree, "C)")))) +
     xlab(expression(paste("Reported air temperature (", degree, "C)"))) +
-    guides(pch = F) +
+    guides(pch = "none") +
     annotate("text", x = 13, y = 3.2, label = "(b)")
   
   p2 = ggplot(data = subdata, aes(x = T_air, y = T_leaf, color = Licor_Type)) + 
@@ -42,11 +42,40 @@ make_fig2 = function() {
     theme(legend.title = element_blank()) +
     ylab(expression(paste("Measured in-cuvette air temperature (", degree, "C)"))) +
     xlab(expression(paste("Reported air temperature (", degree, "C)"))) +
-    guides(pch = F) +
+    guides(pch = "none") +
     annotate("text", x = 13, y = 41, label = "(a)")
   
   grid.arrange(p2,p1, widths = c(1,1.075), ncol = 2)
   
   # Close file
   dev.off()
+  
+  
+  # Output associated statistics
+  
+  # Open file
+  sink("stats.txt", append = T)
+  cat("===================================\n")
+  cat("Statistics associated with Fig. 2:\n")
+  cat("===================================\n\n")
+  
+  z = lm(T_leaf ~ T_air, data = subset(subdata, Licor_Type == "LI-6400XT"))
+  cat("Linear model summary (LI-6400XT):")
+  print(summary(z))
+  cat("\n95% confidence intervals (LI-6400XT):\n")
+  print(confint(z))
+  
+  cat("\n\n")
+  
+  z = lm(T_leaf ~ T_air, data = subset(subdata, Licor_Type == "LI-6800"))
+  cat("Linear model summary (LI-6800):")
+  print(summary(z))
+  cat("\n95% confidence intervals (LI-6800):\n")
+  print(confint(z))
+  
+  
+  # Close file
+  cat("\n\n\n")
+  sink()
+  
 }

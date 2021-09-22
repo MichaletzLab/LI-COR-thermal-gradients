@@ -272,16 +272,15 @@ est_error_6800_reg_2 <- function(test_params, m = 1, b = 0) {
     
     results = rbind(results, data.frame(g_sw_0,g_sw_a,g_tw_0,g_tw_a,g_tc_0,g_tc_a,C_i_0,C_i_a,TleafC_cur,TairC_cur))
   }
-  
-  # Works a treat, friend
+
   
   
   
   # Compute relative error
-  error_df = data.frame( g_sw_high = (results$g_sw_0-results$g_sw_a)/results$g_sw_0,
-                         g_tw_high = (results$g_tw_0-results$g_tw_a)/results$g_tw_0,
-                         g_tc_high = (results$g_tc_0-results$g_tc_a)/results$g_tc_0,
-                         C_i_high = (results$C_i_0-results$C_i_a)/results$C_i_0,
+  error_df = data.frame( g_sw_high = (results$g_sw_0-results$g_sw_a)/results$g_sw_a,
+                         g_tw_high = (results$g_tw_0-results$g_tw_a)/results$g_tw_a,
+                         g_tc_high = (results$g_tc_0-results$g_tc_a)/results$g_tc_a,
+                         C_i_high = (results$C_i_0-results$C_i_a)/results$C_i_a,
                          Tleaf = results$TleafC_cur,
                          Tair = results$TairC_cur)
   
@@ -297,3 +296,30 @@ est_error_6800_reg_2 <- function(test_params, m = 1, b = 0) {
   
   return(err_long)
 }
+
+
+
+
+
+
+# This function corrects Tleaf, Ci, gsw, gtw, and gtc for the 6800
+# The functionality is specific to generating Fig. 6 in this analysis,
+# and this should not be used as a general-purpose correction scheme
+# for 6800 files.
+correct_licor6800 = function(licor_uncorrected) {
+  
+  # Correct air and leaf temperatures
+  licor_uncorrected %>% 
+    
+    # Preserve uncorrected values, correct Tleaf, gtw, gsw, gtc, and Ci
+    mutate(
+      Tleaf_uncorrected = Tleaf,
+      Tleaf = -( (Tair-Tleaf)*0.4941 - 1.1436 - Tleaf ),
+      gtw = g_tw(E, W_l(Tleaf, P = `ΔPcham` + Pa), H2O_s),
+      gsw = g_sw(gtw, gbw, K),
+      gtc = g_tc(gsw, gbw, K),
+      Ci = C_i(gtc, Ca, A, E)
+    ) 
+  
+}
+

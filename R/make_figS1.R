@@ -10,11 +10,13 @@ make_figS1 = function() {
   Tleaf_error_trials_all$Licor_Type[Tleaf_error_trials_all$Licor_Type == "6400"] = "LI-6400XT"
   Tleaf_error_trials_all$Licor_Type[Tleaf_error_trials_all$Licor_Type == "6800"] = "LI-6800"
   
-  
+  # Remove data without threaded thermocouple
   data_thread = subset(Tleaf_error_trials_all, !is.na(T_thread))
   
+  # Open file
   pdf("figures/figS1.pdf", width = 4, height = 4)
   
+  # Build plot
   p1 = ggplot(data=data_thread, aes(x=T_thread, y=T_below)) +
     scale_fill_manual(values = palette_a) +
     scale_colour_manual(values = palette_a) +
@@ -30,6 +32,26 @@ make_figS1 = function() {
     ylab(expression(paste("Leaf temperature, abaxial thermocouple (", degree, "C)"))) #+
 
   grid.arrange(p1, ncol = 1)
+  
+  # Close file
   dev.off()
+  
+  # Output associated statistics
+  
+  # Open file
+  sink("stats_supplement.txt", append = T)
+  cat("===================================\n")
+  cat("Statistics associated with Fig. S1:\n")
+  cat("===================================\n\n")
+  
+  z = lm(T_below ~ T_thread, data = data_thread)
+  cat("Linear model summary:")
+  summary(z)
+  cat("\n95% confidence intervals:\n")
+  confint(z)
+  
+  # Close file
+  cat("\n\n\n")
+  sink()
   
 }

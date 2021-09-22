@@ -9,99 +9,99 @@ growth_chamber_trials_all <- read.csv("~/Documents/School/UBC - Botany/LICOR gra
 Tleaf_error_trials_all <- read.csv("~/Documents/School/UBC - Botany/LICOR gradients/data/Tleaf_error_trials_all.csv")
 
 ### Section 3.1.1 ###
+# 
+# # Slope and CI of empty 6400; corresponds to Fig. 1
+# test_1 = subset(licor_trials_all, Licor_Type == "6400" & Species == "Empty")
+# z1 = lm(T_leaf ~ T_air, data = test_1)
+# confint(z1)
+# summary(z1)
+# 
+# a = lmer(T_leaf ~ T_air + (T_air|Licor_name), data = test_1)
+# 
+# # Slope and CI of empty 6800; corresponds to fig. 1
+# test_2 = subset(licor_trials_all, Licor_Type == "6800" & Species == "Empty")
+# z2 = lm(T_leaf ~ T_air, data = test_2)
+# confint(z2)
+# summary(z2)
+# 
+# a = lmer(T_leaf ~ T_air + (T_air|Licor_name), data = test_2)
+# 
+# # Slopes of above and below air temperatures 6400; corresponds to fig. 2
+# test_3 = subset(licor_trials_all, Licor_Type == "6400")
+# z3_1 = lm(T_above ~ T_air, data = test_3)
+# z3_2 = lm(T_below ~ T_air, data = test_3)
+# confint(z3_1)
+# confint(z3_2)
+# summary(z3_1)
+# summary(z3_2)
+# 
+# a = lmer(T_above ~ T_air + (T_air|Licor_name), data = test_3)
+# b = lmer(T_below ~ T_air + (T_air|Licor_name), data = test_3)
+# 
+# # Slopes of above and below air temperatures 6800; corresponds to fig. 2
+# test_4 = subset(licor_trials_all, Licor_Type == "6800")
+# z4_1 = lm(T_above ~ T_air, data = test_4)
+# z4_2 = lm(T_below ~ T_air, data = test_4)
+# confint(z4_1)
+# confint(z4_2)
+# summary(z4_1)
+# summary(z4_2)
+# 
+# a = lmer(T_above ~ T_air + (T_air|Licor_name), data = test_4)
+# b = lmer(T_below ~ T_air + (T_air|Licor_name), data = test_4)
+# 
+# # Are the slopes different for 6800?
+# #test_5 = rbind(data.frame(T_ar = test_4$T_air, T_am = test_4$T_above, Type = "above"),
+# #               data.frame(T_ar = test_4$T_air, T_am = test_4$T_below, Type = "below"))
+# #anova(lm(T_am ~ T_ar*Type, data = test_5))
+# 
+# 
+# # Growth chamber trials, above and below leaf air temps in 6400; corresponds to fig. 3
+# test_5 = subset(growth_chamber_trials_all, Licor == "6400")
+# z5_1 = lm(T_above ~ T_air, data = test_5)
+# z5_2 = lm(T_below ~ T_air, data = test_5)
+# confint(z5_1)
+# confint(z5_2)
+# summary(z5_1)
+# summary(z5_2)
+# 
+# # Growth chamber trials, above and below leaf air temps in 6800; corresponds to fig. 3
+# test_6 = subset(growth_chamber_trials_all, Licor == "6800")
+# z6_1 = lm(T_above ~ T_air, data = test_6)
+# z6_2 = lm(T_below ~ T_air, data = test_6)
+# confint(z6_1)
+# confint(z6_2)
+# summary(z6_1)
+# summary(z6_2)
+# 
+# 
 
-# Slope and CI of empty 6400; corresponds to Fig. 1
-test_1 = subset(licor_trials_all, Licor_Type == "6400" & Species == "Empty")
-z1 = lm(T_leaf ~ T_air, data = test_1)
-confint(z1)
-summary(z1)
-
-a = lmer(T_leaf ~ T_air + (T_air|Licor_name), data = test_1)
-
-# Slope and CI of empty 6800; corresponds to fig. 1
-test_2 = subset(licor_trials_all, Licor_Type == "6800" & Species == "Empty")
-z2 = lm(T_leaf ~ T_air, data = test_2)
-confint(z2)
-summary(z2)
-
-a = lmer(T_leaf ~ T_air + (T_air|Licor_name), data = test_2)
-
-# Slopes of above and below air temperatures 6400; corresponds to fig. 2
-test_3 = subset(licor_trials_all, Licor_Type == "6400")
-z3_1 = lm(T_above ~ T_air, data = test_3)
-z3_2 = lm(T_below ~ T_air, data = test_3)
-confint(z3_1)
-confint(z3_2)
-summary(z3_1)
-summary(z3_2)
-
-a = lmer(T_above ~ T_air + (T_air|Licor_name), data = test_3)
-b = lmer(T_below ~ T_air + (T_air|Licor_name), data = test_3)
-
-# Slopes of above and below air temperatures 6800; corresponds to fig. 2
-test_4 = subset(licor_trials_all, Licor_Type == "6800")
-z4_1 = lm(T_above ~ T_air, data = test_4)
-z4_2 = lm(T_below ~ T_air, data = test_4)
-confint(z4_1)
-confint(z4_2)
-summary(z4_1)
-summary(z4_2)
-
-a = lmer(T_above ~ T_air + (T_air|Licor_name), data = test_4)
-b = lmer(T_below ~ T_air + (T_air|Licor_name), data = test_4)
-
-# Are the slopes different for 6800?
-#test_5 = rbind(data.frame(T_ar = test_4$T_air, T_am = test_4$T_above, Type = "above"),
-#               data.frame(T_ar = test_4$T_air, T_am = test_4$T_below, Type = "below"))
-#anova(lm(T_am ~ T_ar*Type, data = test_5))
-
-
-# Growth chamber trials, above and below leaf air temps in 6400; corresponds to fig. 3
-test_5 = subset(growth_chamber_trials_all, Licor == "6400")
-z5_1 = lm(T_above ~ T_air, data = test_5)
-z5_2 = lm(T_below ~ T_air, data = test_5)
-confint(z5_1)
-confint(z5_2)
-summary(z5_1)
-summary(z5_2)
-
-# Growth chamber trials, above and below leaf air temps in 6800; corresponds to fig. 3
-test_6 = subset(growth_chamber_trials_all, Licor == "6800")
-z6_1 = lm(T_above ~ T_air, data = test_6)
-z6_2 = lm(T_below ~ T_air, data = test_6)
-confint(z6_1)
-confint(z6_2)
-summary(z6_1)
-summary(z6_2)
-
-
-
-
-### Section 3.1.2
-
-# Error in Tleaf as a function of Tair-Tleaf in the LI-6400XT
-test_7 = subset(Tleaf_error_trials_all, Licor_Type == "6400")
-test_7 = subset(test_7, !is.na(T_air_below))
-test_7$T_leaf_error = (test_7$T_leaf-test_7$T_below)
-test_7$diff = test_7$T_air - test_7$T_leaf
-z7 = lm(T_leaf_error ~ diff, data = test_7)
-confint(z7)
-summary(z7)
-
-summary(test_7$diff)
-summary(test_7$T_leaf_error)
-
-# Error in Tleaf as a function of Tair-Tleaf in the LI-6800
-test_8 = subset(Tleaf_error_trials_all, Licor_Type == "6800")
-test_8 = subset(test_8, !is.na(T_air_below))
-test_8$T_leaf_error = (test_8$T_leaf-test_8$T_below)
-test_8$diff = test_8$T_air - test_8$T_leaf
-z8 = lm(T_leaf_error ~ diff, data = test_8)
-confint(z8)
-summary(z8)
-
-summary(test_8$diff)
-summary(test_8$T_leaf_error)
+# 
+# ### Section 3.1.2
+# 
+# # Error in Tleaf as a function of Tair-Tleaf in the LI-6400XT
+# test_7 = subset(Tleaf_error_trials_all, Licor_Type == "6400")
+# test_7 = subset(test_7, !is.na(T_air_below))
+# test_7$T_leaf_error = (test_7$T_leaf-test_7$T_below)
+# test_7$diff = test_7$T_air - test_7$T_leaf
+# z7 = lm(T_leaf_error ~ diff, data = test_7)
+# confint(z7)
+# summary(z7)
+# 
+# summary(test_7$diff)
+# summary(test_7$T_leaf_error)
+# 
+# # Error in Tleaf as a function of Tair-Tleaf in the LI-6800
+# test_8 = subset(Tleaf_error_trials_all, Licor_Type == "6800")
+# test_8 = subset(test_8, !is.na(T_air_below))
+# test_8$T_leaf_error = (test_8$T_leaf-test_8$T_below)
+# test_8$diff = test_8$T_air - test_8$T_leaf
+# z8 = lm(T_leaf_error ~ diff, data = test_8)
+# confint(z8)
+# summary(z8)
+# 
+# summary(test_8$diff)
+# summary(test_8$T_leaf_error)
 
 # 
 test_9 = subset(Tleaf_error_trials_all, Licor_Type == "6400")

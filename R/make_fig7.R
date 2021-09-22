@@ -145,6 +145,9 @@ make_fig7 = function () {
   # Close file
   dev.off()
   
+  
+  
+  
   # Generate supplemental figure S3
   
   # Trim data such that (Tblock-Tair) and (Tair-Tleaf) do not go out of 
@@ -202,35 +205,57 @@ make_fig7 = function () {
   dev.off()
   
   
+  # Output associated statistics
   
-  #### Stats
-  # uncorrected
+  # Open file
+  sink("stats.txt", append = T)
+  cat("===================================\n")
+  cat("Statistics associated with Fig. 7:\n")
+  cat("===================================\n\n")
   
-  # Quick stats: mean and stderr of slope values
+  # Mean, stderr, and variance of slope values in uncorrected dataset
   print("Mean slope, uncorrected:")
-  print(mean(model_coef$slope))
+  print(mean(model_coef_uncorrected$slope))
   print("Std. error, uncorrected:")
-  print(sd(model_coef$slope)/sqrt(length(model_coef$slope)))
+  print(sd(model_coef_uncorrected$slope)/sqrt(length(model_coef_uncorrected$slope)))
   print("Variance, uncorrected:")
-  print(var(model_coef$slope))
+  print(var(model_coef_uncorrected$slope))
   
-  # Quick stats: mean and stderr of slope values - corrected
-  print("Mean slope, uncorrected:")
-  print(mean(model_coef$slope))
-  print("Std. error, uncorrected:")
-  print(sd(model_coef$slope)/sqrt(length(model_coef$slope)))
-  print("Variance, uncorrected:")
-  print(var(model_coef$slope))
-  
-  # Quick stats: mean and stderr of slope values - supplement
-  print("Mean slope, uncorrected:")
-  print(mean(model_coef$slope, na.rm = T))
-  print("Std. error, uncorrected:")
-  print(sd(model_coef$slope, na.rm = T)/sqrt(sum(!is.na(model_coef$slope))))
-  print("Variance, uncorrected:")
-  print(var(model_coef$slope))
+  # Mean, stderr, and variance of slope values in corrected dataset
+  print("Mean slope, corrected:")
+  print(mean(model_coef_corrected$slope))
+  print("Std. error, corrected:")
+  print(sd(model_coef_corrected$slope)/sqrt(length(model_coef_corrected$slope)))
+  print("Variance, corrected:")
+  print(var(model_coef_corrected$slope))
   
   # Test if truncation modifies slope distribution
-  ad.test(slopes_full, slopes_trunc)
+  print(ad.test(slopes_full, slopes_trunc))
+  
+  # Close file
+  cat("\n\n\n")
+  sink()
+  
+  
+  # Output supplemental statistics
+  
+  # Open file
+  sink("stats_supplement.txt", append = T)
+  cat("===================================\n")
+  cat("Statistics associated with Fig. 7:\n")
+  cat("===================================\n\n")
+  
+  # Mean, stderr, and variance of slope values in truncated dataset
+  print("Mean slope, uncorrected:")
+  print(mean(model_coef_trunc$slope, na.rm = T))
+  print("Std. error, uncorrected:")
+  print(sd(model_coef_trunc$slope, na.rm = T)/sqrt(sum(!is.na(model_coef_trunc$slope))))
+  print("Variance, uncorrected:")
+  print(var(model_coef_trunc$slope, na.rm = T))
+  
+  
+  # Close file
+  cat("\n\n\n")
+  sink()
 
 }

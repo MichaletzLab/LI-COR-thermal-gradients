@@ -3,8 +3,8 @@
 #install.packages("remotes")
 #remotes::install_github("Plant-Functional-Trait-Course/LICOR6400")
 
-library("LICOR6400")
-library("tidyverse")
+#library("LICOR6400")
+#library("tidyverse")
 
 # Function to correct Tleaf based on the difference between Tair and Tleaf
 correct_Tleaf = function(Tleaf, Tair, slope = 0.7838, intercept = 0.8092) {
@@ -26,7 +26,7 @@ correct_licor6400 = function(licor_uncorrected) {
       CTleaf_uncorrected = CTleaf,
       Tleaf_uncorrected = Tleaf,
       Tair_uncorrected = Tair,
-      total.leaf.area = Area
+      #total.leaf.area = Area
     ) %>% 
     
     # Correct air and leaf temperatures 

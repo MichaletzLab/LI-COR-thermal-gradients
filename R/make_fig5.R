@@ -46,4 +46,54 @@ make_fig5 = function() {
   
   # Close file
   dev.off()
+  
+  
+  
+  # Output associated statistics
+  
+  # Open file
+  sink("stats.txt", append = T)
+  cat("===================================\n")
+  cat("Statistics associated with Fig. 5:\n")
+  cat("===================================\n\n")
+  
+  Tleaf_error_trials_all$a = Tleaf_error_trials_all$T_leaf-Tleaf_error_trials_all$T_below
+  Tleaf_error_trials_all$b = Tleaf_error_trials_all$T_air-Tleaf_error_trials_all$T_leaf
+  Tleaf_error_trials_all$c = Tleaf_error_trials_all$T_air_below-Tleaf_error_trials_all$T_below
+  
+      
+  z = lm(a ~ b, data = subset(Tleaf_error_trials_all, Licor_Type == "LI-6400XT"))
+  cat("Linear model summary (LI-6400XT, Tleaf error vs. Tair-Tleaf):")
+  print(summary(z))
+  cat("\n95% confidence intervals (LI-6400XT, Tleaf error vs. Tair-Tleaf):\n")
+  print(confint(z))
+  
+  cat("\n\n")
+  
+  z = lm(a ~ b, data = subset(Tleaf_error_trials_all, Licor_Type == "LI-6800"))
+  cat("Linear model summary (LI-6800, Tleaf error vs. Tair-Tleaf):")
+  print(summary(z))
+  cat("\n95% confidence intervals (LI-6800, Tleaf error vs. Tair-Tleaf):\n")
+  print(confint(z))
+  
+  cat("\n\n")
+  
+  z = lm(a ~ c, data = subset(Tleaf_error_trials_all, Licor_Type == "LI-6400XT"))
+  cat("Linear model summary (LI-6400XT, Tleaf error vs. Tair,lower-Tleaf,lower):")
+  print(summary(z))
+  cat("\n95% confidence intervals (LI-6400XT, Tleaf error vs. Tair,lower-Tleaf,lower):\n")
+  print(confint(z))
+  
+  cat("\n\n")
+  
+  z = lm(a ~ c, data = subset(Tleaf_error_trials_all, Licor_Type == "LI-6800"))
+  cat("Linear model summary (LI-6800, Tleaf error vs. Tair,lower-Tleaf,lower):")
+  print(summary(z))
+  cat("\n95% confidence intervals (LI-6800, Tleaf error vs. Tair,lower-Tleaf,lower):\n")
+  print(confint(z))
+  
+  
+  # Close file
+  cat("\n\n\n")
+  sink()
 }

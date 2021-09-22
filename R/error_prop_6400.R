@@ -152,6 +152,7 @@ est_error_6400_reg_2 <- function(test_params, m = 1, b = 0) {
     # Compute current T_leaf error under current conditions
     #T_error = m*(TairC_cur-TleafC_cur)+b
     Tleaf_corr = -( (TairC_cur-TleafC_cur)*0.7838 + 0.8092 - TleafC_cur )
+    print(Tleaf_corr)
     
     #print(T_error)
     
@@ -175,15 +176,15 @@ est_error_6400_reg_2 <- function(test_params, m = 1, b = 0) {
   }
   
   # Post-processing, remove unreasonable values
-  results = subset(results, g_sw_0 < 1)
-  results = subset(results, g_sw_0 > 0)
-  results = subset (results, C_i_0 > 0)
+  # results = subset(results, g_sw_0 < 1)
+  # results = subset(results, g_sw_0 > 0)
+  # results = subset (results, C_i_0 > 0)
   
   # Compute relative error
-  error_df = data.frame( g_sw_high = (results$g_sw_0-results$g_sw_a)/results$g_sw_0,
-                         g_tw_high = (results$g_tw_0-results$g_tw_a)/results$g_tw_0,
-                         g_tc_high = (results$g_tc_0-results$g_tc_a)/results$g_tc_0,
-                         C_i_high = (results$C_i_0-results$C_i_a)/results$C_i_0,
+  error_df = data.frame( g_sw_high = (results$g_sw_0-results$g_sw_a)/results$g_sw_a,
+                         g_tw_high = (results$g_tw_0-results$g_tw_a)/results$g_tw_a,
+                         g_tc_high = (results$g_tc_0-results$g_tc_a)/results$g_tc_a,
+                         C_i_high = (results$C_i_0-results$C_i_a)/results$C_i_a,
                          Tleaf = results$TleafC_cur,
                          Tair = results$TairC_cur)
   

@@ -12,7 +12,7 @@ make_fig8 = function () {
   AT_uncorrected$Condition = "Uncorrected"
   AT_corrected$Condition = "Corrected"
   
-  # Fit Pawar model (equivalent to Sharpe-Scholfield with high temperature deactivation) 
+  # Fit Pawar model (equivalent to Sharpe-Schoolfield with high temperature deactivation) 
   # Grab starting limits
   mod = "pawar_2018"
   start_vals = get_start_vals(AT_uncorrected$Tleaf, AT_uncorrected$Photo, model_name = mod)
@@ -97,20 +97,28 @@ make_fig8 = function () {
   
   
   
-  # Other stats and tests:
   
-  summary(fit_pawar_uncorr)
-  confint2(fit_pawar_uncorr)
+  # Output associated statistics
   
-  summary(fit_pawar_corr)
-  confint2(fit_pawar_corr)
+  # Open file
+  sink("stats.txt", append = T)
+  cat("===================================\n")
+  cat("Statistics associated with Fig. 8:\n")
+  cat("===================================\n\n")
   
+  cat("Sharpe-Schoolfield best fit parameters, uncorrected data:")
+  print(summary(fit_pawar_uncorr))
+  print(confint2(fit_pawar_uncorr))
+  
+  cat("\n\nSharpe-Schoolfield best fit parameters, corrected data:")
+  print(summary(fit_pawar_corr))
+  print(confint2(fit_pawar_corr))
+  
+  # Fit modified Gaussian function
   mod = "modifiedgaussian_2006"
   start_vals = get_start_vals(AT_uncorrected$Tleaf, AT_uncorrected$Photo, model_name = mod)
   low_lims = get_lower_lims(AT_uncorrected$Tleaf, AT_uncorrected$Photo, model_name = mod)
   upper_lims = get_upper_lims(AT_uncorrected$Tleaf, AT_uncorrected$Photo, model_name = mod)
-  
-  #low_lims[1] = -30
   
   fit_gaussian_uncorr = nls_multstart(Photo~modifiedgaussian_2006(temp = Tleaf, rmax, topt, a,b),
                                       data = AT_uncorrected,
@@ -121,9 +129,6 @@ make_fig8 = function () {
                                       upper = upper_lims,
                                       supp_errors = 'Y')
   
-  summary(fit_gaussian_uncorr)
-  confint2(fit_gaussian_uncorr)
-  
   fit_gaussian_corr = nls_multstart(Photo~modifiedgaussian_2006(temp = Tleaf, rmax, topt, a,b),
                                     data = AT_corrected,
                                     iter = 500,
@@ -132,19 +137,28 @@ make_fig8 = function () {
                                     lower = low_lims,
                                     upper = upper_lims,
                                     supp_errors = 'Y')
-  summary(fit_gaussian_corr)
-  confint2(fit_gaussian_corr)
   
-  all_data = rbind(AT_uncorrected, AT_corrected)
+  cat("\n\nModified Gaussian best fit parameters, uncorrected data:")
+  print(summary(fit_gaussian_uncorr))
+  print(confint2(fit_gaussian_uncorr))
   
-  # New significance test
+  cat("\n\nModified Gaussian best fit parameters, corrected data:")
+  print(summary(fit_gaussian_corr))
+  print(confint2(fit_gaussian_corr))
+  
+  # Join data for next tests
+  all_data = bind_rows(AT_uncorrected, AT_corrected)
+  all_data$Condition = as.factor(all_data$Condition)
+  
+  # Fit model allowing all parameters to vary by condition
   g1 = nls(Photo ~ modifiedgaussian_2006(temp = Tleaf, rmax[Condition], topt[Condition], a[Condition], b[Condition]),
            data = all_data,
            start = list(rmax = c(11,11),
-                        topt = c(26,26),
+                        topt = c(25,25),
                         a = c(14,14),
                         b = c(2,2)))
   
+  # Fit model, restricting rmax to be the same across conditions
   g2 = nls(Photo ~ modifiedgaussian_2006(temp = Tleaf, rmax, topt[Condition], a[Condition], b[Condition]),
            data = all_data,
            start = list(rmax = 11,
@@ -152,6 +166,7 @@ make_fig8 = function () {
                         a = c(14,14),
                         b = c(2,2)))
   
+  # Fit model, restricting a (breadth) to be the same across conditions
   g3 = nls(Photo ~ modifiedgaussian_2006(temp = Tleaf, rmax[Condition], topt[Condition], a, b[Condition]),
            data = all_data,
            start = list(rmax = c(11,11),
@@ -159,9 +174,12 @@ make_fig8 = function () {
                         a = 14,
                         b = c(2,2)))
   
-  anova(g1,g2)
-  anova(g1,g3)
+  cat("\n\nAnova - significant difference in rmax?\n")
+  print(anova(g1,g2))
+  cat("\n\nAnova - significant difference in a (breadth)?\n")
+  print(anova(g1,g3))
   
+  # Fit model allowing all parameters to vary by condition
   p1 = nls(Photo ~ pawar_2018(temp = Tleaf, r_tref[Condition], e[Condition], eh[Condition], topt[Condition], tref=5),
            data = all_data,
            start = list(r_tref = c(6,6),
@@ -169,6 +187,7 @@ make_fig8 = function () {
                         eh = c(1,1),
                         topt = c(23,23)))
   
+  # Fit model with same e across conditions
   p2 = nls(Photo ~ pawar_2018(temp = Tleaf, r_tref[Condition], e, eh[Condition], topt[Condition], tref=5),
            data = all_data,
            start = list(r_tref = c(6,6),
@@ -176,6 +195,7 @@ make_fig8 = function () {
                         eh = c(1,1),
                         topt = c(23,23)))
   
+  # Fit model with same topt across conditions
   p3 = nls(Photo ~ pawar_2018(temp = Tleaf, r_tref[Condition], e[Condition], eh[Condition], topt, tref=5),
            data = all_data,
            start = list(r_tref = c(6,6),
@@ -183,7 +203,13 @@ make_fig8 = function () {
                         eh = c(1,1),
                         topt = 23))
   
-  anova(p1,p2)
-  anova(p1,p3)
+  cat("\n\nAnova - significant difference in e?\n")
+  print(anova(p1,p2))
+  cat("\n\nAnova - significant difference in topt?\n")
+  print(anova(p1,p3))
+  
+  # Close file
+  cat("\n\n\n")
+  sink()
   
 }

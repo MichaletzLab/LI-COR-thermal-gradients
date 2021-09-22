@@ -24,6 +24,7 @@ make_figS2 = function () {
   
   # Close file
   dev.off()
+  
 }
 
 

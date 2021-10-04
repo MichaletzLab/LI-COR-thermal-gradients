@@ -54,7 +54,7 @@ make_fig2() # OK
 make_fig3() # OK
 make_fig4() # OK
 make_fig5() # OK
-make_fig6b() # Broken again; runs, but very clunky. ERRORS NEED TO BE CORRECTED HERE.
+make_fig6() # Need new dataset here, final touches to fig. else ok
 make_fig7() # OK; still makes blank page?; Also generates Fig. S3
 make_fig8() # OK;
 make_fig9() # OK;

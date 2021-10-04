@@ -4,6 +4,7 @@ make_fig8 = function () {
   
   # Read in data
   AT_uncorrected = read.csv("data/AT_uncorrected.csv")
+  AT_uncorrected$total.leaf.area = AT_uncorrected$chamber_leaf_area
   
   # Correct raw LI-COR data using new function
   AT_corrected = correct_licor6400(AT_uncorrected)

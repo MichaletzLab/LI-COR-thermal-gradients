@@ -13,12 +13,10 @@ library(nlstools)
 library(plantecophys)
 library(kSamples)
 
-##### Add thing here:
 library(LICOR6400)
 
-source("R/correct_licor_function.R")
-#source("R/error_prop_6400.R")
-#source("R/error_prop_6800.R")
+source("R/correct_licor6400.R")
+source("R/correct_licor6800.R")
 
 source("R/make_figS1.R")
 source("R/make_figS2.R")
@@ -32,38 +30,34 @@ source("R/make_fig8.R")
 source("R/make_fig9.R")
 #etc... or maybe you can just do something like "source("R")"
 
-# Need to get this updated on the github
-source("R/calc_licor_jcg.R")
-
 # Generate color palettes for the different figures
-#cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 palette_a = c("#E69F00", "#56B4E9")
 palette_b = c("#D55E00", "#0072B2")
 palette_c = c("#CC79A7","#009E73")
 
 # Generate standard theme
-my_theme = theme_bw() + theme(legend.position = "none") +
+my_theme = theme_bw() + 
+  theme(legend.position = "none") +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 
-# Create directory for figures if none exists
+# Create directory for figures if none exists, clear stats
 if(!dir.exists("figures")) { dir.create("figures") }
-
-file.remove("stats.txt")
-file.remove("stats_supplement.txt")
+if(file.exists("stats.txt")) { file.remove("stats.txt") }
+if(file.exists("stats.txt")) { file.remove("stats_supplement.txt") }
 
 # Generate supplemental figures 1 and 2 and stats(Fig. S3 below)
 make_figS1() # OK
-make_figS2() # fig runs clean; no stats to speak of?
+make_figS2() # OK
 
 # Generate main text figures and stats. Fig. 1 not included.
 make_fig2() # OK
 make_fig3() # OK
 make_fig4() # OK
 make_fig5() # OK
-make_fig6() # runs, but very clunky. ERRORS NEED TO BE CORRECTED HERE.
-make_fig7() # OK; Also generates Fig. S3
-make_fig8() # OK
-make_fig9() # OK
+make_fig6b() # Broken again; runs, but very clunky. ERRORS NEED TO BE CORRECTED HERE.
+make_fig7() # OK; still makes blank page?; Also generates Fig. S3
+make_fig8() # OK;
+make_fig9() # OK;
 
 ########
 # Done #

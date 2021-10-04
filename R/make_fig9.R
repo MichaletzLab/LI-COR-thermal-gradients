@@ -4,6 +4,7 @@ make_fig9 = function() {
 
   # Read in all A-Ci data
   aci_uncorr = read.csv("data/aci_by_temp_all.csv")
+  aci_uncorr$total.leaf.area = aci_uncorr$Area
   
   # Correct data using new function
   aci_corr = correct_licor6400(aci_uncorr)

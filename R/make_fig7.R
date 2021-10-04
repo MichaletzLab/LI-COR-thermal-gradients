@@ -53,8 +53,8 @@ make_fig7 = function () {
   licor_means = licor_means %>% mutate(Campaign = place) %>% select(-place)
   
   # Correct the leaf and air temperatures using new function
+  licor_means$total.leaf.area = licor_means$Area
   licor_corrected = correct_licor6400(licor_means)
-
   
   # Open file
   pdf("figures/fig7.pdf", width = 7, height = 3.5)

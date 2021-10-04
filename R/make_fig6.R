@@ -155,6 +155,7 @@ make_fig6b = function() {
   data6400$total.leaf.area = data6400$chamber_leaf_area
   data6400_corr = correct_licor6400(data6400)
   
+  #data6800 = calc_licor6800(data6800)
   data6800_corr = correct_licor6800(data6800)
   
   # Compute relative error
@@ -165,7 +166,7 @@ make_fig6b = function() {
               (data6400$Ci - data6400_corr$Ci) / data6400_corr$Ci),
     Tair = data6400$Tair,
     Tleaf = data6400$Tleaf,
-    variable = c(rep("g_sw", 200), rep("g_tw", 200), rep("g_tc", 200), rep("Ci", 200)),
+    variable = c(rep("g_sw", 200), rep("g_tw", 200), rep("g_tc", 200), rep("C_i", 200)),
     Licor_Type = "LI-6400XT"
   )
   
@@ -176,7 +177,7 @@ make_fig6b = function() {
               (data6800$Ci - data6800_corr$Ci) / data6800_corr$Ci),
     Tair = data6800$Tair,
     Tleaf = data6800$Tleaf,
-    variable = c(rep("g_sw", 200), rep("g_tw", 200), rep("g_tc", 200), rep("Ci", 200)),
+    variable = c(rep("g_sw", 200), rep("g_tw", 200), rep("g_tc", 200), rep("C_i", 200)),
     Licor_Type = "LI-6800"
   )
   
@@ -237,7 +238,58 @@ make_fig6b = function() {
   dev.off()
   
   
+  # Output associated statistics
   
+  # Open file
+  sink("stats.txt", append = T)
+  cat("===================================\n")
+  cat("Statistics associated with Fig. 6:\n")
+  cat("===================================\n\n")
+  
+
+  cat("LI-6400XT, g_sw:\n")
+  print(summary(subset(error6400, variable == "g_sw")$error))
+  cat("SD:")
+  print(sd(subset(error6400, variable == "g_sw")$error))
+  
+  cat("\nLI-6400XT, g_tw:\n")
+  print(summary(subset(error6400, variable == "g_tw")$error))
+  cat("SD:")
+  print(sd(subset(error6400, variable == "g_tw")$error))
+  
+  cat("\nLI-6400XT, g_tc:\n")
+  print(summary(subset(error6400, variable == "g_tc")$error))
+  cat("SD:")
+  print(sd(subset(error6400, variable == "g_tc")$error))
+  
+  cat("\nLI-6400XT, C_i:\n")
+  print(summary(subset(error6400, variable == "C_i")$error))
+  cat("SD:")
+  print(sd(subset(error6400, variable == "C_i")$error))
+  
+  cat("\nLI-6800, g_sw:\n")
+  print(summary(subset(error6800, variable == "g_sw")$error))
+  cat("SD:")
+  print(sd(subset(error6800, variable == "g_sw")$error))
+  
+  cat("\nLI-6800, g_tw:\n")
+  print(summary(subset(error6800, variable == "g_tw")$error))
+  cat("SD:")
+  print(sd(subset(error6800, variable == "g_tw")$error))
+  
+  cat("\nLI-6800, g_tc:\n")
+  print(summary(subset(error6800, variable == "g_tc")$error))
+  cat("SD:")
+  print(sd(subset(error6800, variable == "g_tc")$error))
+  
+  cat("\nLI-6800, C_i:\n")
+  print(summary(subset(error6800, variable == "C_i")$error))
+  cat("SD:")
+  print(sd(subset(error6800, variable == "C_i")$error))
+  
+  # Close file
+  cat("\n\n\n")
+  sink()
 }
 
 

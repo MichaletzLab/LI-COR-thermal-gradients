@@ -1,5 +1,5 @@
-# Code to generate figures for LI-COR gradients manuscript
-#
+# Code to generate figures  and stats for paper "Gas exchange analyzers
+# exhibit large errors driven by internal thermal gradients"
 #
 # 4 June 2020 Josef Garen
 
@@ -12,23 +12,23 @@ library(nls.multstart)
 library(nlstools)
 library(plantecophys)
 library(kSamples)
-
 library(LICOR6400)
 
-source("R/correct_licor6400.R")
-source("R/correct_licor6800.R")
-
-source("R/make_figS1.R")
-source("R/make_figS2.R")
-source("R/make_fig2.R")
-source("R/make_fig3.R")
-source("R/make_fig4.R")
-source("R/make_fig5.R")
-source("R/make_fig6.R")
-source("R/make_fig7.R")
-source("R/make_fig8.R")
-source("R/make_fig9.R")
+# source("R/correct_licor6400.R")
+# source("R/correct_licor6800.R")
+# 
+# source("R/make_figS1.R")
+# source("R/make_figS2.R")
+# source("R/make_fig2.R")
+# source("R/make_fig3.R")
+# source("R/make_fig4.R")
+# source("R/make_fig5.R")
+# source("R/make_fig6.R")
+# source("R/make_fig7.R")
+# source("R/make_fig8.R")
+# source("R/make_fig9.R")
 #etc... or maybe you can just do something like "source("R")"
+sapply(list.files("R", full.names = T)[2:13], source)
 
 # Generate color palettes for the different figures
 palette_a = c("#E69F00", "#56B4E9")

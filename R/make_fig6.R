@@ -36,13 +36,17 @@ make_fig6 = function() {
   )
   
   error_all = bind_rows(error6400, error6800)
+  
+  error_all$variable = as.factor(error_all$variable)
+  
+  error_all$variable = factor(error_all$variable, levels = c("g_sw", "g_tw", "g_tc", "C_i"))
 
   # Open file
-  pdf("figures/fig6b.pdf", width = 7, height = 3.5)
+  pdf("figures/fig6a.pdf", width = 3, height = 2.65)
   
   # Make label text
   dat_text <- data.frame(
-    labels = c("(b) ~~ italic(g[sw])", "(c) ~~ italic(g[tw])", "(d) ~~ italic(g[tc])", "(e) ~~ italic(C[i])"),
+    labels = c("italic(g[sw])", "italic(g[tw])", "italic(g[tc])", "italic(C[i])"),
     variable = c("g_sw","g_tw","g_tc","C_i"),
     Tair = 0,
     Tleaf = 0,
@@ -61,12 +65,15 @@ make_fig6 = function() {
                               "g_tc" = expression(italic("g"[tc])),
                               "C_i" = expression(italic("C"[i])))) +
     my_theme +
+    theme_transparent +
     theme(legend.position = c(0.8, 0.12)) +
     theme(legend.title = element_blank()) +
     theme(legend.background=element_blank()) +
-    ylim(c(-125,50)) +
+    theme(legend.key = element_blank()) +
+    ylim(c(-80,40)) +
     geom_abline(slope = 0, lty = 2) +
-    annotate("text", x = -Inf, y = 0.75*100, hjust = -0.1, label = "(a)") +
+    scale_y_continuous(breaks = c(-80,-40,0,40)) +
+    #annotate("text", x = -Inf, y = 0.75*100, hjust = -0.1, label = "(a)") +
     theme(axis.text.x = element_text(face="bold",size=12))
   
   p2 = ggplot(data = error_all, aes(x = Tair-Tleaf, y=100*error, color=Licor_Type)) +
@@ -76,16 +83,23 @@ make_fig6 = function() {
     facet_wrap(~ variable, ncol = 2) +
     my_theme + 
     theme(strip.background = element_blank(), strip.text = element_blank()) +
-    xlab(expression(paste("Reported air-leaf temperature difference (", degree, "C)  "))) + 
+    theme_transparent +
+    xlab(expression(paste("Reported ", T[air], " - ", T[leaf], " (", degree, "C)  "))) + 
     ylab("Relative error (%)") +
     guides(colour = "none") +
-    ylim(c(-0.55*100, 0.75*100)) +
+    ylim(c(-80, 40)) +
+    scale_y_continuous(breaks = c(-80,-40,0,40)) +
     geom_abline(slope = 0, lty = 2) +
-    geom_text(data = dat_text, aes(x = -Inf, y = Inf, label = labels), color = "black", hjust = -0.1, vjust = 1.3, parse=T)
+    #geom_text(data = dat_text, aes(x = -Inf, y = Inf, label = labels), color = "black", hjust = -5, vjust = 1.3, parse=T)
+    geom_text(data = dat_text, aes(x = 8, y = 45,  label = labels), color = "black",  parse=T)
   
-  grid.arrange(p1,p2, ncol = 2)
+  grid.arrange(p1, ncol = 1)
   
   # Close file
+  dev.off()
+  
+  pdf("figures/fig6b.pdf", width = 3, height = 2.65)
+  grid.arrange(p2, ncol = 1)
   dev.off()
   
   

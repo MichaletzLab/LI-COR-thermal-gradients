@@ -48,7 +48,7 @@ make_fig9 = function() {
   jmax_model = rbind(j_corr_model, j_uncorr_model)
   
   # Open file
-  pdf("figures/fig9.pdf", width = 7.5, height = 3.5)
+  pdf("figures/fig9.pdf", width = 3, height = 2.65)
   
   # Build plots
   p1 = ggplot(data = kinetics_all, aes(x = Tleaf, y = Vcmax, fill = type, color = type)) +
@@ -57,11 +57,13 @@ make_fig9 = function() {
     geom_line(data = vcmax_model, aes(color=type)) +
     geom_point(aes(fill = type), size=2.4, color = "black", shape = 21) +
     my_theme +
-    theme(legend.position = c(0.2,0.8)) +
+    theme_transparent +
+    theme(legend.position = c(0.25,0.88)) +
     theme(legend.title = element_blank()) +
+    theme(legend.key = element_blank()) +
     xlab("Leaf temperature (ºC)") +
-    ylab(expression(paste(V[cmax]~~(µmol~m^-2~s^-1 )))) +
-    annotate("text", x = 17.5, y = 150, label = "(a)")
+    ylab(expression(paste(V[cmax]~~(µmol~m^-2~s^-1 )))) #+
+    #annotate("text", x = 17.5, y = 150, label = "(a)")
   
   p2 = ggplot(data = kinetics_all, aes(x = Tleaf, y = Jmax, fill = type, color = type)) +
     scale_fill_manual(values = rev(palette_c)) +
@@ -69,13 +71,20 @@ make_fig9 = function() {
     geom_line(data = jmax_model, aes(color=type)) +
     geom_point(aes(fill = type), size=2.4, color = "black", shape = 21) +
     my_theme +
+    theme_transparent +
+    theme(legend.key = element_blank()) +
     xlab("Leaf temperature (ºC)") +
-    ylab(expression(paste(J[max]~~(µmol~m^-2~s^-1 )))) +
-    annotate("text", x = 17.5, y = 160, label = "(b)")
+    ylab(expression(paste(J[max]~~(µmol~m^-2~s^-1 )))) #+
+    #annotate("text", x = 17.5, y = 160, label = "(b)")
   
-  grid.arrange(p1, p2, ncol = 2)
+  grid.arrange(p1, ncol = 1)
   
   # Close file
+  dev.off()
+  
+  
+  pdf("figures/fig9a.pdf", width = 3, height = 2.65)
+  grid.arrange(p2, ncol = 1)
   dev.off()
   
   

@@ -57,7 +57,7 @@ make_fig7 = function () {
   licor_corrected = correct_licor6400(licor_means)
   
   # Open file
-  pdf("figures/fig7.pdf", width = 7, height = 3.5)
+  pdf("figures/fig7.pdf", width = 3, height = 2.65)
   
   # Fit linear models to each curve in the dataset (uncorrected T values)
   licor_corrected %>% 
@@ -81,10 +81,11 @@ make_fig7 = function () {
     scale_color_manual(values=c("blue","red")) +
     geom_abline(slope = 1, lty=2) +
     my_theme +
-    xlab("Uncorrected in-chamber air temperature (ºC)") +
-    ylab("Uncorrected leaf temperature (ºC)") +
-    xlim(c(2,51)) + ylim(c(2,51)) +
-    annotate("text", x = 2, y = 51, label = "(a)")
+    theme_transparent +
+    xlab(expression(paste("Uncorrected ", T[air], " (ºC)"))) +
+    ylab(expression(paste("Uncorrected ", T[leaf]," (ºC)"))) +
+    xlim(c(2,51)) + ylim(c(2,51)) #+
+    #annotate("text", x = 2, y = 51, label = "(a)")
   
   # Make inset - slope distribution
   inset_plot = ggplotGrob(
@@ -95,10 +96,11 @@ make_fig7 = function () {
       ylim(c(0,7.5)) +
       theme(axis.title = element_text(size=8),
             rect = element_rect(fill = "transparent"),
-            plot.background = element_rect(colour = "transparent") )
+            plot.background = element_rect(colour = "transparent") ) +
+      theme_transparent
   )
   
-  p1 = main_plot + annotation_custom(grob = inset_plot, xmin = 0, xmax = 27, ymin = 29, ymax = 50)
+  p1 = main_plot + annotation_custom(grob = inset_plot, xmin = 0, xmax = 30, ymin = 28, ymax = 53)
   
   # Fit linear model to each curve in the dataset (corrected T values)
   licor_corrected %>% 
@@ -123,10 +125,11 @@ make_fig7 = function () {
     scale_color_manual(values=c("blue","red")) +
     geom_abline(slope = 1, lty=2) +
     my_theme +
-    xlab("Corrected in-chamber air temperature (ºC)") +
-    ylab("Corrected leaf temperature (ºC)") +
-    xlim(c(2,51)) + ylim(c(2,51)) +
-    annotate("text", x = 2, y = 51, label = "(b)")
+    theme_transparent + 
+    xlab(expression(paste("Corrected ", T[air], " (ºC)"))) +
+    ylab(expression(paste("Corrected ", T[leaf], " (ºC)"))) +
+    xlim(c(2,51)) + ylim(c(2,51)) #+
+    #annotate("text", x = 2, y = 51, label = "(b)")
   
   # Build inset plot
   inset_plot = ggplotGrob(
@@ -136,16 +139,19 @@ make_fig7 = function () {
       xlim(c(0,1.25)) + ylim(c(0,7.5)) +
       theme(axis.title = element_text(size=8),
             rect = element_rect(fill = "transparent"),
-            plot.background = element_rect(colour = "transparent") )
+            plot.background = element_rect(colour = "transparent") ) +
+      theme_transparent
   )
   
-  p2 = main_plot + annotation_custom(grob = inset_plot, xmin = 0, xmax = 27, ymin = 29, ymax = 50)
-  grid.arrange(p1, p2, ncol = 2)
+  p2 = main_plot + annotation_custom(grob = inset_plot, xmin = 0, xmax = 30, ymin = 28, ymax = 53)
+  grid.arrange(p1, ncol = 1)
   
   # Close file
   dev.off()
   
-  
+  pdf("figures/fig7a.pdf", width = 3, height = 2.65)
+  grid.arrange(p2, ncol = 1)
+  dev.off()
   
   
   # Generate supplemental figure S3
@@ -183,6 +189,7 @@ make_fig7 = function () {
     scale_color_manual(values=c("blue","red")) +
     geom_abline(slope = 1, lty=2) +
     my_theme +
+    theme_transparent +
     xlab("Corrected in-chamber air temperature (ºC)") +
     ylab("Corrected leaf temperature (ºC)") +
     xlim(c(12,38)) + ylim(c(12,38))
@@ -195,10 +202,11 @@ make_fig7 = function () {
       xlim(c(0,1.25)) + ylim(c(0,7.5)) +
       theme(axis.title = element_text(size=8),
             rect = element_rect(fill = "transparent"),
-            plot.background = element_rect(colour = "transparent") )
+            plot.background = element_rect(colour = "transparent") ) +
+      theme_transparent
   )
   
-  p2 = main_plot + annotation_custom(grob = inset_plot, xmin = 11, xmax = 28, ymin = 26, ymax = 39)
+  p2 = main_plot + annotation_custom(grob = inset_plot, xmin = 11, xmax = 30, ymin = 20, ymax = 39)
   grid.arrange(p2,ncol=1)
   
   # Close file

@@ -40,6 +40,15 @@ my_theme = theme_bw() +
   theme(legend.position = "none") +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 
+theme_transparent =   theme(
+  panel.background = element_rect(fill = "transparent"), # bg of the panel
+  plot.background = element_rect(fill = "transparent", color = NA), # bg of the plot
+  panel.grid.major = element_blank(), # get rid of major grid
+  panel.grid.minor = element_blank(), # get rid of minor grid
+  legend.background = element_rect(fill = "transparent"), # get rid of legend bg
+  legend.box.background = element_rect(fill = "transparent", color=NA) # get rid of legend panel bg
+)
+
 # Create directory for figures if none exists, clear stats
 if(!dir.exists("figures")) { dir.create("figures") }
 if(file.exists("stats.txt")) { file.remove("stats.txt") }
@@ -50,10 +59,10 @@ make_figS1() # OK
 make_figS2() # OK
 
 # Generate main text figures and stats. Fig. 1 not included.
-make_fig2() # OK
+make_fig2() # Modified - make this one
 make_fig3() # OK
 make_fig4() # OK
-make_fig5() # OK
+make_fig5() # Modified - make this one
 make_fig6() # Need new dataset here, final touches to fig. else ok
 make_fig7() # OK; still makes blank page?; Also generates Fig. S3
 make_fig8() # OK;

@@ -75,18 +75,21 @@ make_fig8 = function () {
   all_data = bind_rows( AT_corrected, AT_uncorrected)
 
   # Open file
-  pdf("figures/fig8.pdf", width = 4, height = 3.5)
+  pdf("figures/fig8.pdf", width = 3, height = 2.65)
   
   # Build plot
   p1 = ggplot(data = all_data, aes(x = Tleaf, y = Photo, fill = Condition)) + 
-    scale_fill_manual(values = palette_c) +
-    scale_colour_manual(values = palette_c) +
+    scale_fill_manual(values = rev(palette_c)) +
+    scale_colour_manual(values = rev(palette_c)) +
     geom_line(data = ModelToPlotS, aes(x = Temperature, y = TraitValue, color = Condition)) +
     geom_point(aes(fill = Condition), size=2.4, color = "black", pch = 21) +
     my_theme +
-    theme(legend.position = c(0.165,0.88)) +
+    theme_transparent +
+    #theme(legend.position = c(0.165,0.88)) +
+    theme(legend.position = c(0.76, 0.117)) +
     theme(legend.title = element_blank()) +
     theme(legend.background = element_rect(fill="transparent")) +
+    theme(legend.key = element_blank()) +
     xlab("Leaf temperature (ºC)") +
     ylab(expression(paste("Assimilation rate (µmol ", m^-2, s^-1, ")")))
   

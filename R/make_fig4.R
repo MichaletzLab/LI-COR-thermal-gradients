@@ -1,5 +1,11 @@
-### Figure 4 ###
-# Growth chamber trials
+# Gas exchange analyzers exhibit large errors driven by internal thermal gradients
+# Josef Garen, Haley Branch, Isaac Borrego, Benjamin Blonder, Joseph Stinziano, and Sean Michaletz
+# New Phytologist 2022
+#
+# Figure 4: Growth chamber trials
+#
+# Last edited 13 July 2022, Josef Garen
+
 make_fig4 = function() {
   
   # Read data

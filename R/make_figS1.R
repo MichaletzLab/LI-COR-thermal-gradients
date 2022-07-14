@@ -1,17 +1,21 @@
-### Figure S1 ###
-# Supplemental figure showing agreement of leaf and threaded thermocouple
+# Gas exchange analyzers exhibit large errors driven by internal thermal gradients
+# Josef Garen, Haley Branch, Isaac Borrego, Benjamin Blonder, Joseph Stinziano, and Sean Michaletz
+# New Phytologist 2022
+#
+# Figure S1: Supplemental figure showing agreement of leaf and threaded thermocouple
+#
+# Last edited 13 July 2022, Josef Garen
 
 make_figS1 = function() {
   
   # Read in data
-  Tleaf_error_trials_all <- read.csv("data/Tleaf_error_trials_all.csv")
+  Tleaf_error_trials_all = read.csv("data/Tleaf_error_thread.csv")
   
   # Clean up label names
   Tleaf_error_trials_all$Licor_Type[Tleaf_error_trials_all$Licor_Type == "6400"] = "LI-6400XT"
   Tleaf_error_trials_all$Licor_Type[Tleaf_error_trials_all$Licor_Type == "6800"] = "LI-6800"
   
-  # Remove data without threaded thermocouple
-  data_thread = subset(Tleaf_error_trials_all, !is.na(T_thread))
+  data_thread = Tleaf_error_trials_all
   
   # Open file
   pdf("figures/figS1.pdf", width = 4, height = 4)
@@ -46,9 +50,9 @@ make_figS1 = function() {
   
   z = lm(T_below ~ T_thread, data = data_thread)
   cat("Linear model summary:")
-  summary(z)
+  print(summary(z))
   cat("\n95% confidence intervals:\n")
-  confint(z)
+  print(confint(z))
   
   # Close file
   cat("\n\n\n")

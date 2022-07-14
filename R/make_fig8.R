@@ -1,14 +1,22 @@
-### Figure 8 ###
-# Correcting an AT curve
+# Gas exchange analyzers exhibit large errors driven by internal thermal gradients
+# Josef Garen, Haley Branch, Isaac Borrego, Benjamin Blonder, Joseph Stinziano, and Sean Michaletz
+# New Phytologist 2022
+#
+# Figure 8: Correcting an AT curve
+#
+# Last edited 13 July 2022, Josef Garen
 make_fig8 = function () {
-  
+
   # Read in data
-  AT_uncorrected = read.csv("data/AT_uncorrected.csv")
-  AT_uncorrected$total.leaf.area = AT_uncorrected$chamber_leaf_area
+  AT_uncorrected = read.csv("data/lh_6400.csv")
+  AT_uncorrected$total.leaf.area = AT_uncorrected$Area
   
+  # Select first curve
+  AT_uncorrected = subset(AT_uncorrected, uniqueid == 1)
+
   # Correct raw LI-COR data using new function
   AT_corrected = correct_licor6400(AT_uncorrected)
-  
+
   # Add labels
   AT_uncorrected$Condition = "Uncorrected"
   AT_corrected$Condition = "Corrected"
@@ -69,22 +77,25 @@ make_fig8 = function () {
   pred_corr = data.frame(Temperature = tmp_temps,
                          TraitValue = pawar_2018(tmp_temps,r_tref,e,eh,topt,tref=5),
                          Condition = "Corrected")
-  
+
   # Make dataframes for plotting
   ModelToPlotS = rbind(pred_uncorr, pred_corr)
-  all_data = bind_rows( AT_corrected, AT_uncorrected)
+  all_data = bind_rows( AT_corrected , AT_uncorrected)
 
+  all_data$Condition = as.factor(all_data$Condition)
+  ModelToPlotS$Condition = as.factor(ModelToPlotS$Condition)
+  
   # Open file
   pdf("figures/fig8.pdf", width = 4, height = 3.5)
   
   # Build plot
   p1 = ggplot(data = all_data, aes(x = Tleaf, y = Photo, fill = Condition)) + 
-    scale_fill_manual(values = palette_c) +
-    scale_colour_manual(values = palette_c) +
+    scale_fill_manual(values = palette_c[c(2,1)]) +
+    scale_colour_manual(values = palette_c[c(2,1)]) +
     geom_line(data = ModelToPlotS, aes(x = Temperature, y = TraitValue, color = Condition)) +
     geom_point(aes(fill = Condition), size=2.4, color = "black", pch = 21) +
     my_theme +
-    theme(legend.position = c(0.165,0.88)) +
+    theme(legend.position = c(0.77,0.88)) +
     theme(legend.title = element_blank()) +
     theme(legend.background = element_rect(fill="transparent")) +
     xlab("Leaf temperature (ºC)") +
@@ -94,9 +105,6 @@ make_fig8 = function () {
   
   # Close file
   dev.off()
-  
-  
-  
   
   
   # Output associated statistics
@@ -152,28 +160,25 @@ make_fig8 = function () {
   all_data$Condition = as.factor(all_data$Condition)
   
   # Fit model allowing all parameters to vary by condition
-  g1 = nls(Photo ~ modifiedgaussian_2006(temp = Tleaf, rmax[Condition], topt[Condition], a[Condition], b[Condition]),
+  g1 = nls(Photo ~ gaussian_1987(temp = Tleaf, rmax[Condition], topt[Condition], a[Condition]),
            data = all_data,
-           start = list(rmax = c(11,11),
-                        topt = c(25,25),
-                        a = c(14,14),
-                        b = c(2,2)))
+           start = list(rmax = c(13,13),
+                        topt = c(30,30),
+                        a = c(14,14)))
   
   # Fit model, restricting rmax to be the same across conditions
-  g2 = nls(Photo ~ modifiedgaussian_2006(temp = Tleaf, rmax, topt[Condition], a[Condition], b[Condition]),
+  g2 = nls(Photo ~ gaussian_1987(temp = Tleaf, rmax, topt[Condition], a[Condition]),
            data = all_data,
-           start = list(rmax = 11,
-                        topt = c(26,26),
-                        a = c(14,14),
-                        b = c(2,2)))
+           start = list(rmax = 13,
+                        topt = c(30,30),
+                        a = c(14,14)))
   
   # Fit model, restricting a (breadth) to be the same across conditions
-  g3 = nls(Photo ~ modifiedgaussian_2006(temp = Tleaf, rmax[Condition], topt[Condition], a, b[Condition]),
+  g3 = nls(Photo ~ gaussian_1987(temp = Tleaf, rmax[Condition], topt[Condition], a),
            data = all_data,
-           start = list(rmax = c(11,11),
-                        topt = c(26,26),
-                        a = 14,
-                        b = c(2,2)))
+           start = list(rmax = c(13.5,13.5),
+                        topt = c(29,29),
+                        a = 18))
   
   cat("\n\nAnova - significant difference in rmax?\n")
   print(anova(g1,g2))
@@ -183,7 +188,7 @@ make_fig8 = function () {
   # Fit model allowing all parameters to vary by condition
   p1 = nls(Photo ~ pawar_2018(temp = Tleaf, r_tref[Condition], e[Condition], eh[Condition], topt[Condition], tref=5),
            data = all_data,
-           start = list(r_tref = c(6,6),
+           start = list(r_tref = c(1,1),
                         e = c(0.5,0.5),
                         eh = c(1,1),
                         topt = c(23,23)))
@@ -191,23 +196,32 @@ make_fig8 = function () {
   # Fit model with same e across conditions
   p2 = nls(Photo ~ pawar_2018(temp = Tleaf, r_tref[Condition], e, eh[Condition], topt[Condition], tref=5),
            data = all_data,
-           start = list(r_tref = c(6,6),
+           start = list(r_tref = c(1,1),
                         e = 0.5,
                         eh = c(1,1),
-                        topt = c(23,23)))
+                        topt = c(28,28)))
   
   # Fit model with same topt across conditions
   p3 = nls(Photo ~ pawar_2018(temp = Tleaf, r_tref[Condition], e[Condition], eh[Condition], topt, tref=5),
            data = all_data,
-           start = list(r_tref = c(6,6),
+           start = list(r_tref = c(1,1),
                         e = c(0.5,0.5),
                         eh = c(1,1),
-                        topt = 23))
+                        topt = 28))
+  
+  p4 = nls(Photo ~ pawar_2018(temp = Tleaf, r_tref[Condition], e[Condition], eh, topt[Condition], tref=5),
+          data = all_data,
+          start = list(r_tref = c(1,1),
+                       e = c(0.5,0.5),
+                       eh = 1,
+                       topt = c(28,28)))
   
   cat("\n\nAnova - significant difference in e?\n")
   print(anova(p1,p2))
   cat("\n\nAnova - significant difference in topt?\n")
   print(anova(p1,p3))
+  cat("\n\nAnova - significant difference in eh?\n")
+  print(anova(p1,p4))
   
   # Close file
   cat("\n\n\n")

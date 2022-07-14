@@ -36,8 +36,16 @@ make_fig9 = function() {
   jmax_uncorr = nls(Jmax ~ arrhenius(k25, Ea, Tleaf), data = kinetics_extracted_uncorr, start = list(k25 = 66, Ea = 50000))
   
   # Make dataset for model predictions to plot
-  temps_uncorr = seq(17.8, 32.4, 0.2)
-  temps_corr = seq(18.6,29, 0.2)
+  temps_uncorr = seq(min(kinetics_extracted_uncorr$Tleaf),max(kinetics_extracted_uncorr$Tleaf), 0.1)
+  temps_corr = seq(min(kinetics_extracted_corr$Tleaf),max(kinetics_extracted_corr$Tleaf), 0.1)
+  
+  # Fit SS models to the Vcmax and Jmax data
+  mod = "pawar_2018"
+  start_vals = get_start_vals(kinetics_extracted_corr$Tleaf, kinetics_extracted_corr$Vcmax, model_name = mod)
+  low_lims = get_lower_lims(kinetics_extracted_corr$Tleaf, kinetics_extracted_corr$Vcmax, model_name = mod)
+  upper_lims = get_upper_lims(kinetics_extracted_corr$Tleaf, kinetics_extracted_corr$Vcmax, model_name = mod)
+  
+  start_vals = c(r_tref=50, e = 0.5, topt = 30)
   
   v_corr_model = data.frame(Vcmax = predict(vcmax_corr, newdata = list(Tleaf = temps_corr)), Tleaf = temps_corr, type = "Corrected")
   v_uncorr_model = data.frame(Vcmax = predict(vcmax_uncorr, newdata = list(Tleaf = temps_uncorr)), Tleaf = temps_uncorr, type = "Uncorrected")
@@ -86,62 +94,43 @@ make_fig9 = function() {
   cat("===================================\n")
   cat("Statistics associated with Fig. 9:\n")
   cat("===================================\n\n")
-  
-  # Define Q10 function
-  q10 = function(r1, r2, t1, t2) { return( (r2/r1)^(10/(t2-t1)) ) }
-  
-  # Estimate Q10 of Vcmax and Jmax
-  jmax_q10_corr = q10(kinetics_extracted_corr$Jmax[1], kinetics_extracted_corr$Jmax[5], 
-                      kinetics_extracted_corr$Tleaf[1], kinetics_extracted_corr$Tleaf[5])
-  jmax_q10_uncorr = q10(kinetics_extracted_uncorr$Jmax[1], kinetics_extracted_uncorr$Jmax[5], 
-                        kinetics_extracted_uncorr$Tleaf[1], kinetics_extracted_uncorr$Tleaf[5])
-  vcmax_q10_corr = q10(kinetics_extracted_corr$Vcmax[1], kinetics_extracted_corr$Vcmax[5], 
-                       kinetics_extracted_corr$Tleaf[1], kinetics_extracted_corr$Tleaf[5])
-  vcmax_q10_uncorr = q10(kinetics_extracted_uncorr$Vcmax[1], kinetics_extracted_uncorr$Vcmax[5], 
-                         kinetics_extracted_uncorr$Tleaf[1], kinetics_extracted_uncorr$Tleaf[5])
-  
-  print(sprintf("Q10 of Vcmax, uncorrected: %f", vcmax_q10_uncorr))
-  print(sprintf("Q10 of Vcmax, corrected:   %f", vcmax_q10_corr))
-  print(sprintf("Q10 of Jmax, uncorrected:  %f", jmax_q10_uncorr))
-  print(sprintf("Q10 of Jmax, corrected:    %f", jmax_q10_corr))
-  
+
   # Significance tests
   kinetics_all$type = as.factor(kinetics_all$type)
-  
+
   # Fit Arrhenius model to Vcmax data, allowing all parameters to vary
   a1 = nls(Vcmax ~ arrhenius(k25[type], Ea[type], Tleaf),
            data = kinetics_all,
            start = list(k25 = c(66,66), Ea = c(50000,50000)))
-  
+
   # Fit Arrhenius model to Vcmax, holding k25 constant
   a2 = nls(Vcmax ~ arrhenius(k25, Ea[type], Tleaf),
            data = kinetics_all,
            start = list(k25 = 66, Ea = c(50000,50000)))
-  
+
   # Fit Arrhenius model to Vcmax, holding Ea constant
   a3 = nls(Vcmax ~ arrhenius(k25[type], Ea, Tleaf),
            data = kinetics_all,
            start = list(k25 = c(66,66), Ea = 50000))
-  
+
   cat("\nVcmax best fit parameters:")
   print(summary(a1))
-  
+
   cat("\n\nAnova - significant difference in k25 (Vcmax)?\n")
   print(anova(a1,a2))
   cat("\n\nAnova - significant difference in Ea (Vcmax)?\n")
   print(anova(a1,a3))
   
-  
   # Fit Arrhenius model to Jmax, allowing all parameters to vary
   b1 = nls(Jmax ~ arrhenius(k25[type], Ea[type], Tleaf),
            data = kinetics_all,
            start = list(k25 = c(66,66), Ea = c(50000,50000)))
-  
+
   # Fit Arrhenius model to Jmax, holding k25 constant
   b2 = nls(Jmax ~ arrhenius(k25, Ea[type], Tleaf),
            data = kinetics_all,
            start = list(k25 = 66, Ea = c(50000,50000)))
-  
+
   # Fit Arrhenius model to Jmax, holding Ea constant
   b3 = nls(Jmax ~ arrhenius(k25[type], Ea, Tleaf),
            data = kinetics_all,
@@ -149,13 +138,12 @@ make_fig9 = function() {
   
   cat("\nJmax best fit parameters:")
   print(summary(b1))
-  
+
   cat("\n\nAnova - significant difference in k25 (Jmax)?\n")
   print(anova(b1,b2))
   cat("\n\nAnova - significant difference in Ea (Jmax)?\n")
   print(anova(b1,b3))
-  
-  
+
   # Close file
   cat("\n\n\n")
   sink()

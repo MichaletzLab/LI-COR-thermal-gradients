@@ -1,5 +1,11 @@
-### Figure S2 ###
-# Showing thermocouple "calibration" - agreement between thermocouples
+# Gas exchange analyzers exhibit large errors driven by internal thermal gradients
+# Josef Garen, Haley Branch, Isaac Borrego, Benjamin Blonder, Joseph Stinziano, and Sean Michaletz
+# New Phytologist 2022
+#
+# Figure S2: Showing thermocouple "calibration" - agreement between thermocouples
+#
+# Last edited 13 July 2022, Josef Garen
+
 make_figS2 = function () {
   
   # Read data

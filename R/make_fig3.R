@@ -1,5 +1,11 @@
-### Figure 3 ###
-# Comparison of above and below leaf temps with T_air
+# Gas exchange analyzers exhibit large errors driven by internal thermal gradients
+# Josef Garen, Haley Branch, Isaac Borrego, Benjamin Blonder, Joseph Stinziano, and Sean Michaletz
+# New Phytologist 2022
+#
+# Figure 3: Comparison of above and below leaf temps with T_air
+#
+# Last edited 13 July 2022, Josef Garen
+
 make_fig3 = function() {
 
   # Load data
@@ -18,8 +24,8 @@ make_fig3 = function() {
   data6800 = subset(data6800, Species != "Paper")
   
   # Convert data to long format
-  data6400 = data6400 %>% gather(above_below, T_air_meas, T_below:T_above, factor_key = T)
-  data6800 = data6800 %>% gather(above_below, T_air_meas, T_below:T_above, factor_key = T)
+  data6400 = data6400 %>% gather(above_below, T_air_meas, T_air_below:T_air_above, factor_key = T)
+  data6800 = data6800 %>% gather(above_below, T_air_meas, T_air_below:T_air_above, factor_key = T)
   
   # Open file
   pdf("figures/fig3.pdf", width = 7.5, height = 7)
@@ -40,9 +46,9 @@ make_fig3 = function() {
     theme(legend.background = element_rect(fill="transparent")) +
     xlab(NULL) + 
     ylab(expression(atop(paste("Measured"), paste("air temperature (", degree, "C)")))) +
-    ylim(c(10,42)) + 
-    xlim(c(10,42)) +
-    annotate("text", x = -Inf, y = 42, hjust = -0.1, label = "(a)  LI-6400XT")
+    ylim(c(3,47)) + 
+    xlim(c(3,47)) +
+    annotate("text", x = -Inf, y = 47, hjust = -0.1, label = "(a)  LI-6400XT")
   
   p2 = ggplot(data = data6800, aes(x=T_air,y=T_air_meas,color=above_below)) + 
     scale_fill_manual(values = palette_b) +
@@ -54,9 +60,9 @@ make_fig3 = function() {
     my_theme +
     xlab(NULL) + 
     ylab(NULL) +
-    ylim(c(10,42)) +
-    xlim(c(10,42)) +
-    annotate("text", x = -Inf, y = 42, hjust = -0.1, label = "(b)  LI-6800")
+    ylim(c(3,47)) +
+    xlim(c(3,47)) +
+    annotate("text", x = -Inf, y = 47, hjust = -0.1, label = "(b)  LI-6800")
   
   p3 = ggplot(data = data6400, aes(x=T_air,y=T_air_meas-T_air,color=above_below)) + 
     scale_fill_manual(values = palette_b) +
@@ -68,9 +74,9 @@ make_fig3 = function() {
     my_theme +
     xlab(expression(paste("Reported air temperature (", degree, "C)"))) + 
     ylab(expression(atop(paste("Difference between measured and"), paste("reported air temperature (", degree, "C)")))) +
-    ylim(c(-8,8)) + 
-    xlim(c(10,42)) +
-    annotate("text", x = -Inf, y = 8, hjust = -0.1, label = "(c)  LI-6400XT")
+    ylim(c(-10,10)) + 
+    xlim(c(3,47)) +
+    annotate("text", x = -Inf, y = 10, hjust = -0.1, label = "(c)  LI-6400XT")
   
   p4 = ggplot(data = data6800, aes(x=T_air,y=T_air_meas-T_air,color=above_below)) + 
     scale_fill_manual(values = palette_b) +
@@ -82,9 +88,9 @@ make_fig3 = function() {
     my_theme +
     xlab(expression(paste("Reported air temperature (", degree, "C)"))) + 
     ylab(NULL) +
-    ylim(c(-8,8)) +
-    xlim(c(10,42)) +
-    annotate("text", x = -Inf, y = 8, hjust = -0.1, label = "(d)  LI-6800")
+    ylim(c(-10,10)) +
+    xlim(c(3,47)) +
+    annotate("text", x = -Inf, y = 10, hjust = -0.1, label = "(d)  LI-6800")
   
   grid.arrange(p1,p2,p3,p4, widths = c(1.075,1), ncol = 2)
   
@@ -102,7 +108,7 @@ make_fig3 = function() {
   cat("Statistics associated with Fig. 3:\n")
   cat("===================================\n\n")
 
-  z = lm(T_above ~ T_air, data = subset(licor_trials_all, Licor_Type == "LI-6400XT"))
+  z = lm(T_air_above ~ T_air, data = subset(licor_trials_all, Licor_Type == "LI-6400XT" & Species != "Raphanus sativus"))
   cat("Linear model summary (LI-6400XT, T_air_upper):")
   print(summary(z))
   cat("\n95% confidence intervals (LI-6400XT, T_air_upper):\n")
@@ -110,7 +116,7 @@ make_fig3 = function() {
   
   cat("\n\n")
   
-  z = lm(T_below ~ T_air, data = subset(licor_trials_all, Licor_Type == "LI-6400XT"))
+  z = lm(T_air_below ~ T_air, data = subset(licor_trials_all, Licor_Type == "LI-6400XT" & Species != "Raphanus sativus"))
   cat("Linear model summary (LI-6400XT, T_air_lower):")
   print(summary(z))
   cat("\n95% confidence intervals (LI-6400XT, T_air_lower):\n")
@@ -118,7 +124,7 @@ make_fig3 = function() {
   
   cat("\n\n")
   
-  z = lm(T_above ~ T_air, data = subset(licor_trials_all, Licor_Type == "LI-6800"))
+  z = lm(T_air_above ~ T_air, data = subset(licor_trials_all, Licor_Type == "LI-6800"))
   cat("Linear model summary (LI-6800, T_air_upper):")
   print(summary(z))
   cat("\n95% confidence intervals (LI-6800, T_air_upper):\n")
@@ -126,7 +132,7 @@ make_fig3 = function() {
   
   cat("\n\n")
   
-  z = lm(T_below ~ T_air, data = subset(licor_trials_all, Licor_Type == "LI-6800"))
+  z = lm(T_air_below ~ T_air, data = subset(licor_trials_all, Licor_Type == "LI-6800"))
   cat("Linear model summary (LI-6800, T_air_lower):")
   print(summary(z))
   cat("\n95% confidence intervals (LI-6800, T_air_lower):\n")

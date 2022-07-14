@@ -1,5 +1,11 @@
-### Figure 2 ###
-# Relationship between T_leaf and T_air for both 6400 and 6800
+# Gas exchange analyzers exhibit large errors driven by internal thermal gradients
+# Josef Garen, Haley Branch, Isaac Borrego, Benjamin Blonder, Joseph Stinziano, and Sean Michaletz
+# New Phytologist 2022
+#
+# Figure 2: Relationship between T_leaf and T_air for both 6400 and 6800
+#
+# Last edited 13 July 2022, Josef Garen
+
 make_fig2 = function() {
   
   # Read in data
@@ -27,7 +33,8 @@ make_fig2 = function() {
     ylab(expression(atop(paste("Difference between measured"), paste("and reported air temperatures (", degree, "C)")))) +
     xlab(expression(paste("Reported air temperature (", degree, "C)"))) +
     guides(pch = "none") +
-    annotate("text", x = 13, y = 3.2, label = "(b)")
+    xlim(3,47) +
+    annotate("text", x = 3, y = 7, label = "(b)")
   
   p2 = ggplot(data = subdata, aes(x = T_air, y = T_leaf, color = Licor_Type)) + 
     scale_fill_manual(values = palette_a) +
@@ -43,7 +50,9 @@ make_fig2 = function() {
     ylab(expression(paste("Measured in-cuvette air temperature (", degree, "C)"))) +
     xlab(expression(paste("Reported air temperature (", degree, "C)"))) +
     guides(pch = "none") +
-    annotate("text", x = 13, y = 41, label = "(a)")
+    xlim(3,47) +
+    ylim(3,47) +
+    annotate("text", x = 3, y = 47, label = "(a)")
   
   grid.arrange(p2,p1, widths = c(1,1.075), ncol = 2)
   

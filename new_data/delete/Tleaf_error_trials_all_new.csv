@@ -1,0 +1,117 @@
+﻿UniqueID,T_block,T_air,T_leaf,T_below,T_above,T_thread,T_air_below,T_air_above,Threaded,Licor_Type,Licor_name,Species,Flow,PAR,Date,Notes
+1,7.81,14.38,14.66,15.59,16.51,16.02,,,Y,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+1,12,17.33,17.51,18.57,19.49,18.82,,,Y,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+1,16,20.47,20.53,21.61,22.51,21.71,,,Y,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+1,20,23.47,23.4,24.42,25.34,24.41,,,Y,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+1,24,26.53,26.33,27.32,28.29,27.26,,,Y,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+1,28,29.52,29.15,30.12,31.14,30.02,,,Y,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+1,32,32.52,32.02,32.89,33.97,32.74,,,Y,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+1,36,35.44,34.79,35.58,36.77,35.45,,,Y,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+1,40,38.5,37.78,38.51,39.85,38.38,,,Y,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+1,44,41.3,40.38,40.94,42.44,40.92,,,Y,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+2,14.37,16.08,19,19.77,20.48,,,,N,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+2,18.02,19,21.16,21.61,22.21,,,,N,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+2,22.11,22.47,23.81,23.8,24.32,,,,N,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+2,26.02,25.83,26.44,25.95,26.38,,,,N,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+2,30.11,29.28,29,27.91,28.28,,,,N,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+2,34.01,32.67,31.61,29.85,30.18,,,,N,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+2,38.11,36.21,34.28,31.87,32.16,,,,N,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+2,40.28,38.09,35.62,32.81,33.12,,,,N,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+3,8.95,15.93,16.4,17.46,17.75,,,,N,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+3,12,17.83,18.22,19.28,19.59,,,,N,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+3,16,20.69,21,21.95,22.34,,,,N,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+3,20,23.52,23.72,24.55,25.01,,,,N,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+3,24,26.45,26.51,27.27,27.83,,,,N,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+3,28,29.27,29.19,29.91,30.58,,,,N,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+3,32,32.15,31.91,32.54,33.3,,,,N,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+3,36,35.02,34.66,35.25,36.06,,,,N,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+3,40,37.91,37.42,38,38.92,,,,N,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+3,44,40.79,40.11,40.69,41.76,,,,N,6800,Michaletz 1,Gaultheria Shallon,500,1600,12-05-2020,
+4,15.5,17.23,19.44,22.49,23.45,22.13,,,Y,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+4,18.01,19.22,21.07,23.53,24.3,22.93,,,Y,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+4,22.11,22.57,23.72,25.26,25.93,25.04,,,Y,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+4,26.02,25.87,26.37,27.14,27.64,26.97,,,Y,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+4,30.11,29.29,28.99,28.96,29.29,28.74,,,Y,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+4,34.01,32.59,31.45,30.76,30.88,30.54,,,Y,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+4,38.11,36.06,33.97,32.63,32.5,32.41,,,Y,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+4,39.52,37.26,34.79,33.24,33.01,33.03,,,Y,6400,Angert,Gaultheria Shallon,500,1600,12-05-2020,
+5,8.02,14.77,15.02,16.28,16.62,15.64,14.07,13.9,Y,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+5,12,17.42,17.58,18.68,19.22,18.04,16.85,16.7,Y,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+5,16,20.28,20.24,21.24,21.86,20.48,19.3,19.6,Y,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+5,20,23.15,22.96,23.91,24.58,23.08,21.94,22.5,Y,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+5,24,26.24,25.9,26.79,27.54,25.83,24.83,25.6,Y,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+5,28,29.16,28.66,29.49,30.34,28.4,27.58,28.7,Y,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+5,32,32,31.27,32.04,33.03,30.86,30.22,31.6,Y,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+5,36,34.86,33.94,34.64,35.8,33.37,32.91,30.73,Y,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+5,40,37.18,36.01,36.48,37.97,34.97,34.98,37,Y,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+5,44,39.92,38.5,38.66,40.41,37.05,37.31,39.8,Y,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+6,13.94,15.67,18.38,20.7,22.32,,17.9,20.36,N,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+6,16.07,17.42,19.81,21.55,23.3,,19.27,21.47,N,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+6,19.97,20.53,22.08,22.62,24.88,,21.69,22.56,N,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+6,24.07,23.96,24.73,24.15,26.85,,24.49,24.29,N,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+6,27.97,27.34,27.51,26.12,29.18,,27.34,26.24,N,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+6,32.07,30.84,30.23,27.94,31.44,,30.27,28.08,N,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+6,35.97,34.17,32.72,29.58,33.6,,33.01,29.78,N,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+6,39.07,36.8,34.62,30.75,35.35,,35.22,31.1,N,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+7,8.19,15.24,15.82,17.31,16.44,,14.74,14.9,N,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+7,12,17.78,18.16,19.5,18.81,,16.99,17.3,N,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+7,16,20.58,20.72,21.99,21.47,,19.57,20.2,N,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+7,20,23.42,23.3,24.49,24.15,,22.14,23.1,N,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+7,24,26.19,25.86,26.91,26.81,,24.67,26,N,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+7,28,28.98,28.4,29.35,29.46,,27.2,28.7,N,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+7,32,31.77,30.94,31.8,32.11,,29.77,31.6,N,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+7,36,34.55,33.51,34.26,34.74,,32.32,34.4,N,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+7,40,37.29,36.01,36.68,37.35,,34.77,37.2,N,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+7,44,40.81,39.64,40.29,40.97,,38.25,40.7,N,6800,Michaletz 1,Gaultheria Shallon,200,1600,14-05-2020,
+8,14.03,15.76,19.09,20.29,21.27,19.38,17.53,19.75,Y,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+8,16.07,17.42,20.43,21.47,22.33,20.34,18.89,20.64,Y,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+8,19.97,20.68,23.03,23.76,24.53,22.17,21.63,22.46,Y,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+8,24.07,24.13,25.62,26.02,26.63,23.89,24.43,24.27,Y,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+8,27.97,27.4,28.02,28.11,28.62,25.5,27.15,25.98,Y,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+8,32.06,30.89,30.62,30.37,30.75,27.2,29.99,27.8,Y,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+8,35.97,34.24,33.01,32.5,32.77,28.81,32.69,29.62,Y,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+8,39.79,37.56,35.42,34.68,34.83,30.31,35.38,31.4,Y,6400,Angert,Gaultheria Shallon,200,1600,14-05-2020,
+9,0.14,3.29,6.76,12.05,12.06,,6.22,12.66,N,6400,Angert,Gaultheria shallon,200,1600,07-01-2022,"No photo, No cond"
+9,4.95,7.42,10.35,14.91,14.83,,9.91,15.06,N,6400,Angert,Gaultheria shallon,200,1600,07-01-2022,"No photo, No cond"
+9,10.04,11.73,13.84,17.76,17.56,,13.61,17.46,N,6400,Angert,Gaultheria shallon,200,1600,07-01-2022,"No photo, No cond"
+9,15.09,16.07,17.67,20.83,20.48,,17.46,19.97,N,6400,Angert,Gaultheria shallon,200,1600,07-01-2022,"No photo, No cond"
+9,19.97,20.36,21.28,23.71,23.25,,21.22,22.36,N,6400,Angert,Gaultheria shallon,200,1600,07-01-2022,"No photo, No cond"
+9,25.04,24.79,25.02,26.72,26.11,,25.05,24.8,N,6400,Angert,Gaultheria shallon,200,1600,07-01-2022,"No photo, No cond"
+9,30.12,29.23,28.73,29.73,28.97,,28.89,27.24,N,6400,Angert,Gaultheria shallon,200,1600,07-01-2022,"No photo, No cond"
+9,34.99,33.47,32.16,32.45,31.59,,32.47,29.47,N,6400,Angert,Gaultheria shallon,200,1600,07-01-2022,"No photo, No cond"
+9,40.06,38.16,36.18,35.8,34.79,,36.6,32.34,N,6400,Angert,Gaultheria shallon,200,1600,07-01-2022,"No photo, No cond"
+9,45.13,42.77,39.89,39.02,37.86,,40.65,35,N,6400,Angert,Gaultheria shallon,200,1600,07-01-2022,"No photo, No cond"
+9,49.81,46.85,42.7,41.64,40.32,,44.15,37.15,N,6400,Angert,Gaultheria shallon,200,1600,07-01-2022,"No photo, No cond"
+10,1.81,4.803,10.91,13.98,14.21,,8.09,15.38,N,6400,Guy,Gaultheria shallon,200,1600,11-01-2022,"No photo, No cond"
+10,5.09,7.489,12.65,15.61,15.84,,10.27,16.66,N,6400,Guy,Gaultheria shallon,200,1600,11-01-2022,"No photo, No cond"
+10,9.971,11.73,16.06,18.45,18.72,,14.02,18.97,N,6400,Guy,Gaultheria shallon,200,1600,11-01-2022,"No photo, No cond"
+10,15.04,16.09,19.32,21.23,21.54,,17.71,21.17,N,6400,Guy,Gaultheria shallon,200,1600,11-01-2022,"No photo, No cond"
+10,20.11,20.7,23.02,24.33,24.69,,21.76,23.67,N,6400,Guy,Gaultheria shallon,200,1600,11-01-2022,"No photo, No cond"
+10,25,24.68,26.23,27.13,27.52,,25.4,25.88,N,6400,Guy,Gaultheria shallon,200,1600,11-01-2022,"No photo, No cond"
+10,30.07,29.41,29.47,29.93,30.33,,29.1,28.06,N,6400,Guy,Gaultheria shallon,200,1600,11-01-2022,"No photo, No cond"
+10,35.12,33.98,32.96,32.95,33.35,,33.02,30.45,N,6400,Guy,Gaultheria shallon,200,1600,11-01-2022,"No photo, No cond"
+10,40.01,38.25,35.8,35.58,35.95,,36.51,32.46,N,6400,Guy,Gaultheria shallon,200,1600,11-01-2022,"No photo, No cond"
+10,45.09,42.92,39.23,38.84,39.1,,40.64,35.05,N,6400,Guy,Gaultheria shallon,200,1600,11-01-2022,"No photo, No cond"
+10,49.77,47.02,41.59,41.35,41.63,,44.08,37.03,N,6400,Guy,Gaultheria shallon,200,1600,11-01-2022,"No photo, No cond"
+11,1.69,4.71,10.32,11.61,13.53,,8.23,13.72,N,6400,Guy,Raphanus sativus,200,1600,11-01-2022,"Photo, cond OK; logifle jcg_rasa_2; T_leaf_below was DETACHED."
+11,5.09,7.5,12.02,13.24,15.08,,10.42,15.17,N,6400,Guy,Raphanus sativus,200,1600,11-01-2022,"Photo, cond OK; logifle jcg_rasa_2; T_leaf_below was DETACHED."
+11,9.97,11.69,15.37,16.1,17.87,,13.96,17.5,N,6400,Guy,Raphanus sativus,200,1600,11-01-2022,"Photo, cond OK; logifle jcg_rasa_2; T_leaf_below was DETACHED."
+11,15.04,16.22,18.85,19.34,20.96,,17.91,20.24,N,6400,Guy,Raphanus sativus,200,1600,11-01-2022,"Photo, cond OK; logifle jcg_rasa_2; T_leaf_below was DETACHED."
+11,20.11,20.64,22.05,22.29,23.62,,21.57,22.76,N,6400,Guy,Raphanus sativus,200,1600,11-01-2022,"Photo, cond OK; logifle jcg_rasa_2; T_leaf_below was DETACHED."
+11,25,24.92,25.1,25.18,26.23,,25.13,25.23,N,6400,Guy,Raphanus sativus,200,1600,11-01-2022,"Photo, cond OK; logifle jcg_rasa_2; T_leaf_below was DETACHED."
+11,30.08,29.37,28.21,28.21,28.89,,28.78,27.78,N,6400,Guy,Raphanus sativus,200,1600,11-01-2022,"Photo, cond OK; logifle jcg_rasa_2; T_leaf_below was DETACHED."
+11,35.15,33.79,31.04,31.1,31.29,,32.28,30.26,N,6400,Guy,Raphanus sativus,200,1600,11-01-2022,"Photo, cond OK; logifle jcg_rasa_2; T_leaf_below was DETACHED."
+11,40.02,38.24,34.22,34.34,34,,36.03,33.03,N,6400,Guy,Raphanus sativus,200,1600,11-01-2022,"Photo, cond OK; logifle jcg_rasa_2; T_leaf_below was DETACHED."
+11,45.09,42.7,36.7,37.26,36.44,,39.62,35.44,N,6400,Guy,Raphanus sativus,200,1600,11-01-2022,"Photo, cond OK; logifle jcg_rasa_2; T_leaf_below was DETACHED."
+11,49.77,47.01,39.26,40.41,39.11,,43.31,38.4,N,6400,Guy,Raphanus sativus,200,1600,11-01-2022,"Photo, cond OK; logifle jcg_rasa_2; T_leaf_below was DETACHED."
+12,0.64,3.79,10.24,11.22,11.64,,6.89,12.75,N,6400,Angert,Raphanus sativus,200,1600,12-01-2022,"Photo, cond OK; logfile jcg_rasa_3"
+12,4.96,7.4,12.8,13.61,14.02,,9.97,12.83,N,6400,Angert,Raphanus sativus,200,1600,12-01-2022,"Photo, cond OK; logfile jcg_rasa_3"
+12,10.03,11.57,15.59,16.17,16.59,,13.32,17.1,N,6400,Angert,Raphanus sativus,200,1600,12-01-2022,"Photo, cond OK; logfile jcg_rasa_3"
+12,15.1,16.16,19.05,19.57,19.88,,17.52,19.92,N,6400,Angert,Raphanus sativus,200,1600,12-01-2022,"Photo, cond OK; logfile jcg_rasa_3"
+12,19.97,20.45,22.03,22.41,22.63,,21.22,22.39,N,6400,Angert,Raphanus sativus,200,1600,12-01-2022,"Photo, cond OK; logfile jcg_rasa_3"
+12,25.04,24.82,24.87,25.14,25.25,,24.84,24.78,N,6400,Angert,Raphanus sativus,200,1600,12-01-2022,"Photo, cond OK; logfile jcg_rasa_3"
+12,30.12,29.23,27.64,27.86,27.8,,28.51,27.23,N,6400,Angert,Raphanus sativus,200,1600,12-01-2022,"Photo, cond OK; logfile jcg_rasa_3"
+12,34.99,33.46,30.09,30.35,30.08,,31.94,29.56,N,6400,Angert,Raphanus sativus,200,1600,12-01-2022,"Photo, cond OK; logfile jcg_rasa_3"
+12,40.06,37.93,32.55,32.97,32.52,,35.64,32.05,N,6400,Angert,Raphanus sativus,200,1600,12-01-2022,"Photo, cond OK; logfile jcg_rasa_3"
+12,45.13,42.51,34.85,35.67,35.1,,39.48,34.71,N,6400,Angert,Raphanus sativus,200,1600,12-01-2022,"Photo, cond OK; logfile jcg_rasa_3"
+12,49.81,46.79,36.8,38.17,37.51,,43.08,37.48,N,6400,Angert,Raphanus sativus,200,1600,12-01-2022,"Photo, cond OK; logfile jcg_rasa_3"

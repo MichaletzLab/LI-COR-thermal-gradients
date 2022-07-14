@@ -1,15 +1,23 @@
+# Gas exchange analyzers exhibit large errors driven by internal thermal gradients
+# Josef Garen, Haley Branch, Isaac Borrego, Benjamin Blonder, Joseph Stinziano, and Sean Michaletz
+# New Phytologist 2022
+#
+# Functions for correcting leaf and air temperatures in the LI-6400XT
+#
+# Last edited 13 July 2022, Josef Garen
 
 # Function to correct Tleaf based on the difference between Tair and Tleaf
-correct_Tleaf6400 = function(Tleaf, Tair, slope = 0.7838, intercept = 0.8092) {
+correct_Tleaf6400 = function(Tleaf, Tair, slope = 0.52959, intercept = -0.87710) {
   return(Tleaf - (slope*(Tair-Tleaf)+intercept))
 }
 
 # Function to correct Tair based on the difference between Tblock and Tair
-correct_Tair6400 = function(Tblock, Tair, slope = 1.7790, intercept = -0.2557) {
-  return(Tair - (slope*(Tblock-Tair)+intercept))
+correct_Tair6400 = function(Tblock, Tair, slope = 2.28354, intercept = -0.34569) {
+    return(Tair - (slope*(Tblock-Tair)+intercept))
 }
 
-correct_licor6400 = function(licor_uncorrected) {
+# Correct leaf and air temperatures and recalculate derived values
+correct_licor6400 = function(licor_uncorrected, slope = 0.52959, intercept= -0.87710) {
   
   # Correct air and leaf temperatures
   licor_uncorrected %>% 
@@ -24,8 +32,8 @@ correct_licor6400 = function(licor_uncorrected) {
     
     # Correct air and leaf temperatures 
     mutate(
-      CTleaf = correct_Tleaf6400(CTleaf_uncorrected, Tair_uncorrected),
-      Tleaf = correct_Tleaf6400(Tleaf_uncorrected, Tair_uncorrected),
+      CTleaf = correct_Tleaf6400(CTleaf_uncorrected, Tair_uncorrected, slope, intercept),
+      Tleaf = correct_Tleaf6400(Tleaf_uncorrected, Tair_uncorrected, slope, intercept),
       Tair = correct_Tair6400(TBlk, Tair_uncorrected)
     ) %>% 
     

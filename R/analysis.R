@@ -1,39 +1,42 @@
-# Code to generate figures  and stats for paper "Gas exchange analyzers
-# exhibit large errors driven by internal thermal gradients"
+# Gas exchange analyzers exhibit large errors driven by internal thermal gradients
+# Josef Garen, Haley Branch, Isaac Borrego, Benjamin Blonder, Joseph Stinziano, and Sean Michaletz
+# New Phytologist 2022
 #
-# 4 June 2020 Josef Garen
+# Scripts for producing figures and statistics
+#
+# Last edited 13 July 2022, Josef Garen
 
 library(ggplot2)
 library(gridExtra)
 library(tidyverse)
-library(readxl)
 library(rTPC)
 library(nls.multstart)
 library(nlstools)
 library(plantecophys)
-library(kSamples)
 library(LICOR6400)
+library(nlme)
 
-# source("R/correct_licor6400.R")
-# source("R/correct_licor6800.R")
-# 
-# source("R/make_figS1.R")
-# source("R/make_figS2.R")
-# source("R/make_fig2.R")
-# source("R/make_fig3.R")
-# source("R/make_fig4.R")
-# source("R/make_fig5.R")
-# source("R/make_fig6.R")
-# source("R/make_fig7.R")
-# source("R/make_fig8.R")
-# source("R/make_fig9.R")
-#etc... or maybe you can just do something like "source("R")"
-sapply(list.files("R", full.names = T)[2:13], source)
+source("R/correct_licor6400.R")
+source("R/correct_licor6800.R")
+ 
+source("R/make_figS1.R")
+source("R/make_figS2.R")
+source("R/make_figS3.R")
 
-# Generate color palettes for the different figures
-palette_a = c("#E69F00", "#56B4E9")
-palette_b = c("#D55E00", "#0072B2")
-palette_c = c("#CC79A7","#009E73")
+source("R/make_fig2.R")
+source("R/make_fig3.R")
+source("R/make_fig4.R")
+source("R/make_fig5.R")
+source("R/make_fig6.R")
+source("R/make_fig7.R")
+source("R/make_fig8.R")
+source("R/make_fig9.R")
+
+
+# Generate color palettes for figures
+palette_a = c("#ECB63D", "#4188B0")
+palette_b = c("#DF853D", "#005686")
+palette_c = c("#D899BC", "#007757")
 
 # Generate standard theme
 my_theme = theme_bw() + 
@@ -45,20 +48,21 @@ if(!dir.exists("figures")) { dir.create("figures") }
 if(file.exists("stats.txt")) { file.remove("stats.txt") }
 if(file.exists("stats.txt")) { file.remove("stats_supplement.txt") }
 
-# Generate supplemental figures 1 and 2 and stats(Fig. S3 below)
-make_figS1() # OK
-make_figS2() # OK
+# Generate supplemental figures and associated stats
+make_figS1()
+make_figS2()
+make_figS3()
 
 # Generate main text figures and stats. Fig. 1 not included.
-make_fig2() # OK
-make_fig3() # OK
-make_fig4() # OK
-make_fig5() # OK
-make_fig6() # Need new dataset here, final touches to fig. else ok
-make_fig7() # OK; still makes blank page?; Also generates Fig. S3
-make_fig8() # OK;
-make_fig9() # OK;
+make_fig2() 
+make_fig3()
+make_fig4()
+make_fig5()
+make_fig6()
+make_fig7()
+make_fig8()
+make_fig9()
 
-########
-# Done #
-########
+#######
+# End #
+#######

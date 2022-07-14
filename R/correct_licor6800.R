@@ -1,10 +1,19 @@
+# Gas exchange analyzers exhibit large errors driven by internal thermal gradients
+# Josef Garen, Haley Branch, Isaac Borrego, Benjamin Blonder, Joseph Stinziano, and Sean Michaletz
+# New Phytologist 2022
+#
+# Functions for correcting leaf temperatures in the LI-6800
+#
+# Last edited 13 July 2022, Josef Garen
+
 # Correct leaf temperatures using regression
 correct_Tleaf6800 = function(Tleaf, Tair) {
-  return( -( (Tair-Tleaf)*0.4941 - 1.1436 - Tleaf ) )
+  return( -( (Tair-Tleaf)*0.45322 - 1.02172 - Tleaf ) )
 }
 
 
-# This is not a general-purpose correction algorithm, but specific to this paper
+# Recalculate reported values from LI-6800. This only recalculates values relevant
+# to the analyses performed in this paper, not all values
 correct_licor6800 = function(licor_uncorrected) {
   licor_uncorrected %>% 
     mutate(

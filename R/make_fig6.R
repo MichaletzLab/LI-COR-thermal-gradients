@@ -1,5 +1,10 @@
-# Figure 6
-# Errors in derived quantities
+# Gas exchange analyzers exhibit large errors driven by internal thermal gradients
+# Josef Garen, Haley Branch, Isaac Borrego, Benjamin Blonder, Joseph Stinziano, and Sean Michaletz
+# New Phytologist 2022
+#
+# Figure 6: Error in derived quantities
+#
+# Last edited 13 July 2022, Josef Garen
 
 make_fig6 = function() {
   
@@ -36,13 +41,16 @@ make_fig6 = function() {
   )
   
   error_all = bind_rows(error6400, error6800)
-
+  
+  # Trim a couple of outliers for plotting purposes
+  error_all = subset(error_all, error < 0.5)
+  
   # Open file
-  pdf("figures/fig6b.pdf", width = 7, height = 3.5)
+  pdf("figures/fig6.pdf", width = 7, height = 3.5)
   
   # Make label text
   dat_text <- data.frame(
-    labels = c("(b) ~~ italic(g[sw])", "(c) ~~ italic(g[tw])", "(d) ~~ italic(g[tc])", "(e) ~~ italic(C[i])"),
+    labels = c("(c) ~~ italic(g[sw])", "(e) ~~ italic(g[tw])", "(d) ~~ italic(g[tc])", "(b) ~~ italic(C[i])"),
     variable = c("g_sw","g_tw","g_tc","C_i"),
     Tair = 0,
     Tleaf = 0,
@@ -53,20 +61,19 @@ make_fig6 = function() {
   # Build plots
   p1 = ggplot(data = error_all, aes(x = variable, y=100*error, fill=Licor_Type)) + 
     scale_fill_manual(values = palette_a) +
-    scale_colour_manual(values = palette_a) +
     geom_boxplot() +
-    ylab("Relative error (%)") + xlab(NULL) + #ylim(-0.75, 0.75) + 
+    ylab("Relative error (%)") + xlab(NULL) + 
     scale_x_discrete(labels=c("g_sw" = expression(italic("g"[sw])), 
                               "g_tw" = expression(italic("g"[tw])), 
                               "g_tc" = expression(italic("g"[tc])),
                               "C_i" = expression(italic("C"[i])))) +
     my_theme +
-    theme(legend.position = c(0.8, 0.12)) +
+    theme(legend.position = c(0.17, 0.12)) +
     theme(legend.title = element_blank()) +
     theme(legend.background=element_blank()) +
-    ylim(c(-125,50)) +
+    ylim(c(-50,50)) +
     geom_abline(slope = 0, lty = 2) +
-    annotate("text", x = -Inf, y = 0.75*100, hjust = -0.1, label = "(a)") +
+    annotate("text", x = -Inf, y = 0.50*100, hjust = -0.1, label = "(a)") +
     theme(axis.text.x = element_text(face="bold",size=12))
   
   p2 = ggplot(data = error_all, aes(x = Tair-Tleaf, y=100*error, color=Licor_Type)) +
@@ -79,7 +86,7 @@ make_fig6 = function() {
     xlab(expression(paste("Reported air-leaf temperature difference (", degree, "C)  "))) + 
     ylab("Relative error (%)") +
     guides(colour = "none") +
-    ylim(c(-0.55*100, 0.75*100)) +
+    ylim(c(-0.50*100, 0.50*100)) +
     geom_abline(slope = 0, lty = 2) +
     geom_text(data = dat_text, aes(x = -Inf, y = Inf, label = labels), color = "black", hjust = -0.1, vjust = 1.3, parse=T)
   

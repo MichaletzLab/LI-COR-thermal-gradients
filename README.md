@@ -1,6 +1,6 @@
 # Gas exchange analyzers exhibit large errors driven by internal thermal gradients
-# Josef Garen, Haley Branch, Isaac Borrego, Benjamin Blonder, Joseph Stinziano, and Sean Michaletz
-# New Phytologist 2022
+## Josef Garen, Haley Branch, Isaac Borrego, Benjamin Blonder, Joseph Stinziano, and Sean Michaletz
+## New Phytologist 2022
 
 This repo contains scripts for reproducing the figures and statistics in Garen et al. 2022. All figures and satistics may be reproduced by running the file R/analysis.R.
 
